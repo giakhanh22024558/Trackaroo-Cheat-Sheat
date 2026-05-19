@@ -171,6 +171,30 @@ For each outbound payload:
 
 Spec authority: `design-decisions.md M5` (🟢 Locked-in by spec) · `ESF-5026` · `FSD-5126`.
 
+### 6.1 · Tier 1 sub-selection runtime view (BLE Mesh ⇄ Wi-Fi Direct)
+
+Within Tier 1, BLE Mesh and Wi-Fi Direct are **not in strict failover order** — Wi-Fi Direct is **on-demand burst transport**, system-activated when specific deterministic triggers fire. Full trigger definitions + auto-deactivation policy live in `../../2-subsystems/mob-cal-architecture.md §2.1` (spec authority **FSD-5126**). This sub-section captures the **runtime flag/state view** of those transitions.
+
+#### Runtime flag transitions during Tier 1 sub-switch
+
+| Event | State path | Flag delta | UI label delta | Triggering condition |
+|---|---|---|---|---|
+| **T1 · MTU exceeded** | stays in S3 or S4 — state unaffected by MTU alone | unchanged | unchanged | Outbound payload bytes > BLE MTU (e.g. PCR sync burst) |
+| **T2 · Mesh latency exceeds M6** | `S3 → S4` while burst active | `partialSignal: false → true` | "Beacon active" → "Limited Connectivity" (≤ 2 s repaint per UXS-5726) | `CAL.LMON` measures multi-hop delay > M6 threshold |
+| **T3 · BLE signal health degraded** | `S3 → S4` while burst active | `partialSignal: false → true` | same as T2 | Native BLE stack reports packet success rate below threshold |
+| **Burst completes · auto-deactivate** | `S4 → S3` (if T2/T3 was trigger) — debounced | `partialSignal: true → false` | "Limited Connectivity" → "Beacon active" | Wi-Fi Direct session torn down · BLE Mesh resumes as sole primary |
+
+#### Key runtime invariants for the sub-switch
+
+| Invariant | Mechanism |
+|---|---|
+| **Wi-Fi Direct never user-selectable** | No CAL public API exposes transport-tier selection — selection is internal to `CAL.TR` (mob-cal-architectural-diagram component). RT-02 enforced. |
+| **Wi-Fi Direct auto-deactivates after burst** | CAL.TR enforces tear-down on burst completion (T1) or trigger-condition clearance (T2/T3 debounced). Preserves PT-NAV-08 (≤ 8 %/hr) + PT-NAV-09 (≥ 10 hr endurance). |
+| **Both transports counted as "peer-reachable"** | `offlineBeacon` does NOT flip during Tier 1 sub-switch — only flips on full peer-lost (entering S5) |
+| **MTU-trigger alone does not change state** | T1 keeps CAL in S3 (or S4 if already there). Only T2/T3 alter the state-machine state via the `partialSignal` flag. |
+
+Spec authority: **FSD-5126** (CAL functional spec) · cross-referenced with **BPS-5126** for endurance budget rationale on auto-deactivation. Triggers themselves are FSD-5126; the endurance consequence is BPS-5126.
+
 ---
 
 ## 7. Open calibration values (vendor input expected)

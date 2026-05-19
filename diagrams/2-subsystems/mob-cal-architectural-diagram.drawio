@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="cal-component-arch" name="CAL · Component Architecture">
-        <mxGraphModel dx="1708" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1500" background="#ECEFF1" math="0" shadow="0">
+        <mxGraphModel dx="869" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1500" background="#ECEFF1" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -251,7 +251,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="cal-state-machine" name="CAL · State Machine + Flag Transitions">
-        <mxGraphModel dx="4016" dy="2451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="2294" dy="1793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -270,7 +270,7 @@
                 <mxCell id="S3" value="&lt;b&gt;S3 · BeaconingFull&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, T, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Peer + low latency&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Beacon active&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
                     <mxGeometry x="1020" y="380" width="220" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="S4" value="&lt;b&gt;S4 · BeaconingPartial&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, T, T]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Peer + high latency&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Limited Connectivity&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
+                <mxCell id="S4" value="&lt;b&gt;S4 · BeaconingPartial&lt;/b&gt;&lt;br&gt;&lt;i&gt;flags = [F, T, T, T]&lt;/i&gt;&lt;br&gt;&lt;i&gt;Peer + high latency&lt;/i&gt;&lt;div&gt;&lt;i&gt;use BLE Mesh&lt;br&gt;&lt;/i&gt;&lt;b&gt;UI: &quot;Limited Connectivity&quot;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
                     <mxGeometry x="1430" y="380" width="220" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="S5" value="&lt;b&gt;S5 · QueueOnly&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, F, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;No peer reachable · queue holds&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Queue pending&amp;quot; / &amp;quot;Offline&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8bbd0;strokeColor=#ad1457;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">

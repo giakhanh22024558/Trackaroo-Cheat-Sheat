@@ -44,6 +44,45 @@ For each outbound payload:
 
 No probabilistic / adaptive / telemetry-weighted selection. Same inputs always produce the same transport choice.
 
+### 2.1 BLE Mesh ⇄ Wi-Fi Direct sub-selection triggers
+
+Within Tier 1, the switch between **BLE Mesh (primary)** and **Wi-Fi Direct (fallback / on-demand)** is **not** a simple "BLE down → Wi-Fi up" cascade. Both transports may be available simultaneously; the CAL Transport Router escalates to Wi-Fi Direct only when **specific deterministic conditions** are met that exceed BLE's capability envelope.
+
+#### Triggers for Wi-Fi Direct activation (any one suffices)
+
+| # | Trigger | Detection point | Why BLE Mesh is insufficient |
+|---|---|---|---|
+| **T1** | **Payload exceeds BLE MTU** | Outbound message size check at `CAL.TR` before tier selection | BLE MTU caps single-frame size; fragmenting large payloads (e.g. **PCR file sync · group re-alignment burst**) over multi-hop mesh introduces unacceptable latency |
+| **T2** | **Mesh propagation latency exceeds deterministic threshold** | `CAL.LMON` continuous latency monitor (vs. **M6** threshold, see `design-decisions.md M6`) | Multi-hop BLE mesh accumulates per-hop delay; beyond threshold, single-hop Wi-Fi Direct is faster than mesh forwarding |
+| **T3** | **BLE signal health degraded** (packet success rate below deterministic threshold) | Native BLE stack signal-quality callback bubbled through MethodChannel | Continued BLE retries waste battery + risk dropped frames; Wi-Fi Direct's higher SNR + bandwidth completes the burst reliably |
+
+All three triggers are **deterministic integer comparisons** — no ML, no probabilistic scoring (RT-03 compliant).
+
+#### Activation lifecycle policy
+
+| Phase | Behaviour | Spec authority |
+|---|---|---|
+| **Default state** | BLE Mesh is the **default primary** for all outbound payloads · lowest power draw | **FSD-5126** · M5 priority |
+| **On-demand activation** | Wi-Fi Direct is **system-activated only** — never user-selectable. Activated when T1, T2, or T3 fires. | **FSD-5126** |
+| **Burst transport** | Wi-Fi Direct carries the qualifying payload (or sustained burst) only — not the entire session | **FSD-5126** |
+| **Auto-deactivation** | Once the qualifying burst completes (e.g. PCR sync finishes, mesh latency recovers, signal health restored), CAL Transport Router **automatically tears down** the Wi-Fi Direct session and reverts to BLE Mesh | **FSD-5126** · preserves PT-NAV-08 (≤ 8 %/hr) + PT-NAV-09 (≥ 10 hr endurance) per `performance-targets.md` |
+
+#### Flag interactions during Wi-Fi Direct activation
+
+| Flag | During Wi-Fi Direct active burst | After auto-deactivation |
+|---|---|---|
+| `queueEnabled` | unchanged (`true` while session active) | unchanged |
+| `offlineBeacon` | unchanged — both transports count as "peer-reachable" | unchanged |
+| `partialSignal` | may flip `true` if T2 or T3 triggered (the trigger itself reflects degraded mesh) — UI shows "Limited Connectivity" during burst | reverts to `false` once mesh latency back below threshold (debounced — see §3) |
+
+**Runtime view of these flag transitions:** `../3-flows/state/state-cal.md §6` (state matrix) + §6.1 transport sub-selection extension.
+
+#### Why this matters for governance
+
+- **Transport-transparent to user** — no user-facing transport picker (per UXS-5726 Visual Calm doctrine). User sees only CAL state label change ("Beacon active" → "Limited Connectivity" → back) if T2/T3 trigger, never "Switching to Wi-Fi…".
+- **Battery survivable** — auto-deactivation is the mechanism that keeps Wi-Fi Direct's higher draw within the BPS-5126 endurance budget. Without auto-deactivation, sustained Wi-Fi Direct would breach PT-NAV-08.
+- **No user override** — vendor MUST NOT expose a "force Wi-Fi" toggle; that would breach RT-02 (no user-driven adaptive control on transport tier).
+
 ---
 
 ## 3. Mandatory state flags
@@ -277,8 +316,8 @@ graph TB
     BRIDGE -->|"Invokes iOS stack"| IOS
     ANDROID -.->|"advertises available radios"| ROUTER
     IOS -.->|"advertises available radios"| ROUTER
-    ROUTER -->|"small data · low latency"| BLE
-    ROUTER -->|"large PCR · high latency"| WIFI
+    ROUTER -->|"default · BLE MTU OK · mesh latency &lt; M6"| BLE
+    ROUTER -->|"on-demand · T1 MTU exceeded / T2 latency &gt; M6 / T3 signal degraded · auto-deactivate"| WIFI
     ROUTER -.->|"auto-detected via adapter pattern"| LORA
     LORA ==>|"triggers onboarding wireframe"| WF01
     WF01 -->|"user acknowledges"| WF02

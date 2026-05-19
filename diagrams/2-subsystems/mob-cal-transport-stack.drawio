@@ -4,149 +4,239 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="NATIVE" value="NATIVE PLATFORM CHANNELS (Swift / Kotlin)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" vertex="1" parent="1">
+                <mxCell id="NATIVE" value="NATIVE PLATFORM CHANNELS (Swift / Kotlin)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="1" vertex="1">
                     <mxGeometry x="20" y="200" width="1020" height="460" as="geometry"/>
                 </mxCell>
-                <mxCell id="BRIDGE" value="MethodChannel Bridge" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="NATIVE">
+                <mxCell id="BRIDGE" value="MethodChannel Bridge" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="NATIVE" vertex="1">
                     <mxGeometry x="380" y="60" width="300" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="ANDROID" value="Android BLE Stack / WiFi-P2P" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="NATIVE">
+                <mxCell id="ANDROID" value="Android BLE Stack / WiFi-P2P" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="NATIVE" vertex="1">
                     <mxGeometry x="60" y="290" width="340" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="IOS" value="iOS CoreBluetooth / MPC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="NATIVE">
+                <mxCell id="IOS" value="iOS CoreBluetooth / MPC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="NATIVE" vertex="1">
                     <mxGeometry x="500" y="290" width="360" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="FLUTTER" value="FLUTTER APPLICATION LAYER (Experience Layer)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=2;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" vertex="1" parent="1">
                     <mxGeometry x="1100" y="20" width="880" height="640" as="geometry"/>
                 </mxCell>
-                <mxCell id="TM" value="TrackMate Messaging and Location UI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="TM" value="TrackMate Messaging and Location UI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="250" y="50" width="380" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="CAL" value="Comms Abstraction Layer (CAL) Engine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="CAL" value="Comms Abstraction Layer (CAL) Engine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="250" y="160" width="380" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="FLAGS" value="CAL State Flags (FSD-5126)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="FLAGS" value="CAL State Flags (FSD-5126)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="240" y="280" width="400" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="F1" value="satReady = FALSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="F1" value="satReady = FALSE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="20" y="530" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="F2" value="queueEnabled" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="F2" value="queueEnabled" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="220" y="530" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="F3" value="offlineBeacon" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="F3" value="offlineBeacon" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="420" y="530" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="F4" value="partialSignal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="FLUTTER">
+                <mxCell id="F4" value="partialSignal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="FLUTTER" vertex="1">
                     <mxGeometry x="620" y="530" width="180" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="SEP" value="IMMUTABLE SEPARATION" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c62828;strokeWidth=2;fontColor=#c62828;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-                    <mxGeometry x="900" y="115" width="220" height="70" as="geometry"/>
+                <mxCell id="SEP" value="IMMUTABLE SEPARATION" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c62828;strokeWidth=2;fontColor=#c62828;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="115" width="220" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="OFFLINE" value="SURVIVAL CORE PATHS (No Network Dependency)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=1.5;fontColor=#1b5e20;fontSize=11;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+                <mxCell id="OFFLINE" value="SURVIVAL CORE PATHS (No Network Dependency)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=1.5;fontColor=#1b5e20;fontSize=11;align=center;verticalAlign=middle;spacing=5;" parent="1" vertex="1">
                     <mxGeometry x="900" y="330" width="220" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="PRIORITY" value="DETERMINISTIC PRIORITY SELECTION (CAL)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" vertex="1" parent="1">
+                <mxCell id="PRIORITY" value="DETERMINISTIC PRIORITY SELECTION (CAL)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="1" vertex="1">
                     <mxGeometry x="20" y="700" width="1020" height="720" as="geometry"/>
                 </mxCell>
-                <mxCell id="LORA" value="TIER 2 OPTIONAL: LoRa Peripheral (Long Range)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="PRIORITY">
+                <mxCell id="LORA" value="TIER 2 OPTIONAL: LoRa Peripheral (Long Range)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="PRIORITY" vertex="1">
                     <mxGeometry x="560" y="60" width="400" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="ROUTER" value="Payload Size and Link Health?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="PRIORITY">
+                <mxCell id="ROUTER" value="Payload Size and Link Health?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="PRIORITY" vertex="1">
                     <mxGeometry x="380" y="280" width="280" height="180" as="geometry"/>
                 </mxCell>
-                <mxCell id="BLE" value="TIER 1 PRIMARY: BLE Mesh (Background)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="PRIORITY">
+                <mxCell id="BLE" value="TIER 1 PRIMARY: BLE Mesh (Background)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="PRIORITY" vertex="1">
                     <mxGeometry x="60" y="580" width="360" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="WIFI" value="TIER 1 FALLBACK: Wi-Fi Direct (On-Demand)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="PRIORITY">
+                <mxCell id="WIFI" value="TIER 1 FALLBACK: Wi-Fi Direct (On-Demand)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="PRIORITY" vertex="1">
                     <mxGeometry x="480" y="580" width="400" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="LORA_ON" value="LoRa ONBOARDING (WFD-5126)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" vertex="1" parent="1">
+                <mxCell id="LORA_ON" value="LoRa ONBOARDING (WFD-5126)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=12;fontStyle=0;align=center;spacingTop=8;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="1" vertex="1">
                     <mxGeometry x="1100" y="820" width="880" height="600" as="geometry"/>
                 </mxCell>
-                <mxCell id="WF01" value="TM-WF-01 Disclosure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="LORA_ON">
+                <mxCell id="WF01" value="TM-WF-01 Disclosure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="LORA_ON" vertex="1">
                     <mxGeometry x="290" y="60" width="300" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="WF02" value="TM-WF-02 Short-Range" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="LORA_ON">
+                <mxCell id="WF02" value="TM-WF-02 Short-Range" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="LORA_ON" vertex="1">
                     <mxGeometry x="290" y="200" width="300" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="WF03" value="TM-WF-03 Hardware Detected" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="LORA_ON">
+                <mxCell id="WF03" value="TM-WF-03 Hardware Detected" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="LORA_ON" vertex="1">
                     <mxGeometry x="290" y="340" width="300" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="WF04" value="TM-WF-04 Disconnected" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" vertex="1" parent="LORA_ON">
+                <mxCell id="WF04" value="TM-WF-04 Disconnected" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=11;spacing=5;" parent="LORA_ON" vertex="1">
                     <mxGeometry x="290" y="480" width="300" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_tm_cal" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="TM" target="CAL" edge="1">
+                <mxCell id="e_tm_cal" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="TM" target="CAL">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_cal_flags" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="CAL" target="FLAGS" edge="1">
+                <mxCell id="e_cal_flags" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="CAL" target="FLAGS">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_flags_f1" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" parent="1" source="FLAGS" target="F1" edge="1">
+                <mxCell id="e_flags_f1" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="FLAGS" target="F1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1540" y="510"/>
+                            <mxPoint x="1210" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_flags_f2" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="FLAGS" target="F2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1540" y="510"/>
+                            <mxPoint x="1410" y="510"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_flags_f3" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="FLAGS" target="F3">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_flags_f2" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;exitX=0.4;exitY=1;entryX=0.5;entryY=0;" parent="1" source="FLAGS" target="F2" edge="1">
+                <mxCell id="e_flags_f4" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1" source="FLAGS" target="F4">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_flags_f3" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;exitX=0.6;exitY=1;entryX=0.5;entryY=0;" parent="1" source="FLAGS" target="F3" edge="1">
+                <mxCell id="e_cal_bridge" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="CAL" target="BRIDGE">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1170" y="210"/>
+                            <mxPoint x="1170" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_bridge_android" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="BRIDGE" target="ANDROID">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="470" y="405"/>
+                            <mxPoint x="220" y="405"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_bridge_ios" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.65;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="BRIDGE" target="IOS">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_flags_f4" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" parent="1" source="FLAGS" target="F4" edge="1">
+                <mxCell id="e_android_ble" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="ANDROID" target="BLE">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="160" y="910"/>
+                            <mxPoint x="160" y="910"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_android_wifi" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="ANDROID" target="WIFI">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="50" y="525"/>
+                            <mxPoint x="50" y="1390"/>
+                            <mxPoint x="700" y="1390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_android_lora" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="ANDROID" target="LORA">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="795"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_ios_ble" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="IOS" target="BLE">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="550" y="850"/>
+                            <mxPoint x="260" y="850"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_ios_wifi" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="IOS" target="WIFI">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1010" y="525"/>
+                            <mxPoint x="1010" y="1315"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_ios_lora" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="IOS" target="LORA">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="610"/>
+                            <mxPoint x="780" y="610"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_lora_router" value="Auto-Detected via Adapter Pattern" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="LORA" target="ROUTER">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="670" y="905"/>
+                            <mxPoint x="540" y="905"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_router_ble" value="Default — BLE MTU OK · mesh latency &amp;lt; M6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ROUTER" target="BLE">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="480" y="1220"/>
+                            <mxPoint x="370" y="1220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_router_wifi" value="On-demand burst&#xa;T1 MTU exceeded · T2 latency &amp;gt; M6 · T3 signal degraded&#xa;(auto-deactivate after burst)" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;align=center;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ROUTER" target="WIFI">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="e_cal_bridge" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=2.5;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" parent="1" source="CAL" target="BRIDGE" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf01_wf02" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF01" target="WF02">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1620" y="990"/>
+                            <mxPoint x="1620" y="990"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="e_bridge_android" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.35;exitY=1;entryX=0.5;entryY=0;" parent="1" source="BRIDGE" target="ANDROID" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf02_wf03" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF02" target="WF03">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1620" y="1130"/>
+                            <mxPoint x="1620" y="1130"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="e_bridge_ios" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.65;exitY=1;entryX=0.5;entryY=0;" parent="1" source="BRIDGE" target="IOS" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf03_wf04" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF03" target="WF04">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1620" y="1270"/>
+                            <mxPoint x="1620" y="1270"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="e_android_ble" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.25;exitY=1;entryX=0.2;entryY=0;" parent="1" source="ANDROID" target="BLE" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf02_wf01" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF02" target="WF01">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1480" y="990"/>
+                            <mxPoint x="1480" y="990"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="e_android_wifi" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.75;exitY=1;entryX=0.25;entryY=0;" parent="1" source="ANDROID" target="WIFI" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf03_wf02" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF03" target="WF02">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1480" y="1130"/>
+                            <mxPoint x="1480" y="1130"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="e_android_lora" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" parent="1" source="ANDROID" target="LORA" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_ios_ble" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" parent="1" source="IOS" target="BLE" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_ios_wifi" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" parent="1" source="IOS" target="WIFI" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_ios_lora" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.75;exitY=1;entryX=0.7;entryY=0;" parent="1" source="IOS" target="LORA" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_lora_router" value="Auto-Detected via Adapter Pattern" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=3 3;strokeColor=#000000;strokeWidth=1;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="LORA" target="ROUTER" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_router_ble" value="Small Data" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.25;exitY=1;entryX=0.5;entryY=0;" parent="1" source="ROUTER" target="BLE" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_router_wifi" value="Large PCR / High Latency" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.75;exitY=1;entryX=0.5;entryY=0;" parent="1" source="ROUTER" target="WIFI" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf01_wf02" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="WF01" target="WF02" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf02_wf03" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="WF02" target="WF03" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf03_wf04" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="WF03" target="WF04" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf02_wf01" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;exitX=0.3;exitY=0;entryX=0.3;entryY=1;" parent="1" source="WF02" target="WF01" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf03_wf02" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;exitX=0.3;exitY=0;entryX=0.3;entryY=1;" parent="1" source="WF03" target="WF02" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="e_wf04_wf03" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;exitX=0.3;exitY=0;entryX=0.3;entryY=1;" parent="1" source="WF04" target="WF03" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="e_wf04_wf03" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" edge="1" parent="1" source="WF04" target="WF03">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1480" y="1260"/>
+                            <mxPoint x="1480" y="1260"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
