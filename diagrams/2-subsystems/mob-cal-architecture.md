@@ -214,7 +214,129 @@ graph TB
 
 ---
 
-## 6. Validation & evidence obligations (Discovery Gate)
+## 6. Transport Stack — Flutter ⇄ Native ⇄ Radios + LoRa Onboarding
+
+Complementary view to §5 (CAL Component Architecture). §5 looks at CAL's **internal** 5-component structure (SFM · LMON · TR · QMGR · SPUB). This section looks at the **vertical transport stack** — how a `send(msg)` call travels from Dart down through the MethodChannel boundary into native radio stacks, and how CAL's Transport Router makes its tier selection. It also surfaces the **4 WFD-5126 LoRa onboarding states** (referenced in Scenario 2 evaluator probe E.2 — see `../../research/scenario-responses.md`).
+
+**Draw.io twin:** `./mob-cal-transport-stack.drawio` (single-page, master-architecture style).
+
+```mermaid
+---
+config:
+  layout: elk
+  theme: base
+  themeVariables:
+    fontFamily: Arial
+    fontSize: 12px
+---
+graph TB
+    subgraph APP["<b>FLUTTER APPLICATION LAYER · Experience Layer</b><br/><i>Tech: Flutter · Dart · CAL Engine owns 4 mandatory state flags</i>"]
+        TM["<b>TrackMate UI</b><br/><i>MOB-1001</i><br/>Messaging + location UI"]
+        CAL["<b>CAL Engine</b><br/><i>MOB-1101</i><br/>Comms Abstraction Layer<br/>5 sub-components<br/>SFM · LMON · TR · QMGR · SPUB"]
+        subgraph FLAGS["<b>CAL State Flags · FSD-5126</b>"]
+          direction LR
+            F1["satReady<br/><b>= FALSE</b><br/><i>Phase 2 inert</i>"]
+            F2["queueEnabled<br/><i>session active?</i>"]
+            F3["offlineBeacon<br/><i>peer present?</i>"]
+            F4["partialSignal<br/><i>latency &gt; M6?</i>"]
+        end
+    end
+
+    subgraph NATIVE["<b>NATIVE PLATFORM CHANNELS</b><br/><i>Tech: Swift iOS / Kotlin Android · platform-specific radio stacks</i>"]
+        BRIDGE["<b>MethodChannel Bridge</b><br/><i>Dart ⇄ Native</i>"]
+        ANDROID["<b>Android</b><br/>BLE Stack · Wi-Fi P2P"]
+        IOS["<b>iOS</b><br/>CoreBluetooth · MPC"]
+    end
+
+    subgraph PRIORITY["<b>DETERMINISTIC PRIORITY SELECTION · CAL.TR</b><br/><i>Tech: 5-rule deterministic algorithm (M5 Locked-in) · no probabilistic / no ML</i>"]
+        ROUTER{"<b>Payload size +<br/>link health?</b>"}
+        BLE["<b>Tier 1 · BLE Mesh</b><br/><i>Primary · background discovery</i>"]
+        WIFI["<b>Tier 1 · Wi-Fi Direct</b><br/><i>Fallback · on-demand</i>"]
+        LORA["<b>Tier 2 · LoRa Peripheral</b><br/><i>Long-range · paired-only</i>"]
+    end
+
+    subgraph LORA_ON["<b>LoRa ONBOARDING · WFD-5126</b><br/><i>Tech: 4-state wireframe authoritative flow</i>"]
+      direction TB
+        WF01["<b>TM-WF-01</b><br/>Disclosure"]
+        WF02["<b>TM-WF-02</b><br/>Short-Range Pairing"]
+        WF03["<b>TM-WF-03</b><br/>Hardware Detected · Active"]
+        WF04["<b>TM-WF-04</b><br/>Disconnected"]
+    end
+
+    SEP{{"<b>IMMUTABLE SEPARATION</b><br/><i>Dart ⇄ Native boundary · MethodChannel-only<br/>architecturally enforced</i>"}}
+    OFFLINE["<b>SURVIVAL CORE PATHS</b><br/><i>Zero network dependency · all tiers operate offline<br/>ESF-5026 §4</i>"]
+
+    %% Flow edges
+    TM ==>|"Calls send(msg) · toggles session lifecycle"| CAL
+    CAL -.->|"flag vector"| F1
+    CAL -.-> F2
+    CAL -.-> F3
+    CAL -.-> F4
+    CAL ==>|"Crosses Dart ⇄ Native via MethodChannel"| BRIDGE
+    BRIDGE -->|"Invokes Android stack"| ANDROID
+    BRIDGE -->|"Invokes iOS stack"| IOS
+    ANDROID -.->|"advertises available radios"| ROUTER
+    IOS -.->|"advertises available radios"| ROUTER
+    ROUTER -->|"small data · low latency"| BLE
+    ROUTER -->|"large PCR · high latency"| WIFI
+    ROUTER -.->|"auto-detected via adapter pattern"| LORA
+    LORA ==>|"triggers onboarding wireframe"| WF01
+    WF01 -->|"user acknowledges"| WF02
+    WF02 -->|"pair complete"| WF03
+    WF03 -->|"lost peripheral"| WF04
+    WF04 -.->|"re-pair"| WF02
+    SEP -.- CAL
+    SEP -.- BRIDGE
+    OFFLINE -.- PRIORITY
+
+    classDef whiteBox fill:#ffffff,stroke:#555555,stroke-width:1px,color:#000
+    classDef diamondNode fill:#fff8e1,stroke:#f57c00,stroke-width:1.5px,color:#000
+    classDef flagBox fill:#ffffff,stroke:#1976d2,stroke-width:1px,color:#000
+    classDef scaffoldBox fill:#fafafa,stroke:#9e9e9e,stroke-width:1px,stroke-dasharray:5 3,color:#616161
+    classDef sepHex fill:#fff5f5,stroke:#c62828,stroke-width:3px,color:#b71c1c
+    classDef offlineNote fill:#e8f5e9,stroke:#2e7d32,stroke-width:1.5px,color:#1b5e20
+
+    class TM,CAL,BRIDGE,ANDROID,IOS,BLE,WIFI,LORA,WF01,WF02,WF03,WF04 whiteBox
+    class ROUTER diamondNode
+    class F2,F3,F4 flagBox
+    class F1 scaffoldBox
+    class SEP sepHex
+    class OFFLINE offlineNote
+
+    style APP fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    style NATIVE fill:#f5f5f5,stroke:#757575,stroke-width:2px,stroke-dasharray:5 3
+    style PRIORITY fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style LORA_ON fill:#b2dfdb,stroke:#00695c,stroke-width:2px
+    style FLAGS fill:#bbdefb,stroke:#0277bd,stroke-width:1.5px
+
+    linkStyle 1,2,3,4,8,9,12 stroke:#6a1b9a,stroke-width:2px,stroke-dasharray:2 3
+    linkStyle 17 stroke:#9e9e9e,stroke-width:1.5px,stroke-dasharray:5 3
+    linkStyle 18,19 stroke:#c62828,stroke-width:2px,stroke-dasharray:8 4
+    linkStyle 20 stroke:#2e7d32,stroke-width:1.5px,stroke-dasharray:8 4
+```
+
+### How to read this view
+
+| Zone | Purpose | Boundary it respects |
+|---|---|---|
+| **Flutter Application Layer** (blue) | Dart-side CAL Engine + 4 mandatory state flags. CAL never references concrete transports — only the `ITransport` abstraction. | Survival Core wall (`compliance-matrix.md §5`) — CAL cannot import from `mob_core` |
+| **Native Platform Channels** (grey dashed) | Swift/Kotlin side. MethodChannel Bridge is the **only** path between Dart and platform radio stacks. | Dart ⇄ Native immutable separation (red dashed marker) |
+| **Deterministic Priority Selection · CAL.TR** (peach) | The 5-rule priority algorithm — `M5` Locked-in. Selection is pure integer/bucket arithmetic; same inputs → same tier. | `RT-03` (no AI / probabilistic) · `M0a` deterministic execution mandate |
+| **LoRa Onboarding · WFD-5126** (teal) | The 4 wireframe states triggered when a LoRa peripheral is connected mid-session. Authoritative copy + visual treatment derive from `WFD-5126`. | Evaluator probe E.2 in `scenario-responses.md` requires all 4 states present |
+
+### Edge semantics in this view
+
+| Edge style | Meaning |
+|---|---|
+| Solid + verb label | Operational / control relationship (`TM → CAL`, `BRIDGE → ANDROID`, `ROUTER → BLE`) |
+| Purple dotted + noun label | Data payload flow (`CAL → flag`, `ANDROID → ROUTER` "advertises available radios") |
+| Grey dashed | Phase 2 inert OR retry path (`WF04 → WF02 re-pair`) |
+| Red dashed hexagon marker | Architectural separation boundary (Dart ⇄ Native) — not an edge, a marker |
+| Green note | Cross-cutting mandate (offline-first paths · ESF-5026 §4) |
+
+---
+
+## 7. Validation & evidence obligations (Discovery Gate)
 
 Vendors must provide the following at Discovery Gate. This file IS one of the deliverables; the other two reference it.
 
@@ -236,7 +358,7 @@ Vendors must provide the following at Discovery Gate. This file IS one of the de
 
 ---
 
-## 7. Cross-references
+## 8. Cross-references
 
 - Master: `../1-overview/trackaroo-phase1-architecture.md` — see `MOB-1101` in `MOB_G2` (Comms & Transport)
 - Parent module: TrackMate™ (`MOB-1001`) — see `./mob-application-layer.md`
@@ -247,7 +369,7 @@ Vendors must provide the following at Discovery Gate. This file IS one of the de
 - Compliance: `../4-cross-cutting/compliance-matrix.md` — entries for `satReady` inertness, CAL→Core prohibition
 - Navigation: `../README.md`
 
-## 8. Document status
+## 9. Document status
 
 | Field | Value |
 |---|---|

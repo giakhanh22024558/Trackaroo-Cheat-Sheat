@@ -43,6 +43,7 @@ Start here to figure out *which* diagram answers *what* question. The diagrams a
 |---|---|---|---|
 | **`mob-cal-architecture.md`** | **`MOB-1101` CAL** — transport priority · 4 mandatory state flags (satReady · queueEnabled · offlineBeacon · partialSignal) · Survival Core isolation · static analysis evidence · **Discovery Gate Deliverable #4** (spec/mandates) | ✅ filled | ✅ **CAL Architecture** |
 | **`mob-cal-architectural-diagram.md`** | **`MOB-1101` CAL — architectural visual** — 5 internal components (SFM · LMON · TR · QMGR · SPUB) + state machine with flag transitions per state + flag transition matrix + component-to-state responsibility map | ✅ filled | — |
+| **`mob-cal-transport-stack.drawio`** | **`MOB-1101` CAL — Transport Stack** — Flutter App Layer ⇄ Native Platform Channels (Swift/Kotlin) ⇄ Radios (BLE/Wi-Fi/LoRa) + deterministic 5-rule priority router + WFD-5126 4-state LoRa onboarding flow + IMMUTABLE SEPARATION boundary marker | — | ✅ standalone drawio (companion to `mob-cal-architecture.md §6`) |
 | `cbe-trackiq-pipeline.md` | `CBE-5000` TrackIQ Backend Pipeline Worker — 4 stages · schemas · thresholds · governance flow · Pipes & Filters detail | ✅ filled | 🚧 (drawio tab deleted — backing material only) |
 | `mob-survival-core.md` | `MOB-2000` Survival Core — NAV · BackTrack · HazTrack · SOS · Bundle Download Manager · perf targets | 🚧 stub | 🚧 TBD |
 | `mob-application-layer.md` | `MOB-1000` Application Layer — TrackMate · First Aid · PCR Framework · Multi-Tier Transport (CAL detail moved to dedicated file) | 🚧 stub | 🚧 TBD |
