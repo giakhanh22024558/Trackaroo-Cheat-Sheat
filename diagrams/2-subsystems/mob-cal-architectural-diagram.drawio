@@ -1,0 +1,376 @@
+<mxfile host="65bd71144e">
+    <diagram id="cal-component-arch" name="CAL · Component Architecture">
+        <mxGraphModel dx="1708" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1500" background="#ECEFF1" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="TITLE" value="&lt;b&gt;MOB-1101 · CAL — Component Architecture (zoom into MOB-1100 Comms &amp;amp; Transport)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Tech: Flutter dart-side · ITransport adapter pattern · 4 mandatory state flags · satReady=FALSE always (Phase 1)&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Reduced scope — only CAL touchpoints shown. Styling matches master architecture (../1-overview/trackaroo-phase1-architecture.drawio) — see Legend page.&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="20" width="1760" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="EXT" value="&lt;b&gt;EXTERNAL&lt;/b&gt; · &lt;i&gt;Third-party providers&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="110" width="1760" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="EXT_HW" value="&lt;b&gt;External Peripherals&lt;/b&gt; · &lt;i&gt;Separate physical devices · BLE/USB-paired&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8e7;strokeColor=#e65100;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="EXT" vertex="1">
+                    <mxGeometry x="15" y="40" width="500" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="EXT_LORA" value="&lt;i&gt;EXT-9007&lt;/i&gt; · &lt;b&gt;LoRa Peripheral&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Long-range mesh radio · BLE-paired&lt;/i&gt;" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;strokeWidth=1;fontSize=10;spacing=5;" parent="EXT_HW" vertex="1">
+                    <mxGeometry x="15" y="30" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="EXT_NOTE" value="&lt;b&gt;Note on satellite (Phase 2)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;HW_SAT lives in Device Hardware below (per master architecture). It is dashed-grey + amber &quot;PHASE 2&quot; badge — currently unreachable from CAL because satReady=FALSE is a CI-enforced invariant.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;spacing=5;fontColor=#616161;" parent="EXT" vertex="1">
+                    <mxGeometry x="540" y="10" width="900" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB" value="&lt;b&gt;MOBILE APPLICATION&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Tech: Flutter · Dart · Dual-Layer Architecture&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0277bd;strokeWidth=2;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="270" width="1760" height="1290" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB_APP" value="&lt;i&gt;MOB-1000&lt;/i&gt; · &lt;b&gt;Application Layer&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Experience &amp;amp; Intelligence · degradable offline&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=1.5;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB" vertex="1">
+                    <mxGeometry x="15" y="60" width="820" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="TM" value="&lt;i&gt;MOB-1001&lt;/i&gt; · &lt;b&gt;TrackMate™&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Primary CAL caller · invokes send(msg) and toggles session lifecycle&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Also surfaces CAL UI state labels to the user&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_APP" vertex="1">
+                    <mxGeometry x="20" y="50" width="380" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="APP_OTHER_NOTE" value="&lt;b&gt;Other Application modules (out of scope)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;First Aid · PCR Framework · Six Archetype Presets · Companion CMS — do not interact with CAL directly. Omitted for clarity.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;spacing=5;fontColor=#616161;" parent="MOB_APP" vertex="1">
+                    <mxGeometry x="420" y="50" width="380" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="CORE_BARRIER" value="IMMUTABLE SEPARATION BOUNDARY&#xa;Experience ⇎ Survival Core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c62828;strokeWidth=3;dashed=1;dashPattern=8 4;fontColor=#c62828;fontSize=11;fontStyle=1;horizontal=0;align=center;verticalAlign=middle;" parent="MOB" vertex="1">
+                    <mxGeometry x="845" y="20" width="30" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB_CORE" value="&lt;i&gt;MOB-2000&lt;/i&gt; · &lt;b&gt;Survival Core&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Safety pillar · 100% offline-first · deterministic&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=1.5;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB" vertex="1">
+                    <mxGeometry x="885" y="60" width="855" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="BT" value="&lt;i&gt;MOB-2002&lt;/i&gt; · &lt;b&gt;BackTrack™&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;background-color:#ffe082;color:#000;padding:1px 4px;font-size:8px;&quot;&gt;P2 ESCROW SCAFFOLD · Inactive in Phase 1.&lt;/span&gt;&lt;br/&gt;&lt;i&gt;Phase 2 only: BT emergency escrow schema will read CAL queue&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_CORE" vertex="1">
+                    <mxGeometry x="20" y="50" width="395" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="CORE_OTHER_NOTE" value="&lt;b&gt;Other Survival Core modules (out of scope)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;NAV · HazTrack · SOS · Bundle Manager · Event Log · Safe Anchor Points — operate independently of CAL in Phase 1 (Core isolation per ESF-5026). Omitted for clarity.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;spacing=5;fontColor=#616161;" parent="MOB_CORE" vertex="1">
+                    <mxGeometry x="435" y="50" width="405" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB_G2" value="&lt;i&gt;MOB-1100&lt;/i&gt; · &lt;b&gt;Comms &amp;amp; Transport&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB" vertex="1">
+                    <mxGeometry x="15" y="290" width="1725" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="CAL" value="&lt;i&gt;MOB-1101&lt;/i&gt; · &lt;b&gt;Comms Abstraction Layer&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;background-color:#ffe082;color:#000;padding:1px 4px;font-size:8px;&quot;&gt;satReady = FALSE · Inactive in Phase 1.&lt;/span&gt;&lt;br/&gt;&lt;i&gt;5 internal components · Owns transport priority + 4 mandatory flags + UI state publication&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB_G2" vertex="1">
+                    <mxGeometry x="15" y="40" width="1695" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="SFM" value="&lt;i&gt;MOB-1101.SFM&lt;/i&gt; · &lt;b&gt;State Flag Manager&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Owns 4 flags:&lt;/i&gt;&lt;br/&gt;• satReady (always F)&lt;br/&gt;• queueEnabled&lt;br/&gt;• offlineBeacon&lt;br/&gt;• partialSignal&lt;br/&gt;&lt;i&gt;Computes state transitions deterministically&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="CAL" vertex="1">
+                    <mxGeometry x="15" y="85" width="277" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="LMON" value="&lt;i&gt;MOB-1101.LMON&lt;/i&gt; · &lt;b&gt;Latency Monitor&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Tracks discovery + propagation latency from MTT&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Compares vs M6 threshold (provisional · vendor input pending)&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Reports to SFM · never flips flags directly&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="CAL" vertex="1">
+                    <mxGeometry x="370" y="85" width="277" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="TR" value="&lt;i&gt;MOB-1101.TR&lt;/i&gt; · &lt;b&gt;Transport Router&lt;/b&gt;&lt;br/&gt;&lt;i&gt;5-rule priority (M5 Locked-in):&lt;/i&gt;&lt;br/&gt;1. Sat (Phase 2 · inert)&lt;br/&gt;2. BLE Mesh&lt;br/&gt;3. Wi-Fi Direct&lt;br/&gt;4. LoRa&lt;br/&gt;5. Queue (fallback)&lt;br/&gt;&lt;i&gt;Read-only on SFM state · selects tier per packet&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="CAL" vertex="1">
+                    <mxGeometry x="720" y="85" width="277" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="QMGR" value="&lt;i&gt;MOB-1101.QMGR&lt;/i&gt; · &lt;b&gt;Queue Manager&lt;/b&gt;&lt;br/&gt;&lt;i&gt;WAL · AES-256 · crash-survivable&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Firebase-independent (M0f)&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Reads queueEnabled flag · writes/replays via comms_queue schema in MOB-3002 SQL&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="CAL" vertex="1">
+                    <mxGeometry x="1080" y="85" width="277" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="SPUB" value="&lt;i&gt;MOB-1101.SPUB&lt;/i&gt; · &lt;b&gt;UI Status Publisher&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Emits state label per UXS-5726 (≤2s repaint):&lt;/i&gt;&lt;br/&gt;• &quot;Beacon active&quot; (S3)&lt;br/&gt;• &quot;Limited Connectivity&quot; (S4)&lt;br/&gt;• &quot;Queue pending&quot; (S5)&lt;br/&gt;• &quot;Offline&quot; (S5 no peers)&lt;br/&gt;&lt;i&gt;Calm-language enforced — no &quot;Reconnecting…&quot;&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="CAL" vertex="1">
+                    <mxGeometry x="1390" y="85" width="277" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="MTT" value="&lt;i&gt;MOB-1102&lt;/i&gt; · &lt;b&gt;Multi-Tier Transport (MTT)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Implements ITransport adapter for each tier — BLE Mesh · Wi-Fi Direct · LoRa · Sat adapter slot (Phase 2 only · no implementing class in Phase 1) · Reports peer-discovery + latency to CAL&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;verticalAlign=middle;" parent="MOB_G2" vertex="1">
+                    <mxGeometry x="15" y="440" width="1695" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB_DATA" value="&lt;i&gt;MOB-3000&lt;/i&gt; · &lt;b&gt;Mobile Local Data&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=1.5;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB" vertex="1">
+                    <mxGeometry x="15" y="846" width="1725" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="SQL" value="&lt;i&gt;MOB-3002&lt;/i&gt; · &lt;b&gt;Slitigenz unified store (comms_queue partition)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Tech: SQLite + WAL · AES-256 at rest · Firebase-independent (M0f)&lt;/i&gt;&lt;br/&gt;&lt;i&gt;CAL.QMGR writes/replays queue records here. Schema also reserves BT Emergency Escrow (Phase 2 scaffold).&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#6a1b9a;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_DATA" vertex="1">
+                    <mxGeometry x="465" y="40" width="780" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="DATA_OTHER_NOTE" value="&lt;b&gt;Other local stores (out of scope)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Firestore Local Cache · Professional Incident Log (PRO_LOG) — not accessed by CAL. Omitted for clarity.&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;spacing=5;fontColor=#616161;" parent="MOB_DATA" vertex="1">
+                    <mxGeometry x="15" y="40" width="440" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="MOB_HW" value="&lt;i&gt;MOB-0000&lt;/i&gt; · &lt;b&gt;Device Hardware&lt;/b&gt; · &lt;i&gt;Built-in sensors + transport radios&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#757575;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" parent="MOB" vertex="1">
+                    <mxGeometry x="15" y="1032" width="1725" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="HW_GNSS" value="&lt;i&gt;MOB-0001&lt;/i&gt; · &lt;b&gt;HW_GNSS&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Built-in GPS · position fix&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_HW" vertex="1">
+                    <mxGeometry x="15" y="45" width="410" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="HW_BLE" value="&lt;i&gt;MOB-0002&lt;/i&gt; · &lt;b&gt;HW_BLE&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Bluetooth LE radio · mesh transport&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_HW" vertex="1">
+                    <mxGeometry x="440" y="45" width="410" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="HW_WIFI" value="&lt;i&gt;MOB-0003&lt;/i&gt; · &lt;b&gt;HW_WIFI&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Wi-Fi radio · Wi-Fi Direct peer transport&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" parent="MOB_HW" vertex="1">
+                    <mxGeometry x="865" y="45" width="410" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="HW_SAT" value="&lt;i&gt;MOB-0004&lt;/i&gt; · &lt;b&gt;Satellite Relay&lt;/b&gt;&amp;nbsp;&lt;span style=&quot;background-color:#ffe082;color:#000;padding:1px 4px;font-size:9px;&quot;&gt;PHASE 2&lt;/span&gt;&lt;br/&gt;&lt;b&gt;Inactive in Phase 1.&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Future: BackTrack Emergency Escrow&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#9e9e9e;strokeWidth=1;dashed=1;dashPattern=5 3;fontColor=#616161;fontSize=10;spacing=5;" parent="MOB_HW" vertex="1">
+                    <mxGeometry x="1290" y="45" width="420" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="CI_BANNER" value="&lt;b&gt;⚠ STATIC-ANALYSIS CI GATE (compliance-matrix §13)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;0 matches required for: &lt;b&gt;satReady=true&lt;/b&gt; literal · satellite SDK imports (iridium·inmarsat·globalstar·orbcomm) · CAL → Survival Core imports · direct transport calls outside ITransport · AI/ML imports. Enforces Placeholder Discipline #4 + RT-01 + RT-09 (scaffold reachability).&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c62828;strokeWidth=1.5;fontColor=#b71c1c;fontSize=10;spacing=5;align=left;spacingLeft=10;" parent="MOB" vertex="1">
+                    <mxGeometry x="15" y="1208" width="1725" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_tm_to_tr" value="&lt;b&gt;Sends outbound message&lt;/b&gt;&lt;br/&gt;&lt;i&gt;(API: send(msg))&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="TM" target="TR" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="530"/>
+                            <mxPoint x="830" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_tm_to_sfm" value="&lt;b&gt;Toggles session&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;lifecycle&lt;/b&gt;&lt;br&gt;&lt;i&gt;(queueEnabled := T on start)&lt;/i&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="TM" target="SFM" edge="1">
+                    <mxGeometry x="-0.2093" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-50" y="480"/>
+                            <mxPoint x="-50" y="788"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_spub_to_tm" value="&lt;b&gt;UI state label&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="SPUB" target="TM" edge="1">
+                    <mxGeometry x="-0.0974" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1592" y="550"/>
+                            <mxPoint x="245" y="550"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_gnss_to_tm" value="&lt;b&gt;Position fix&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="HW_GNSS" target="TM" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-140" y="1382"/>
+                            <mxPoint x="-140" y="438"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_sfm_to_tr" value="&lt;b&gt;Flag vector + state&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="SFM" target="TR" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="300" y="910"/>
+                            <mxPoint x="730" y="910"/>
+                            <mxPoint x="730" y="788"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_sfm_to_qmgr" value="&lt;b&gt;queueEnabled signal&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="SFM" target="QMGR" edge="1">
+                    <mxGeometry x="-0.1569" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="950"/>
+                            <mxPoint x="1160" y="950"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_sfm_to_spub" value="&lt;b&gt;State change event&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="SFM" target="SPUB" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="230" y="980"/>
+                            <mxPoint x="1592" y="980"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_lmon_to_sfm" value="&lt;b&gt;Latency&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;reading&lt;/b&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="LMON" target="SFM" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="270" y="750"/>
+                            <mxPoint x="270" y="750"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_tr_to_qmgr" value="&lt;b&gt;Enqueues&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;if no peer&lt;/b&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="TR" target="QMGR" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_tr_to_mtt" value="&lt;b&gt;Dispatches via selected tier&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="TR" target="MTT" edge="1">
+                    <mxGeometry x="0.2142" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="898" y="960"/>
+                            <mxPoint x="690" y="960"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_qmgr_to_sql" value="&lt;b&gt;Reads / Writes queue records&lt;/b&gt;&lt;br/&gt;&lt;i&gt;(M0f Firebase-independent)&lt;/i&gt;" style="endArrow=classic;startArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="QMGR" target="SQL" edge="1">
+                    <mxGeometry x="0.5" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1330" y="910"/>
+                            <mxPoint x="1800" y="910"/>
+                            <mxPoint x="1800" y="1203"/>
+                        </Array>
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_lmon" value="&lt;b&gt;Latency telemetry&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=2 3;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="LMON" edge="1">
+                    <mxGeometry x="0.2727" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="460" y="970"/>
+                            <mxPoint x="460" y="970"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_sfm" value="&lt;b&gt;Peer-discovered&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;· peer-lost events&lt;/b&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="SFM" edge="1">
+                    <mxGeometry x="-0.3187" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="120" y="940"/>
+                            <mxPoint x="120" y="940"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_ble" value="&lt;b&gt;Routes BLE Mesh frames&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="HW_BLE" edge="1">
+                    <mxGeometry x="-0.048" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-30" y="1050"/>
+                            <mxPoint x="-30" y="1290"/>
+                            <mxPoint x="680" y="1290"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_wifi" value="&lt;b&gt;Routes Wi-Fi&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;Direct frames&lt;/b&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="HW_WIFI" edge="1">
+                    <mxGeometry x="-0.0024" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1840" y="1060"/>
+                            <mxPoint x="1840" y="1450"/>
+                            <mxPoint x="1105" y="1450"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_lora" value="&lt;b&gt;Routes LoRa packets&lt;/b&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;strokeColor=#555555;strokeWidth=1.5;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="EXT_LORA" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1850" y="1037"/>
+                            <mxPoint x="1850" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_mtt_to_sat" value="&lt;i&gt;Phase 2 pathway&amp;nbsp;&lt;/i&gt;&lt;div&gt;&lt;i&gt;· Inactive in Phase 1.&lt;/i&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=5 3;strokeColor=#9e9e9e;strokeWidth=1.5;fontColor=#616161;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="MTT" target="HW_SAT" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1890" y="1019"/>
+                            <mxPoint x="1890" y="1382"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_bt_to_qmgr" value="&lt;i&gt;Phase 2 escrow scaffold&amp;nbsp;&lt;/i&gt;&lt;div&gt;&lt;i&gt;· Inactive in Phase 1.&lt;/i&gt;&lt;/div&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;dashed=1;dashPattern=5 3;strokeColor=#9e9e9e;strokeWidth=1.5;fontColor=#616161;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="BT" target="QMGR" edge="1">
+                    <mxGeometry x="-0.1053" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1300" y="590"/>
+                            <mxPoint x="1300" y="590"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="cal-state-machine" name="CAL · State Machine + Flag Transitions">
+        <mxGraphModel dx="4016" dy="2451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="TITLE" value="&lt;b&gt;CAL State Machine — 5 Reachable States + 4 Mandatory Flag Transitions&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Each state shows flag vector [satReady · queueEnabled · offlineBeacon · partialSignal]. Transitions labeled with trigger + flags that change. Behavioral view — companion to Page 1 Component Architecture.&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="-130" y="-20" width="1760" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="S0" value="&lt;b&gt;S0 · AppLaunch&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, F, F, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Pre-session · CAL initialized&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#455a64;strokeWidth=2;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="-50" y="180" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="S1" value="&lt;b&gt;S1 · Idle&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, F, F, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;TrackMate not running&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: hidden&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#455a64;strokeWidth=2;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="180" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="S2" value="&lt;b&gt;S2 · SessionActive&lt;/b&gt; &lt;i&gt;(transient)&lt;/i&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, ?, ?]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;queueEnabled just flipped ON&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Resolving... (≤2s)&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#f9a825;strokeWidth=2;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="180" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="S3" value="&lt;b&gt;S3 · BeaconingFull&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, T, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Peer + low latency&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Beacon active&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="380" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="S4" value="&lt;b&gt;S4 · BeaconingPartial&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, T, T]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Peer + high latency&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Limited Connectivity&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="1430" y="380" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="S5" value="&lt;b&gt;S5 · QueueOnly&lt;/b&gt;&lt;br/&gt;&lt;i&gt;flags = [F, T, F, F]&lt;/i&gt;&lt;br/&gt;&lt;i&gt;No peer reachable · queue holds&lt;/i&gt;&lt;br/&gt;&lt;b&gt;UI: &amp;quot;Queue pending&amp;quot; / &amp;quot;Offline&amp;quot;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8bbd0;strokeColor=#ad1457;strokeWidth=2.5;fontSize=11;spacing=8;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="540" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="START" value="●" style="ellipse;whiteSpace=wrap;html=1;fillColor=#263238;strokeColor=#263238;strokeWidth=2;fontColor=#ffffff;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="100" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_start_s0" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#263238;strokeWidth=2;" parent="1" source="START" target="S0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s0_s1" value="&lt;b&gt;process init complete&lt;/b&gt;&lt;br/&gt;&lt;i&gt;all flags stay F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#455a64;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S0" target="S1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s1_s2" value="&lt;b&gt;user starts TrackMate&lt;/b&gt;&lt;br/&gt;&lt;i&gt;queueEnabled: F → T&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#455a64;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S1" target="S2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s2_s3" value="&lt;b&gt;peer + latency &amp;lt; threshold&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: F → T&lt;/i&gt;&lt;br/&gt;&lt;i&gt;partialSignal: stays F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S2" target="S3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1130" y="260"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s2_s4" value="&lt;b&gt;peer + latency &amp;gt; threshold&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: F → T&lt;/i&gt;&lt;br/&gt;&lt;i&gt;partialSignal: F → T&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#e65100;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S2" target="S4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1500" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s2_s5" value="&lt;b&gt;no peer found in window&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: stays F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ad1457;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S2" target="S5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="810" y="560"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s3_s4" value="&lt;b&gt;latency degrades&lt;/b&gt;&lt;br/&gt;&lt;i&gt;partialSignal: F → T&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#e65100;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" parent="1" source="S3" target="S4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s4_s3" value="&lt;b&gt;latency recovers (debounced)&lt;/b&gt;&lt;br/&gt;&lt;i&gt;partialSignal: T → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;exitX=0;exitY=0.7;entryX=1;entryY=0.7;" parent="1" source="S4" target="S3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_s3_s5" value="&lt;b&gt;all peers lost&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: T → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ad1457;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S3" target="S5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="520" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s4_s5" value="&lt;b&gt;all peers lost&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: T → F&lt;/i&gt;&lt;br/&gt;&lt;i&gt;partialSignal: T → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#ad1457;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S4" target="S5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1540" y="680"/>
+                            <mxPoint x="490" y="680"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s5_s3" value="&lt;b&gt;new peer + low latency&lt;/b&gt;&lt;br/&gt;&lt;i&gt;offlineBeacon: F → T&lt;/i&gt;&lt;br/&gt;&lt;i&gt;queue flushes&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2e7d32;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" parent="1" source="S5" target="S3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1130" y="630"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s3_s1" value="&lt;b&gt;user stops session&lt;/b&gt;&lt;br/&gt;&lt;i&gt;queueEnabled: T → F&lt;br/&gt;offlineBeacon: T → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#607d8b;strokeWidth=1.5;dashed=1;dashPattern=8 4;fontSize=9;labelBackgroundColor=#ffffff;" parent="1" source="S3" target="S1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1190" y="130"/>
+                            <mxPoint x="450" y="130"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s4_s1" value="&lt;b&gt;user stops session&lt;/b&gt;&lt;br/&gt;&lt;i&gt;all 3 active flags → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#607d8b;strokeWidth=1.5;dashed=1;dashPattern=8 4;fontSize=9;labelBackgroundColor=#ffffff;" parent="1" source="S4" target="S1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1580" y="100"/>
+                            <mxPoint x="370" y="100"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_s5_s1" value="&lt;b&gt;user stops session&lt;/b&gt;&lt;br/&gt;&lt;i&gt;queueEnabled: T → F&lt;/i&gt;" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#607d8b;strokeWidth=1.5;dashed=1;dashPattern=8 4;fontSize=9;labelBackgroundColor=#ffffff;" parent="1" source="S5" target="S1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="450" y="410"/>
+                            <mxPoint x="450" y="410"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="INV_LEGEND" value="&lt;b&gt;State invariants (always true)&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;1. &lt;b&gt;satReady = F&lt;/b&gt; in EVERY Phase-1 reachable state · CI gate enforced&lt;br/&gt;2. &lt;b&gt;queueEnabled = T&lt;/b&gt; iff TrackMate session active&lt;br/&gt;3. &lt;b&gt;offlineBeacon = T&lt;/b&gt; iff CAL in S3 or S4 (peer present)&lt;br/&gt;4. &lt;b&gt;partialSignal = T&lt;/b&gt; iff CAL in S4 only&lt;br/&gt;5. Transitions are &lt;b&gt;deterministic&lt;/b&gt; · same trigger → same next state (no ML / probabilistic)&lt;br/&gt;6. UI labels follow &lt;b&gt;Visual Calm&lt;/b&gt; doctrine — no &amp;quot;Reconnecting&amp;quot; / &amp;quot;Recovery in progress&amp;quot; language" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=1.5;fontSize=10;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="780" width="460" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="FLAG_LEGEND" value="&lt;b&gt;Flag vector key&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;i&gt;[satReady · queueEnabled · offlineBeacon · partialSignal]&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&lt;b&gt;satReady&lt;/b&gt; — Phase-1 always F · Phase-2 only&lt;br/&gt;&lt;b&gt;queueEnabled&lt;/b&gt; — TrackMate session active&lt;br/&gt;&lt;b&gt;offlineBeacon&lt;/b&gt; — peer present + transmitting&lt;br/&gt;&lt;b&gt;partialSignal&lt;/b&gt; — latency above M6 threshold" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f57c00;strokeWidth=1.5;fontSize=10;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="780" width="290" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="EDGE_LEGEND" value="&lt;b&gt;Transition edge colors&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#2e7d32&quot;&gt;━━━&lt;/font&gt; Green — entering &#39;good&#39; state (S3 BeaconingFull)&lt;br/&gt;&lt;font color=&quot;#e65100&quot;&gt;━━━&lt;/font&gt; Orange — entering degraded state (S4 BeaconingPartial)&lt;br/&gt;&lt;font color=&quot;#ad1457&quot;&gt;━━━&lt;/font&gt; Magenta — entering offline state (S5 QueueOnly)&lt;br/&gt;&lt;font color=&quot;#607d8b&quot;&gt;┄┄┄&lt;/font&gt; Grey dashed — session-stop teardown (→ S1 Idle)&lt;br/&gt;&lt;font color=&quot;#455a64&quot;&gt;━━━&lt;/font&gt; Slate — neutral transition (init / session-start)&lt;br/&gt;&lt;br/&gt;&lt;i&gt;Note: state-machine edge palette is page-2-specific (semantic state coloring). Page 1 component edges follow the master architecture Legend.&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#455a64;strokeWidth=1.5;fontSize=10;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="780" width="320" height="210" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

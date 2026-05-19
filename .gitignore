@@ -1,0 +1,32 @@
+# Claude personal config (not shared)
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+# Drawio temp / backup
+*.bkp
+~$*
+
+# Build artefacts
+build/
+dist/
+
+# Local env
+.env
+.env.local

@@ -1,0 +1,220 @@
+<mxfile host="65bd71144e">
+    <diagram id="dfd-survival-core" name="DFD · Survival Core">
+        <mxGraphModel dx="2850" dy="1557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2100" pageHeight="2750" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="20" width="2100" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="50">
+                    <mxGeometry x="15" y="50" width="375" height="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;i&gt;EXT-9001a&lt;/i&gt; · &lt;b&gt;Basemap (Mapbox)&lt;/b&gt;" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="51">
+                    <mxGeometry x="15" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="51">
+                    <mxGeometry x="195" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="51">
+                    <mxGeometry x="15" y="130" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="51">
+                    <mxGeometry x="195" y="130" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="50">
+                    <mxGeometry x="405" y="50" width="195" height="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="56">
+                    <mxGeometry x="15" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=5 3;fontSize=10;fontColor=#bdbdbd;spacing=5;" vertex="1" parent="56">
+                    <mxGeometry x="15" y="130" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="377" y="370" width="750" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="59">
+                    <mxGeometry x="15" y="50" width="720" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="shape=process;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="60">
+                    <mxGeometry x="15" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="" style="shape=process;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="60">
+                    <mxGeometry x="191" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="" style="shape=process;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="60">
+                    <mxGeometry x="367" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="shape=process;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="60">
+                    <mxGeometry x="543" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="59">
+                    <mxGeometry x="15" y="210" width="720" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="65">
+                    <mxGeometry x="15" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="65">
+                    <mxGeometry x="191" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="65">
+                    <mxGeometry x="367" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="65">
+                    <mxGeometry x="543" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="59">
+                    <mxGeometry x="15" y="370" width="720" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;i&gt;CBE-7001&lt;/i&gt; · &lt;b&gt;Tile Server / CDN&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#5e35b2;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="70">
+                    <mxGeometry x="278" y="50" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="1339" y="386" width="585" height="485" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="72">
+                    <mxGeometry x="15" y="50" width="555" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="73">
+                    <mxGeometry x="15" y="35" width="255" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="73">
+                    <mxGeometry x="285" y="35" width="255" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="72">
+                    <mxGeometry x="15" y="195" width="555" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="76">
+                    <mxGeometry x="15" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="76">
+                    <mxGeometry x="195" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="76">
+                    <mxGeometry x="375" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="72">
+                    <mxGeometry x="15" y="340" width="555" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="80">
+                    <mxGeometry x="15" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="80">
+                    <mxGeometry x="195" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="80">
+                    <mxGeometry x="375" y="35" width="165" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="960" width="2100" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;i&gt;SYN-7001&lt;/i&gt; · &lt;b&gt;Firestore (cloud)&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#f9a825;strokeWidth=1.5;fontSize=10;spacing=5;" vertex="1" parent="84">
+                    <mxGeometry x="850" y="50" width="400" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="1225" width="2100" height="920" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="86">
+                    <mxGeometry x="15" y="50" width="720" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="15" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="191" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="367" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="543" y="50" width="161" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="" style="shape=line;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=8 4;html=1;fillColor=#f5f5f5;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="15" y="155" width="690" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;verticalAlign=top;fontSize=10;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="87">
+                    <mxGeometry x="15" y="180" width="690" height="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="93">
+                    <mxGeometry x="17" y="35" width="660" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="93">
+                    <mxGeometry x="18" y="130" width="660" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="IMMUTABLE SEPARATION BOUNDARY&#xa;Experience ⇎ Survival Core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#c62828;strokeWidth=3;dashed=1;dashPattern=8 4;fontColor=#c62828;fontSize=11;fontStyle=1;horizontal=0;align=center;verticalAlign=middle;" vertex="1" parent="86">
+                    <mxGeometry x="750" y="50" width="30" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="&lt;i&gt;MOB-2000&lt;/i&gt; · &lt;b&gt;Survival Core&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Safety pillar · 100% offline-first · deterministic&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=1.5;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;" vertex="1" parent="86">
+                    <mxGeometry x="795" y="50" width="1275" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="&lt;i&gt;MOB-2001&lt;/i&gt; · &lt;b&gt;Offline Navigation Engine&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="195" y="52" width="165" height="349" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;i&gt;MOB-2002&lt;/i&gt; · &lt;b&gt;BackTrack™&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="375" y="52" width="165" height="349" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;i&gt;MOB-2003&lt;/i&gt; · &lt;b&gt;HazTrack™&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="735" y="52" width="165" height="345" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="&lt;i&gt;MOB-2004&lt;/i&gt; · &lt;b&gt;SOS Emergency Logging&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="915" y="52" width="165" height="343" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;i&gt;MOB-2005&lt;/i&gt; · &lt;b&gt;Local Event Log&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="1095" y="52" width="165" height="343" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;i&gt;MOB-2006&lt;/i&gt; · &lt;b&gt;Safe Anchor Points&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="555" y="50" width="165" height="347" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;i&gt;MOB-2007&lt;/i&gt; · &lt;b&gt;Map Bundle Download Manager&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="97">
+                    <mxGeometry x="15" y="50" width="165" height="351" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="86">
+                    <mxGeometry x="15" y="540" width="2070" height="172" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="105">
+                    <mxGeometry x="15" y="50" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=10;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="105">
+                    <mxGeometry x="325" y="25" width="1400" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="&lt;i&gt;MOB-3002&lt;/i&gt; · &lt;b&gt;Survival Core Data + Comms Queue&lt;/b&gt;&lt;br/&gt;&lt;i&gt;[LOCAL-ONLY]&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#6a1b9a;strokeWidth=1.5;dashed=1;dashPattern=3 2;fontSize=10;spacing=5;" vertex="1" parent="107">
+                    <mxGeometry x="15" y="30" width="446" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=3 2;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="107">
+                    <mxGeometry x="476" y="30" width="446" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="&lt;i&gt;MOB-3005&lt;/i&gt; · &lt;b&gt;HazTrack Overlay Cache&lt;/b&gt;&lt;br/&gt;&lt;i&gt;[Firebase-cache-only · TTL]&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#6a1b9a;strokeWidth=1.5;dashed=1;dashPattern=3 2;fontSize=10;spacing=5;" vertex="1" parent="107">
+                    <mxGeometry x="937" y="30" width="446" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="&lt;i&gt;MOB-3004&lt;/i&gt; · &lt;b&gt;Map Tile Cache&lt;/b&gt;&lt;br/&gt;&lt;i&gt;[Mapbox SDK native]&lt;/i&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#ffffff;strokeColor=#1976d2;strokeWidth=1.5;fontSize=10;spacing=5;" vertex="1" parent="105">
+                    <mxGeometry x="1755" y="50" width="280" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=11;fontStyle=1;align=left;spacingLeft=6;spacingTop=3;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="86">
+                    <mxGeometry x="15" y="735" width="2070" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="&lt;i&gt;MOB-0001&lt;/i&gt; · &lt;b&gt;GNSS Sensor&lt;/b&gt;" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#555555;strokeWidth=1;fontSize=10;spacing=5;" vertex="1" parent="112">
+                    <mxGeometry x="15" y="35" width="498" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="112">
+                    <mxGeometry x="528" y="35" width="498" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="112">
+                    <mxGeometry x="1041" y="35" width="498" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="rounded=1;arcSize=80;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;dashed=1;dashPattern=5 3;fontSize=10;fontColor=#bdbdbd;spacing=5;" vertex="1" parent="112">
+                    <mxGeometry x="1554" y="35" width="498" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;verticalAlign=top;fontSize=12;fontStyle=1;align=left;spacingLeft=8;spacingTop=4;container=1;collapsible=0;recursiveResize=0;expand=0;fontColor=#bdbdbd;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="2214" width="2100" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontSize=10;spacing=5;fontColor=#bdbdbd;" vertex="1" parent="117">
+                    <mxGeometry x="950" y="50" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="DFD_LEGEND" value="&lt;b&gt;━━━ DFD OVERLAY LEGEND ━━━&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Template convention for all Tier-3 data-flow diagrams (diagrams/3-flows/data-flow/). Reuse this block in every DFD .drawio file.&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► CANVAS PRINCIPLE&lt;/b&gt;&lt;br/&gt;This DFD uses the &lt;b&gt;full master architecture as visual canvas&lt;/b&gt; — every layer, component, and zone is preserved 1:1 from trackaroo-phase1-architecture.drawio. Vendors can map DFD elements back to the architecture by sight (same IDs, same colors, same positions). &lt;b&gt;Do NOT modify architecture cells&lt;/b&gt; — only add overlays on top.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► SCOPE OF THIS FILE&lt;/b&gt;&lt;br/&gt;Survival Core (MOB-2000) · processes 1.0–7.0 mapped to MOB-2001 → MOB-2007. Out-of-scope components stay rendered as context but receive no DFD overlay.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► OVERLAYS ADDED ON TOP OF CANVAS&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Process number prefix&lt;/b&gt; — Yourdon-style numbering (1.0, 2.0…) prepended to in-scope component labels&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Data-flow edges&lt;/b&gt; — &lt;font color=&quot;#6a1b9a&quot;&gt;purple dotted&lt;/font&gt; (strokeColor=#6a1b9a, dashPattern=2 3) with &lt;b&gt;noun&lt;/b&gt; labels (payload name)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Prohibited paths&lt;/b&gt; — &lt;font color=&quot;#c62828&quot;&gt;red dashed&lt;/font&gt; (strokeColor=#c62828, dashPattern=5 5) labeled [X] PROHIBITED + named Rejection Trigger (RT-02, RT-05…)&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Control/operational edges&lt;/b&gt; — solid grey/black with &lt;b&gt;verb&lt;/b&gt; labels (action conjugated for source)&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► EDGE LABEL CONVENTIONS&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;TRIGGER:&lt;/b&gt; prefix on an edge label = event that initiates the destination process (user tap · GNSS fix arrival · sibling event emission · timer · OS event)&lt;br/&gt;&amp;nbsp;&amp;nbsp;Bold &amp;lt;b&amp;gt; = primary noun (payload) or verb (action) · Italic &amp;lt;i&amp;gt; = context · timing · constraint · classification&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► WHEN TO USE THIS TEMPLATE&lt;/b&gt;&lt;br/&gt;Each subsystem that needs data-flow visualisation gets its own DFD .drawio file in 3-flows/data-flow/. Steps for a new DFD: (1) copy the full architecture canvas, (2) copy this legend block, (3) update SCOPE OF THIS FILE line, (4) add process-number prefixes to in-scope components, (5) overlay data-flow / prohibited edges. Existing or planned files: &lt;b&gt;dfd-survival-core.drawio&lt;/b&gt; (this file) · &lt;b&gt;dfd-trackiq-pipeline.drawio&lt;/b&gt; (planned) · &lt;b&gt;dfd-ocs-pipeline.drawio&lt;/b&gt; (planned).&lt;br/&gt;&lt;br/&gt;&lt;b&gt;► CROSS-REFS&lt;/b&gt; Master architecture: ../../1-overview/trackaroo-phase1-architecture.drawio  ·  This DFD&#39;s narrative + tables: ./dfd-survival-core.md  ·  Visual style guide: ../../../CLAUDE.md" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#616161;strokeWidth=1.5;dashed=1;dashPattern=5 3;verticalAlign=top;fontSize=11;align=left;spacingLeft=14;spacingTop=10;spacingRight=14;spacingBottom=10;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="2400" width="2100" height="340" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
