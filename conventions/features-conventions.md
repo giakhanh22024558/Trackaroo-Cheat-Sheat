@@ -35,24 +35,23 @@ id_formats:
 > **Single source:** all planning + backlog now lives in **`docs/planning.md`** (Part A = plan, Part B = registers). The former `backlog.md` and `sprint-0-foundation.md` were merged into it.
 
 - **Feature backlog — `docs/planning.md` §B3 (EPIC-/FEAT-):** end-user / operator **business capabilities** (navigation, SOS, BackTrack, HazTrack, First Aid, TrackIQ, PCR, TrackMate, POI, OCS modules, app experience).
-- **Sprint 0 register — `docs/planning.md` §B2 (FND-):** cross-cutting concerns that serve **every** module — overall architecture, infra/CI-CD, foundational data model, auth, code standards, design system, UX guidelines, RBAC/permission matrix, business-rule/compliance baselines, Phase 2 inert scaffolds. Built first as the foundation (Sprint 0 / run-up to Discovery gate).
+- **Sprint 0 register — `docs/planning.md` §B2:** cross-cutting foundation that serves **every** module — overall architecture, infra/CI-CD, foundational data model, auth, code standards, design system, UX guidelines, RBAC/permission matrix, business-rule/compliance baselines, Phase 2 inert scaffolds, public site. Built first as the foundation (Sprint 0 / run-up to Discovery gate).
 
 ### Foundation hierarchy naming (PROJECT RULE)
 
-Sprint 0 reuses the feature 3-level decomposition, **renamed for the foundation phase** (it has no end-user stories):
+Sprint 0 separates **the work (tasks)** from **how it is assured (criteria)** (it has no end-user stories):
 
-| Feature backlog | Foundation (Sprint 0) | ID |
+| Layer | Sprint 0 | ID |
 |---|---|---|
-| Epic | **Topic** | `TOPIC-NN` (priority/build order) |
-| Feature | **Concern** | "Concern N" (the 10 technical concerns) |
-| User Story | **Task** | `FND-{n:03d}` |
-| Acceptance Criteria | **ACs** | per-Task done-criteria (DoD), language `en`, confirmed at Discovery gate |
+| The task list — everything Sprint 0 does (not all are hand-overs) | **Task** | `S0-NN` (analysis · documents · site · Figma · codebase) |
+| Analysis grouping (theme) | **Topic** | `TOPIC-NN` |
+| Analysis area | **Concern** | "Concern N" (the 10 technical concerns) |
+| Done-criteria per concern | **Acceptance Criteria** | `AC-C{concern}-{nn}`, language `en`, confirmed at Discovery gate |
 
-- **5 Topics** group the **10 Concerns**; each Concern holds **Tasks**; each Task carries **ACs**.
-- Tasks are numbered in build order (`FND-001…044`); incremental additions append at the tail.
-- **Task + Reference** live in `docs/planning.md` §B2; **ACs live in a separate file** `docs/sprint-0-acs.md` (keyed by Task ID, AC ID format `AC-FND-{task}-{nn}`) — same split rationale as the feature AC sheet being separate from the backlog.
-- **Sprint 0 task ID:** `FND-{n:03d}`, numbered in build order, grouped by the 9 technical concerns.
-- **Link model:** a feature builds on `FND-xxx` outputs and asserts foundation standards (5-Q hierarchy, prohibited mutations, WCAG, RT/RG, thresholds) as **Acceptance Criteria** — the standard itself is never a feature.
+- **Tasks (`S0-`)** — 9 items (see §B2.1): business analysis · build backlog · 4 documents · site · Figma · codebase/CI. A **Customer hand-over?** flag marks which are client deliverables (Discovery artefacts) vs internal foundation work. The former per-task `FND-` IDs are retired.
+- **Topic → Concern → Acceptance Criteria** (§B2.2) is the assurance layer; each criterion notes which **Task (`S0-`)** it validates + which Discovery artefact (D#) it evidences.
+- **Single source:** tasks, criteria and ACs all live inline in `docs/planning.md` §B2 (the separate `sprint-0-acs.md` was retired — no double maintenance).
+- **Link model:** a business feature builds on the Sprint 0 tasks' outputs and asserts foundation standards (5-Q hierarchy, prohibited mutations, WCAG, RT/RG, thresholds) as **Acceptance Criteria** — the standard itself is never a feature.
 
 ## Priority levels
 

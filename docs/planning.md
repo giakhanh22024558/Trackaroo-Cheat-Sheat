@@ -9,7 +9,7 @@
 **Document map:**
 - **Part A — Delivery Plan:** [A1 Master Timeline](#a1-master-delivery-timeline) · [A2 Sprint-by-sprint execution](#a2-sprint-by-sprint-execution) · [A3 Coverage check](#a3-coverage-check)
 - **Part B — Registers (the backlog):** [B1 Scope rule](#b1-scope-rule) · [B2 Sprint 0 Foundation register](#b2-sprint-0-foundation-register) · [B3 Consolidated feature backlog](#b3-consolidated-feature-backlog-9-column-canonical) · [B4 Gate & Priority](#b4-delivery-gate--priority) · [B5 Discovery deliverables](#b5-discovery-gate-deliverable-register) · [B6 Traceability](#b6-feature--governing-spec-traceability) · [B7 Reserved for AC](#b7-cross-cutting-standards-reserved-for-ac)
-- **Companion files:** [`docs/sprint-0-acs.md`](./sprint-0-acs.md) — Sprint 0 foundation Task ACs (DoD)
+- *(Sprint 0 deliverables, criteria & ACs are all inline in §B2 — single source.)*
 
 ---
 ---
@@ -58,7 +58,7 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 
 | Sprint | Dates (2026) | Delivery goal | Feature work? | Client gate |
 |---|---|---|---|---|
-| **Sprint 0** | 29 May – 10 Jun (+5d buffer→15 Jun) | Foundation platform + **9 Compliance Artefacts (D1–D9)** + companion website | Foundation (FND) | **★ Discovery — 15 Jun** |
+| **Sprint 0** | 29 May – 10 Jun (+5d buffer→15 Jun) | Foundation platform + **9 Compliance Artefacts (D1–D9)** + companion website | Sprint 0 tasks (S0-) | **★ Discovery — 15 Jun** |
 | **Sprint 1** | 16 – 27 Jun | SOS & Emergency Logging (safety-critical lead) | ✅ 5 feat | → Alpha |
 | **Sprint 2** | 30 Jun – 11 Jul | BackTrack™ + Navigation core | ✅ 6 feat | → Alpha |
 | **Sprint 3** | 14 – 25 Jul | Navigation complete + HazTrack™ start + onboarding | ✅ 6 feat | → Alpha |
@@ -106,6 +106,8 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 
 ## A2. Sprint-by-sprint execution
 
+> 🎨 **Colour convention:** in every per-sprint Gantt, each `section` = one **Epic** (Sprint 0 = one **Topic**), so **all tasks of the same Epic/Topic share the same bar colour** within that chart. Non-feature activities (Legal, QA, Buffer, Release, Gate) keep their own sections. *(Mermaid cycles ~4 section colours per chart, so colours group within a chart; they are not guaranteed identical across different sprint charts.)*
+
 ### Sprint 0 — Foundation (29 May – 15 Jun) → Discovery Gate
 
 **Goal:** Stand up the shared platform once and produce the **9 committed Architectural Compliance Artefacts + companion website**. No business features. Full task list: [B2](#b2-sprint-0-foundation-register). Committed artefacts: [B5](#b5-discovery-gate-deliverable-register).
@@ -116,25 +118,25 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 gantt
     title Sprint 0 — Foundation (29 May – 10 Jun work) → Discovery 15 Jun
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Architecture
-    C1 Architecture + D1/D2/D3 (FND-001-003,040-042) :2026-05-29, 2026-06-06
-    section Platform (parallel)
-    C2 Infra & CI/CD (FND-004-009)        :2026-05-29, 2026-06-08
-    C3 Data Model + D5 (FND-010-014)      :2026-05-29, 2026-06-08
-    C4 CAL + D6 (FND-015-017)             :2026-06-01, 2026-06-09
-    C5 Auth & RBAC (FND-018-020)          :2026-06-01, 2026-06-09
-    C6 Map & Overlay + D7 (FND-021-024,043) :2026-05-29, 2026-06-10
-    section Standards (parallel)
-    C7 Design System & UX (FND-025-029)   :2026-06-01, 2026-06-10
-    C8 Business Rules (FND-030-036)       :2026-06-01, 2026-06-10
-    C9 Phase 2 Scaffolds (FND-037-039)    :2026-06-05, 2026-06-09
-    C10 Companion Website (FND-044)       :2026-05-29, 2026-06-09
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section Analysis
+    S0-01 Business analysis            :2026-05-29, 2026-06-02
+    S0-02 Build backlog & plan         :2026-06-01, 2026-06-05
+    section Documents
+    S0-03 SAD (D1-D7)                  :2026-06-01, 2026-06-10
+    S0-04 Compliance & Audit (D8/D9)   :2026-06-03, 2026-06-10
+    S0-05 Design System & UX Guide     :2026-06-03, 2026-06-10
+    S0-06 Eng & DevOps Handbook        :2026-06-02, 2026-06-09
+    section Build & Site
+    S0-07 Companion Website            :2026-05-29, 2026-06-09
+    S0-08 Design System (Figma)        :2026-05-29, 2026-06-06
+    S0-09 Foundation Codebase & CI     :2026-05-29, 2026-06-10
     section Gate buffer
-    D8/D9 SDK & OSS audit                 :2026-06-08, 2026-06-10
-    Foundation freeze                     :milestone, active, 2026-06-10, 0d
-    Artefact acceptance buffer (~5d)      :active, 2026-06-11, 2026-06-15
-    Discovery acceptance (D1-D9 + site)   :milestone, crit, 2026-06-15, 0d
+    Foundation freeze                  :milestone, active, 2026-06-10, 0d
+    Artefact acceptance buffer (~5d)   :active, 2026-06-11, 2026-06-15
+    Discovery acceptance (D1-D9 + site) :milestone, crit, 2026-06-15, 0d
 ```
 
 ### Sprint 1 — SOS & Emergency Logging (16 – 27 Jun) → Alpha
@@ -152,8 +154,10 @@ gantt
 gantt
     title Sprint 1 — SOS (16 – 27 Jun)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 1 Survival Core
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-002 SOS
     FEAT-006 SOS activation         :2026-06-16, 2026-06-19
     FEAT-007 3-stage log sequence   :2026-06-18, 2026-06-23
     FEAT-008 Confirmation screen    :2026-06-22, 2026-06-25
@@ -177,13 +181,15 @@ gantt
 gantt
     title Sprint 2 — BackTrack + Navigation core (30 Jun – 11 Jul)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 1 BackTrack
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-003 BackTrack™
     FEAT-011 Breadcrumb logging     :2026-06-30, 2026-07-03
     FEAT-012 Immutable write        :2026-07-02, 2026-07-07
     FEAT-013 Reverse retrace        :2026-07-06, 2026-07-10
     FEAT-014 Distress-mode capture  :2026-07-08, 2026-07-11
-    section Track 3 Navigation
+    section EPIC-001 Navigation
     FEAT-001 Region download        :2026-06-30, 2026-07-04
     FEAT-002 Location/orientation   :2026-07-06, 2026-07-11
 ```
@@ -202,15 +208,17 @@ gantt
 gantt
     title Sprint 3 — Navigation + HazTrack start + onboarding (14 – 25 Jul)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 3 Navigation
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-001 Navigation
     FEAT-003 Route planning         :2026-07-14, 2026-07-18
     FEAT-004 Map controls           :2026-07-17, 2026-07-21
     FEAT-005 Nav instrument overlays :2026-07-21, 2026-07-25
-    section Track 5 Feed
+    section EPIC-004 HazTrack™
     FEAT-017 Feed ingestion/filter  :2026-07-14, 2026-07-21
     FEAT-018 Hazard overlay render  :2026-07-21, 2026-07-25
-    section Track 4 App
+    section EPIC-006 App Experience
     FEAT-025 First-use onboarding   :2026-07-14, 2026-07-19
 ```
 
@@ -230,16 +238,18 @@ gantt
 gantt
     title Sprint 4 — HazTrack + First Aid + OCS Stage 1 (28 Jul – 8 Aug) · Alpha feature freeze
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 5 HazTrack
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-004 HazTrack™
     FEAT-019 Freshness/TTL          :2026-07-28, 2026-07-31
     FEAT-020 Source attribution     :2026-07-30, 2026-08-02
     FEAT-021 Cache management       :2026-08-02, 2026-08-05
-    section Track 4 First Aid
+    section EPIC-005 First Aid
     FEAT-022 Content rendering      :2026-07-28, 2026-08-02
     FEAT-023 Mandatory disclaimer   :2026-08-02, 2026-08-04
     FEAT-024 Offline access         :2026-08-04, 2026-08-06
-    section Track 8 OCS
+    section EPIC-007 Operations Console
     FEAT-027 HazTrack feed admin    :2026-07-28, 2026-08-02
     FEAT-028 Break-glass module     :2026-08-02, 2026-08-06
     section Track 7 Legal
@@ -262,7 +272,9 @@ gantt
 gantt
     title Sprint 5 — STABILISATION buffer (11 – 22 Aug) → Alpha
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
     section Track 6 QA
     Survival Core regression        :2026-08-11, 2026-08-18
     Prohibited-capability scan      :2026-08-14, 2026-08-19
@@ -289,13 +301,14 @@ gantt
 gantt
     title Sprint 6 — TrackIQ (25 Aug – 5 Sep)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 4 Experience
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-008 TrackIQ™
     FEAT-033 Difficulty grade       :2026-08-25, 2026-08-28
     FEAT-034 Verification shield     :2026-08-27, 2026-09-01
     FEAT-035 Deterministic scoring   :2026-08-31, 2026-09-03
     FEAT-037 Metadata display        :2026-09-01, 2026-09-04
-    section Track 5 Intelligence
     FEAT-036 Stop-detection prompt   :2026-08-25, 2026-08-29
     FEAT-038 Non-mutation guard      :2026-09-03, 2026-09-05
 ```
@@ -314,8 +327,10 @@ gantt
 gantt
     title Sprint 7 — PCR (8 – 19 Sep)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 4 PCR
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-009 PCR
     FEAT-039 Map markers            :2026-09-08, 2026-09-11
     FEAT-040 Detail card            :2026-09-10, 2026-09-12
     FEAT-041 Submission + queue     :2026-09-12, 2026-09-17
@@ -338,14 +353,16 @@ gantt
 gantt
     title Sprint 8 — TrackMate + history (22 Sep – 3 Oct)
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 2 TrackMate
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-010 TrackMate™
     FEAT-046 Transport stack        :2026-09-22, 2026-09-29
     FEAT-045 Presence & messaging   :2026-09-22, 2026-09-26
     FEAT-049 Offline queue/sync     :2026-09-28, 2026-10-02
     FEAT-047 LoRa onboarding        :2026-09-29, 2026-10-03
     FEAT-048 Group Health Envelope  :2026-10-01, 2026-10-03
-    section Track 1 App
+    section EPIC-003 BackTrack™
     FEAT-015 Multi-session history  :2026-09-22, 2026-09-26
 ```
 
@@ -367,17 +384,20 @@ All remaining features land here (incl. the 3 Low-tier, pulled from S11) so the 
 gantt
     title Sprint 9 — OCS full + extras + Low (6 – 17 Oct) · Beta feature freeze
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
-    section Track 8 OCS
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
+    section EPIC-007 Operations Console
     FEAT-029 PCR moderation         :2026-10-06, 2026-10-09
     FEAT-030 User support           :2026-10-09, 2026-10-13
     FEAT-031 Audit log & compliance :2026-10-13, 2026-10-16
     FEAT-032 OCS analytics/config   :2026-10-14, 2026-10-17
-    section Track 4 POI
+    section EPIC-011 Points of Interest
     FEAT-050 POI display            :2026-10-06, 2026-10-09
     FEAT-051 POI metadata           :2026-10-09, 2026-10-11
-    section Track 1 App
+    section EPIC-006 App Experience
     FEAT-026 Local event-log viewer :2026-10-06, 2026-10-10
+    section EPIC-003 BackTrack™
     FEAT-016 Breadcrumb export      :2026-10-10, 2026-10-14
     section Freeze
     Beta feature freeze             :milestone, active, 2026-10-17, 0d
@@ -397,7 +417,9 @@ gantt
 gantt
     title Sprint 10 — STABILISATION buffer (20 – 30 Oct) → Beta-Ready
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
     section Track 6 QA
     11 TQP validation domains       :2026-10-20, 2026-10-28
     WCAG 2.1 AA audit (RT-11)       :2026-10-20, 2026-10-27
@@ -421,7 +443,9 @@ gantt
 gantt
     title Sprint 11 — RELEASE buffer (31 Oct – 13 Nov) → GA
     dateFormat YYYY-MM-DD
-    axisFormat %d %b
+    axisFormat %a %d/%m
+    tickInterval 1day
+    excludes weekends
     section Release
     Full regression on frozen RC    :2026-10-31, 2026-11-06
     App Store / Play submission     :2026-11-04, 2026-11-10
@@ -436,7 +460,8 @@ gantt
 
 | Bucket | Count | Where (build sprints — buffer sprints excluded) |
 |---|---|---|
-| Foundation tasks (FND-001→044) | 44 | Sprint 0 (work by 10 Jun) |
+| Sprint 0 tasks (S0-01→09) | 9 | Sprint 0 (work by 10 Jun) |
+| Foundation acceptance criteria (AC-C1→C10) | 45 | Sprint 0 — see [B2.2](#b2-sprint-0-foundation-register) |
 | High features | 25 | Sprints 1–4 *(S5 = buffer)* |
 | Medium features | 23 | Sprints 6–9 *(S10 = buffer)* |
 | Low features | 3 | Sprint 9 *(pulled forward; S11 = release buffer)* |
@@ -444,7 +469,7 @@ gantt
 
 **Per-sprint feature load:** S1=5 · S2=6 · S3=6 · S4=8 · S5=buffer · S6=6 · S7=6 · S8=6 · S9=8 · S10=buffer · S11=release. (= 51)
 
-Every FND task and every FEAT is scheduled exactly once; all feature work lands **before each gate's freeze date**, leaving the stabilisation/release buffers (S5, S10, S11). Registers below (Part B) hold the full detail.
+Every Sprint 0 task and every FEAT is scheduled exactly once; all feature work lands **before each gate's freeze date**, leaving the stabilisation/release buffers (S5, S10, S11). Registers below (Part B) hold the full detail.
 
 ---
 ---
@@ -453,148 +478,160 @@ Every FND task and every FEAT is scheduled exactly once; all feature work lands 
 
 ## B1. Scope rule
 
-Epics/Features are **business-functional only**. Cross-cutting foundations are **Sprint 0 tasks (FND-)**. Standards/criteria are **Acceptance Criteria**, never features.
+Epics/Features are **business-functional only**. Cross-cutting foundations are **Sprint 0 tasks (S0-)** with their acceptance criteria. Standards/criteria are **Acceptance Criteria**, never features.
 
 | Bucket | Goes to | Source doc groups (per `research/spec-docs/READING-GUIDE.md`) |
 |---|---|---|
 | **Business-functional capability** | Feature (`FEAT-`) in [B3](#b3-consolidated-feature-backlog-9-column-canonical) | NHÓM 2/3/4/6 — AOD · FSD · CDG · MAS · ESF · SFD · BTF · HFG · OSM · WFD · VGD · OCS |
-| **Cross-cutting foundation** (architecture · infra/CI-CD · data model · auth · design system · UX guidelines · RBAC · business rules · scaffolds) | Foundation task (`FND-`) in [B2](#b2-sprint-0-foundation-register) | NHÓM 2/6 + the standards from 1/5 that become baselines |
+| **Cross-cutting foundation** (architecture · infra/CI-CD · data model · auth · design system · UX guidelines · RBAC · business rules · scaffolds) | Task (`S0-`) + criteria (`AC-Cn-`) in [B2](#b2-sprint-0-foundation-register) | NHÓM 2/6 + the standards from 1/5 that become baselines |
 | **Standard / threshold / rule** (colour hex · TTL · battery % · RT/RG · WCAG · 5-Q hierarchy · tier gating) | Acceptance Criterion — see [B7](#b7-cross-cutting-standards-reserved-for-ac) | NHÓM 1 (UXS · TAA · PSB · FQH) + NHÓM 5 (PRD · TQP · BPS) |
 
-> ⭐ **ID = priority order.** Lower ID = higher delivery priority. Epic IDs 3-digit. FND tasks numbered in build order. Rule in `conventions/features-conventions.md`.
+> ⭐ **ID = priority order.** Lower ID = higher delivery priority. Epic IDs 3-digit. Sprint 0 tasks `S0-NN` numbered in build order. Rule in `conventions/features-conventions.md`.
 
 ---
 
 ## B2. Sprint 0 Foundation Register
 
-*Hierarchy: Topic → Concern → Task → ACs.* Sprint 0 uses the same 3-level decomposition as the feature backlog, **renamed for the foundation phase**:
+Two layers:
+- **B2.1 Tasks** — everything Sprint 0 does (analysis + documents + site + design + codebase). **Not all are customer hand-overs** — some are internal.
+- **B2.2 Topic → Concern → Acceptance Criteria** — the analysis/assurance layer that guarantees each task's output meets requirements. (ACs live here inline — single source, `sprint-0-acs.md` retired.)
 
-| Feature backlog | Foundation (Sprint 0) | Meaning |
-|---|---|---|
-| Epic | **Topic** | A theme grouping related concerns |
-| Feature | **Concern** | A technical concern (the 10 areas) |
-| User Story | **Task** (`FND-`) | A buildable unit of foundation work |
-| Acceptance Criteria | **ACs** | Done-criteria (DoD) per Task — verifiable, English |
+### B2.1 Sprint 0 Tasks
 
-**5 Topics group the 10 concerns:**
+Everything Sprint 0 does. **Customer hand-over?** flags whether the output is handed to the client (a Discovery deliverable) or is internal foundation work. 🎯 = carries a committed Discovery artefact (D1–D9 / website).
 
-| Topic | Concerns | Theme |
-|---|---|---|
-| **TOPIC-01 — Architecture & Delivery Platform** | C1 Architecture · C2 Infra/CI-CD | How the system is structured + built/shipped |
-| **TOPIC-02 — Data, Connectivity & Identity Core** | C3 Data Model · C4 CAL · C5 Auth/RBAC | The platform substrate: storage · connectivity · identity |
-| **TOPIC-03 — Experience Foundation** | C6 Map/Overlay · C7 Design System/UX | Rendering + UX substrate every screen builds on |
-| **TOPIC-04 — Compliance & Phase Governance** | C8 Business Rules · C9 Phase 2 Scaffolds | Guardrails · registers · phase-boundary discipline |
-| **TOPIC-05 — Public Presence** | C10 Companion Website | Public-facing Discovery deliverable |
+| ID | Task | Type | Customer hand-over? | Covers (Topic / Concern) | Discovery artefact |
+|---|---|---|---|---|---|
+| **S0-01** | Business analysis — ingest the 19 spec docs → requirements understanding | 🔍 Analysis | No (internal) | all | — |
+| **S0-02** | Build product backlog & delivery plan (Epic→Feature · gate priority · sprint plan) | 🔍 Analysis | Shared (planning) | all | — |
+| **S0-03** 🎯 | Solution Architecture Document (SAD) | 📄 Document | Yes | TOPIC-01 · TOPIC-02 (C1·C3·C4·C5) + PCR arch | D1·D2·D3·D4·D5·D6·D7 |
+| **S0-04** 🎯 | Compliance & Audit Report | 📄 Document | Yes | TOPIC-04 (C8·C9) + audit (C2) | D8·D9 |
+| **S0-05** | Design System & UX Guidelines | 📄 Document | Yes | TOPIC-03 (C6·C7) | — |
+| **S0-06** | Engineering & DevOps Handbook | 📄 Document | No (internal) | TOPIC-01 (C2) — repo · CI/CD · coding standards · release | — |
+| **S0-07** 🎯 | Companion Website | 🌐 Site | Yes | TOPIC-05 (C10) | website |
+| **S0-08** | Design System (Figma library) | 🎨 Design asset | Shared | TOPIC-03 (C7) — components/tokens | — |
+| **S0-09** | Foundation Codebase & CI Pipelines | ⚙️ Code/config | No (internal) | all concerns (implementations: store · isolation · CAL · auth · overlay engine · scaffolds · scanners) | — |
 
-44 tasks total · 🎯 = committed Discovery Gate deliverable ([B5](#b5-discovery-gate-deliverable-register)).
-**Build-order:** TOPIC-01 → TOPIC-02 → TOPIC-03 → TOPIC-04 (∥) → TOPIC-05 (∥). All run concurrently across the 8 tracks from day 1 to hit the 10 Jun foundation freeze.
+**9 tasks** = 2 analysis + 4 documents + site + Figma + codebase/CI. Only the 🎯 (+ shared) outputs are client hand-overs; the rest are internal foundation work. Schedule in the [Sprint 0 Gantt](#a2-sprint-by-sprint-execution).
 
-> 📖 **Reference** = spec(s) to read first. Doc IDs → `research/spec-docs/<DOC-ID>.md`; `Slitigenz §x` → the proposal extract; `diagrams/…` → project diagrams.
-> ✅ **ACs (Definition-of-Done) per Task live in [`docs/sprint-0-acs.md`](./sprint-0-acs.md)** — keyed by Task ID (`AC-FND-xxx-nn`), confirmed at the Discovery gate.
+### B2.2 Topic → Concern → Acceptance Criteria
+
+The analysis framework: **5 Topics** group **10 Concerns**; each Concern carries the **Acceptance Criteria (DoD)** the tasks' outputs must satisfy. Each criterion notes which **Task (S0-)** it validates and which **Discovery artefact (D#)** it evidences.
+
+| Topic | Concerns |
+|---|---|
+| **TOPIC-01 — Architecture & Delivery Platform** | C1 Architecture · C2 Infra/CI-CD |
+| **TOPIC-02 — Data, Connectivity & Identity Core** | C3 Data Model · C4 CAL · C5 Auth/RBAC |
+| **TOPIC-03 — Experience Foundation** | C6 Map/Overlay · C7 Design System/UX |
+| **TOPIC-04 — Compliance & Phase Governance** | C8 Business Rules · C9 Phase 2 Scaffolds |
+| **TOPIC-05 — Public Presence** | C10 Companion Website |
+
+> 📖 Refs in each Concern heading = spec(s) to read first (`research/spec-docs/<DOC-ID>.md` · `Slitigenz §x` · `diagrams/…`). Criteria language: English. All confirmed at the **Discovery gate**.
 
 ---
 
 ### TOPIC-01 — Architecture & Delivery Platform
 
-#### Concern 1 — Architecture & Technical Design  *(refs: AOD-5026 · FSD-5126)*
-| Task | Reference |
-|---|---|
-| **FND-001 — Dual-layer architecture baseline** (Core ⇎ Experience · immutable separation) | AOD-5026 · UXS-5726 §dual-layer · `diagrams/1-overview/` |
-| **FND-002 — Component / module boundaries & interfaces** (MOB-1xxx/2xxx · CBE · OCS · SYN) | AOD-5026 (component inventory) · `diagrams/2-subsystems/` |
-| **FND-003 — ADR baseline + tech-stack lock** (Flutter/Dart · Mapbox+OSM · Firebase non-core) | FSD-5126 §3 · AOD-5026 §6 · `research/tech-stack-inventory.md` |
-| **FND-040 🎯 — High-Level Architecture Diagram** artefact — **D1** | Slitigenz §2.7.1 · AOD-5026 · `diagrams/1-overview/trackaroo-phase1-architecture.md` |
-| **FND-041 🎯 — Deterministic State Transition Matrix** (Idle/Navigating/SOS/BackTrack™) — **D2** | Slitigenz §2.7.2 · FSD-5126 §4 · `diagrams/3-flows/state/state-trackaroo-transitions.md` |
-| **FND-042 🎯 — Offline-First Execution whitepaper** — **D3** | Slitigenz §2.7.3 · UXS-5726 (offline-first) · AOD-5026 |
+#### Concern 1 — Architecture & Technical Design  *(refs: AOD-5026 · FSD-5126 · UXS-5726 · validates: S0-03, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C1-01 | Dual-layer separation enforced — Experience→Core dependency is one-way & read-only; a dependency-lint rule fails any Core mutation from Experience | S0-03·S0-09 · D1/D4 |
+| AC-C1-02 | High-Level Architecture Diagram annotates Core isolation boundaries, aligns with AOD-5026, PD-accepted | S0-03 · D1 |
+| AC-C1-03 | Deterministic State Transition Matrix enumerates all Core states/transitions, zero probabilistic branch, PD-accepted | S0-03 · D2 |
+| AC-C1-04 | Offline-First whitepaper proves 100% Core function with no network (airplane-mode walkthrough per Core path), PD-accepted | S0-03 · D3 |
+| AC-C1-05 | Component boundaries defined with interface contracts + published dependency graph; no Core↔Experience cycles | S0-03 · D4 |
+| AC-C1-06 | ADRs recorded per stack decision; versions pinned; deviations require a new ADR | S0-03·S0-06 |
 
-#### Concern 2 — Infrastructure & CI/CD  *(refs: VGD-5126 · CDG-5126 · BTF-5126 · TQP-5026)*
-| Task | Reference |
-|---|---|
-| **FND-004 — Repo, branch strategy & Flutter build pipeline** (iOS 15+ / Android 13+) | VGD-5126 · FSD-5126 §3 |
-| **FND-005 — Compliance static-analysis CI** (14 mutations + field-name scan) | CDG-5126 §4.3 · BTF-5126 §5.2 · ESF-5026 §8 · TQP-5026 §7 |
-| **FND-006 — Prohibited-capability & phase-boundary scan** | PRD-5126 §14.4 (RT-01/03/09) · PSB-5026 · TQP-5026 §7 |
-| **FND-007 — Release-gate evidence packaging pipeline** (Discovery/Alpha/Beta/GA) | VGD-5126 · TQP-5026 · Slitigenz §10.2 |
-| **FND-008 🎯 — SDK & OSS license audit tooling** (V-12 / V-13) — **D8/D9** | VGD-5126 · Slitigenz §2.7.8–2.7.9 |
-| **FND-009 — WFD-5126 build-gate adherence tracking** | WFD-5126 §9 · VGD-5126 |
+#### Concern 2 — Infrastructure & CI/CD  *(refs: VGD-5126 · CDG-5126 · BTF-5126 · TQP-5026 · validates: S0-06, S0-09, S0-04)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C2-01 | CI builds iOS 15+ & Android 13+ on every push to main; signed artefacts; pipeline green | S0-06·S0-09 |
+| AC-C2-02 | Static-analysis CI scans for all 14 prohibited mutations + prohibited satellite field names; build fails on any match | S0-06·S0-09 |
+| AC-C2-03 | Prohibited-capability & phase-boundary scan detects AI/ML/satellite SDKs (active/dormant) + Phase-2 triggers; build fails on detection | S0-06·S0-09 |
+| AC-C2-04 | Per-gate evidence bundle produced (Discovery/Alpha/Beta/GA) with scan + test results | S0-06 |
+| AC-C2-05 | SDK inventory warrants no prohibited capability; OSS licences App Store/Play compatible; declaration signed | S0-04 · D8/D9 |
+| AC-C2-06 | WFD build-gate tracker blocks subsystem dev without approved wireframe; PD approval recorded per subsystem | S0-06 |
 
 ---
 
 ### TOPIC-02 — Data, Connectivity & Identity Core
 
-#### Concern 3 — Foundational Data Model & Persistence  *(refs: CDG-5126 · AOD-5026 · BTF-5126)*
-| Task | Reference |
-|---|---|
-| **FND-010 — Local-only Survival Core store** (SQLite + WAL · Firebase-independent) | CDG-5126 (Local-Only) · BTF-5126 (WAL) · AOD-5026 |
-| **FND-011 — Firebase / Firestore isolation barrier** | CDG-5126 (isolation) · AOD-5026 |
-| **FND-012 🎯 — Data classification + enforcement** (Local-Only / Non-Syncable) — **D5** | CDG-5126 §3–4 · Slitigenz §2.7.5 |
-| **FND-013 — Firestore offline persistence** (non-Core: PCR cache · group · profile) | CDG-5126 (sync cache) · FSD-5126 |
-| **FND-014 — Encryption baseline** (AES-256 at rest · TLS 1.3 in transit) | CDG-5126 · AOD-5026 |
+#### Concern 3 — Foundational Data Model & Persistence  *(refs: CDG-5126 · AOD-5026 · BTF-5126 · validates: S0-03, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C3-01 | Local-only Core store (SQLite+WAL) operates fully offline, no Firebase dependency in any Core write path, crash-survivable via WAL replay | S0-03·S0-09 |
+| AC-C3-02 | Firebase/Firestore isolation barrier proven by dependency scan; Core writes verified local-only | S0-03·S0-09 · D4 |
+| AC-C3-03 | Every data type classified Local-Only or Syncable; breadcrumb confirmed Local-Only & Non-Syncable in writing; rule blocks misclassified sync | S0-03 · D5 |
+| AC-C3-04 | Non-Core data (PCR cache · group · profile) uses Firestore offline persistence; Core data excluded from sync | S0-03·S0-09 |
+| AC-C3-05 | AES-256 at rest; TLS 1.3 in transit; key management per policy | S0-03·S0-09 |
 
-#### Concern 4 — Connectivity Abstraction Layer (CAL)  *(refs: FSD-5126 §6.1 · AOD-5026)*
-| Task | Reference |
-|---|---|
-| **FND-015 🎯 — CAL state-flag schema** (satReady/queueEnabled/offlineBeacon/partialSignal) — **D6** | FSD-5126 §6.1 · Slitigenz §2.7.6 · `diagrams/` CAL pages |
-| **FND-016 — Connectivity detection & degraded-state abstraction** | FSD-5126 §6.1 · AOD-5026 |
-| **FND-017 — Connectivity status indicator components** (cross-app) | WFD-5126 §6 · FSD-5126 §6.1 |
+#### Concern 4 — Connectivity Abstraction Layer (CAL)  *(refs: FSD-5126 §6.1 · AOD-5026 · validates: S0-03, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C4-01 | CAL exposes 4 state flags (satReady/queueEnabled/offlineBeacon/partialSignal); `satReady` locked false & not activatable; schema documented | S0-03 · D6 |
+| AC-C4-02 | Degraded states detected deterministically; no automatic recovery/escalation; calm status surfaced | S0-03·S0-09 |
+| AC-C4-03 | Reusable connectivity-status component consumed app-wide; reflects CAL flags; no alarmist styling | S0-09 |
 
-#### Concern 5 — Authentication & RBAC  *(refs: OCS-5026 · AOD-5026)*
-| Task | Reference |
-|---|---|
-| **FND-018 — App identity / profile** (Firebase Auth — non-Core only) | AOD-5026 · CDG-5126 §7 |
-| **FND-019 — OCS authentication** | OCS-5026 · CLR-SLZ-005 (Slitigenz §11) |
-| **FND-020 — OCS 3-role RBAC + permission matrix** (Founder/Admin/Operator) | OCS-5026 §3 |
+#### Concern 5 — Authentication & RBAC  *(refs: OCS-5026 · AOD-5026 · validates: S0-03, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C5-01 | Firebase Auth scoped to non-Core profile only; Core paths require no auth; identity isolated from Core data | S0-03·S0-09 |
+| AC-C5-02 | OCS login via Firebase Auth with secure session management (TLS 1.3) | S0-09 |
+| AC-C5-03 | OCS 3-role RBAC (Founder/Admin/Operator) enforced server-side; permission matrix documented; unauthorized action blocked + audited | S0-03·S0-09 |
 
 ---
 
 ### TOPIC-03 — Experience Foundation
 
-#### Concern 6 — Map & Overlay Rendering Foundation  *(refs: MAS-5126 · OSM-5026)*
-| Task | Reference |
-|---|---|
-| **FND-021 — Mapbox SDK + OSM vector-tile pipeline** | MAS-5126 · `research/mapbox-sdk-overview.md` · CLR-SLZ-004 (Slitigenz §11) |
-| **FND-022 — Offline tile-bundle infrastructure** | MAS-5126 · WFD-5126 · BPS-5126 (cold-start) |
-| **FND-023 — Map-provider abstraction** (provider-agnostic) | MAS-5126 · TAA-5126 §4.4 |
-| **FND-024 — Overlay rendering framework** (z-index · LIR-01→06 · 8-state · toggle) | OSM-5026 §5A / §11 / §13 · MAS-5126 |
-| **FND-043 🎯 — PCR Architecture Documentation** (supersession, not TTL) — **D7** | OSM-5026 §10 · Slitigenz §2.7.7 |
+#### Concern 6 — Map & Overlay Rendering Foundation  *(refs: MAS-5126 · OSM-5026 · validates: S0-05, S0-09; PCR doc → S0-03)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C6-01 | Mapbox SDK renders OSM vector tiles offline from bundle; no Mapbox-cloud runtime dependency | S0-05·S0-09 |
+| AC-C6-02 | Region bundles render offline; cold-start within BPS targets (≤500MB / >500MB) | S0-09 |
+| AC-C6-03 | Map provider behind a swappable interface; no provider-specific hard-coding in app logic | S0-05·S0-09 |
+| AC-C6-04 | Overlay framework enforces z-index hierarchy (basemap→PCR), LIR-01→06 layer independence, only the 8 valid overlay states; toggles work | S0-05·S0-09 |
+| AC-C6-05 | PCR architecture documented — supersession-based resolution (no TTL), isolated from TTL hazard/env layers; PD-accepted | S0-03 · D7 |
 
-#### Concern 7 — Design System, App Shell & UX Guidelines  *(refs: WFD-5126 · UXS-5726 · FQH-5026)*
-| Task | Reference |
-|---|---|
-| **FND-025 — Design system / component library** (Figma + WFD baseline) | WFD-5126 · UXS-5726 |
-| **FND-026 — Application shell & navigation chrome** (≤2-tap SOS · ≤3-tap BackTrack) | UXS-5726 §7 / §9 · WFD-5126 · SFD-5026 |
-| **FND-027 — Inactive-module placeholder pattern** ("Inactive in Phase 1") | WFD-5126 §5.13 · PSB-5026 |
-| **FND-028 — Accessibility baseline** (WCAG 2.1 AA · glove/one-handed/low-light) | UXS-5726 · WFD-5126 · PRD-5126 RT-11 |
-| **FND-029 — Five-Question Cognitive Hierarchy harness** | FQH-5026 · UXS-5726 §3 · PRD-5126 §10 |
+#### Concern 7 — Design System, App Shell & UX Guidelines  *(refs: WFD-5126 · UXS-5726 · FQH-5026 · validates: S0-05, S0-08)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C7-01 | Component library published (Figma + code) with design tokens; reused by feature screens | S0-05·S0-08 |
+| AC-C7-02 | App shell makes SOS reachable ≤2 taps from every screen state, BackTrack ≤3 taps; chrome consistent | S0-05 |
+| AC-C7-03 | Inactive-module placeholders render exactly "Inactive in Phase 1" with no executable logic | S0-05·S0-09 |
+| AC-C7-04 | WCAG 2.1 AA on shared components; touch targets ≥44pt (≥60pt Core); glove/low-light/one-handed verified | S0-05·S0-08 |
+| AC-C7-05 | Five-Question Cognitive Hierarchy harness checks all 5 questions answerable across 6 archetypes (offline/gloved/low-light); failures reported | S0-05 |
 
 ---
 
 ### TOPIC-04 — Compliance & Phase Governance
 
-#### Concern 8 — Business Rules & Compliance Baseline  *(refs: UXS · ESF · CDG · BTF · OSM · PSB · PRD)*
-| Task | Reference |
-|---|---|
-| **FND-030 — Deterministic execution rule-set** (non-adaptive · non-inferential) | UXS-5726 (Core invariants) · FSD-5126 |
-| **FND-031 — 14 prohibited breadcrumb-mutation register + guard** | BTF-5126 §5.2 · CDG-5126 §4.3 · Slitigenz §2.1.1 / §7.3 |
-| **FND-032 — Prohibited satellite field-name register** | ESF-5026 §8 · FSD-5126 §4.4.4 |
-| **FND-033 — Zero-transmission / non-dispatch posture enforcement** | ESF-5026 §4.2 · UXS-5726 §7.4 · SFD-5026 |
-| **FND-034 — 22 Rejection Triggers register** (RT-01→22) as gate checks | PRD-5126 §14.4 · VGD-5126 |
-| **FND-035 — 11 Rollback Governance triggers register** (RG-01→11) | OSM-5026 §12 |
-| **FND-036 — Phase-boundary discipline + 3 permitted-scaffold whitelist** | PSB-5026 §4 |
+#### Concern 8 — Business Rules & Compliance Baseline  *(refs: UXS · ESF · CDG · BTF · OSM · PSB · PRD · validates: S0-04, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C8-01 | Core execution documented & built as non-adaptive / non-inferential; no ML/inference in Core | S0-04·S0-09 |
+| AC-C8-02 | 14 prohibited-mutation register + runtime/CI guard reject them (test proves rejection) | S0-04·S0-09 |
+| AC-C8-03 | Prohibited satellite field-name register; CI scans data models; build fails on presence | S0-04·S0-09 |
+| AC-C8-04 | Zero outbound packets from Core paths (app process), verified by airplane-mode capture; non-dispatch posture confirmed | S0-04·S0-09 |
+| AC-C8-05 | 22 Rejection Triggers (RT-01→22) + 11 Rollback Governance (RG-01→11) encoded as gate checks; gate fails on any hit | S0-04 |
+| AC-C8-06 | Phase-boundary discipline + exactly 3 permitted scaffolds whitelisted; any other scaffold flagged RT-09 | S0-04 |
 
-#### Concern 9 — Phase 2 Inert Scaffolds  *(refs: PSB-5026 §4 · BTF · FSD · CDG)*
-| Task | Reference |
-|---|---|
-| **FND-037 — BackTrack™ Emergency Escrow data schema** (inert · schema-only) | PSB-5026 §4 · BTF-5126 · Slitigenz §2.6 |
-| **FND-038 — CAL `satReady` flag** (declared false · not activatable) | PSB-5026 §4 · FSD-5126 §6.1 |
-| **FND-039 — CAL satellite transport pathway** (architectural · non-executable) | PSB-5026 §4 · FSD-5126 · ESF-5026 §8 |
+#### Concern 9 — Phase 2 Inert Scaffolds  *(refs: PSB-5026 §4 · BTF · FSD · CDG · validates: S0-04, S0-09)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C9-01 | BackTrack™ Emergency Escrow schema present, versioned, inert; no executable logic; surfaces "Inactive in Phase 1" | S0-04·S0-09 |
+| AC-C9-02 | CAL `satReady` flag declared false, not activatable, absent from app data models (CAL schema only) | S0-04·S0-09 |
+| AC-C9-03 | CAL satellite pathway interface documented, non-executable, no transmission code; extensible for Phase 2 | S0-04·S0-09 |
 
 ---
 
 ### TOPIC-05 — Public Presence
 
-#### Concern 10 — Companion Website  *(refs: OCS-5026 · proposal §10.2)*
-| Task | Reference |
-|---|---|
-| **FND-044 🎯 — Companion website live** (public CMS) — Discovery deliverable | Slitigenz §10.2 · OCS-5026 |
+#### Concern 10 — Companion Website  *(refs: OCS-5026 · Slitigenz §10.2 · validates: S0-07)*
+| AC ID | Acceptance Criterion (DoD) | Validates · D# |
+|---|---|---|
+| AC-C10-01 | Public site live on CMS | S0-07 · website |
+| AC-C10-02 | Required Discovery content + legal pages present | S0-07 |
+| AC-C10-03 | PD-accepted at Discovery | S0-07 |
 
 ---
 
@@ -685,7 +722,7 @@ Priority by earliest delivery gate (lower ID = higher priority). Companion mappi
 
 | Priority | Gate | Date | Epics | Sprints |
 |---|---|---|---|---|
-| **(Foundation)** | Discovery | 15 Jun | — (FND tasks, [B2](#b2-sprint-0-foundation-register)) | Sprint 0 |
+| **(Foundation)** | Discovery | 15 Jun | — (Sprint 0 tasks S0-, [B2](#b2-sprint-0-foundation-register)) | Sprint 0 |
 | **High** | Alpha | 22 Aug | EPIC-001 → EPIC-007 | Sprints 1–5 |
 | **Medium** | Beta-Ready | 30 Oct | EPIC-008 → EPIC-011 | Sprints 6–10 |
 | **Low** | GA | 13 Nov | (deferrable features, see below) | Sprint 11 |
@@ -704,18 +741,18 @@ Full locked timeline: **Contract Execution 29 May → Discovery 15 Jun → Alpha
 
 The headline Sprint 0 output. Slitigenz committed **9 Architectural Compliance Artefacts + companion website** for acceptance at Discovery (15 Jun 2026). All must be accepted for the gate to pass. Source: `research/spec-docs/Slitigenz-Proposal-RFT5026.md` §2.7 / §10.2.
 
-| Deliverable | Committed artefact | Produced by (FND) | Existing project asset |
+| Artefact | Committed deliverable | In (task) · evidenced by criterion | Existing project asset |
 |---|---|---|---|
-| **D1** | High-Level Architecture Diagram (Core isolation boundaries) | FND-040 ← FND-001 / FND-002 | `diagrams/1-overview/` |
-| **D2** | Deterministic State Transition Matrix | FND-041 ← FND-030 | `diagrams/3-flows/state/state-trackaroo-transitions.md` |
-| **D3** | Offline-First Execution Explanation (whitepaper) | FND-042 ← FND-001 / FND-010 | — (to author) |
-| **D4** | Module Isolation Mapping (dependency graph) | FND-002 + FND-011 | `diagrams/4-cross-cutting/` |
-| **D5** | Breadcrumb Classification Confirmation (Local-Only / Non-Syncable) | FND-012 | CDG-5126 extract |
-| **D6** | CAL Architecture Documentation (4 state flags) | FND-015 (+016/017) | `diagrams/` CAL pages |
-| **D7** | PCR Architecture Documentation (supersession, not TTL) | FND-043 | OSM-5026 §10 extract |
-| **D8** | SDK Audit Declaration (no prohibited capabilities) | FND-006 + FND-008 | — (CI output) |
-| **D9** | OSS Licence Audit | FND-008 | — (CI output) |
-| **+** | Companion website live | FND-044 | — |
+| **D1** | High-Level Architecture Diagram (Core isolation boundaries) | S0-03 · AC-C1-02 | `diagrams/1-overview/` |
+| **D2** | Deterministic State Transition Matrix | S0-03 · AC-C1-03 | `diagrams/3-flows/state/state-trackaroo-transitions.md` |
+| **D3** | Offline-First Execution Explanation (whitepaper) | S0-03 · AC-C1-04 | — (to author) |
+| **D4** | Module Isolation Mapping (dependency graph) | S0-03 · AC-C1-05 / AC-C3-02 | `diagrams/4-cross-cutting/` |
+| **D5** | Breadcrumb Classification Confirmation (Local-Only / Non-Syncable) | S0-03 · AC-C3-03 | CDG-5126 extract |
+| **D6** | CAL Architecture Documentation (4 state flags) | S0-03 · AC-C4-01 | `diagrams/` CAL pages |
+| **D7** | PCR Architecture Documentation (supersession, not TTL) | S0-03 · AC-C6-05 | OSM-5026 §10 extract |
+| **D8** | SDK Audit Declaration (no prohibited capabilities) | S0-04 · AC-C2-05 | — (CI output) |
+| **D9** | OSS Licence Audit | S0-04 · AC-C2-05 | — (CI output) |
+| **+** | Companion website live | S0-07 · AC-C10-01 | — |
 
 **Gate exit:** D1–D9 accepted by Project Director + companion website live. Validation per CLR-SLZ-001 (lab GPS-spoofing + Faraday simulating the Australian envelope).
 
@@ -745,17 +782,17 @@ By code, not by column. Standards from NHÓM 1/5 are cited later as ACs ([B7](#b
 
 Standards are not features. Established as baselines/registers in Sprint 0 ([B2](#b2-sprint-0-foundation-register)), then asserted as **Acceptance Criteria** on the relevant feature during the Story pass.
 
-| Reserved standard | Sprint 0 baseline | Applied as AC to |
+| Reserved standard | Sprint 0 baseline (criterion) | Applied as AC to |
 |---|---|---|
-| Five-Question Cognitive Hierarchy | FND-029 | FEAT-001 / 002 / 003 / 006 / 013 |
-| ≤2-tap SOS · ≤3-tap/≤3s BackTrack | FND-026 | FEAT-006 · FEAT-013 |
+| Five-Question Cognitive Hierarchy | AC-C7-05 | FEAT-001 / 002 / 003 / 006 / 013 |
+| ≤2-tap SOS · ≤3-tap/≤3s BackTrack | AC-C7-02 | FEAT-006 · FEAT-013 |
 | Difficulty colour hex · shield day-thresholds | (OSM values) | FEAT-033 · FEAT-034 |
 | Hazard TTL values by source type | (OSM/HFG values) | FEAT-019 |
-| 14 prohibited breadcrumb mutations · prohibited field names | FND-031 · FND-032 | FEAT-012 |
-| Zero-transmission / non-dispatch posture | FND-033 | FEAT-008 · all Survival Core paths |
-| 22 Rejection Triggers · 11 Rollback Governance | FND-034 · FND-035 | cross-cutting on all features |
+| 14 prohibited breadcrumb mutations · prohibited field names | AC-C8-02 · AC-C8-03 | FEAT-012 |
+| Zero-transmission / non-dispatch posture | AC-C8-04 | FEAT-008 · all Survival Core paths |
+| 22 Rejection Triggers · 11 Rollback Governance | AC-C8-05 | cross-cutting on all features |
 | Battery / performance thresholds | (BPS values) | FEAT-001 / 011 / 006 |
-| WCAG 2.1 AA · glove / one-handed / low-light | FND-028 | all UI features |
+| WCAG 2.1 AA · glove / one-handed / low-light | AC-C7-04 | all UI features |
 | Subscription tier gating (Free/Plus/Pro) | — | deferred (Phase 1 prohibits entitlement hooks) |
 | Archetype / activity-context personalization | — | AC framing on UI features |
 
