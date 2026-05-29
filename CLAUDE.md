@@ -1,5 +1,9 @@
 # Trackaroo Phase 1 — Project Conventions
 
+> 🌐 **Deliverable language: ENGLISH.** All project artifacts — backlog, requirements, user stories, acceptance criteria, SRS, diagram labels, spec extracts, and analysis tables — are written in **English**. Domain/trademark terms stay as-is (SOS, BackTrack™, TrackMate™, TrackIQ™, HazTrack™, PCR, CAL). Conversational replies to the user may remain bilingual, but **every file/deliverable content is English**. (AC language already pinned to `en` in `conventions/features-conventions.md`.)
+
+> 📦 **MasterMind skill library available at `MasterMind/`** — see [`MASTERMIND-INTEGRATION.md`](./MASTERMIND-INTEGRATION.md) for folder mapping (`input/` · `context/` · `output/` · `docs/` · `conventions/`) and when to invoke which BA skill. The 19 spec extracts in `research/spec-docs/` serve as the canonical context layer for Trackaroo content.
+
 ## ⚠️ Working interaction rules (READ FIRST)
 
 **Do NOT auto-apply changes when the user asks for analysis, check, audit, or review.**

@@ -30,3 +30,12 @@ dist/
 # Local env
 .env
 .env.local
+
+# MasterMind skill library (clone separately — not tracked in this repo)
+# Update via: cd MasterMind && git pull
+MasterMind/
+
+# MasterMind working folders (per-session data, not skill content)
+input/
+context/
+output/
