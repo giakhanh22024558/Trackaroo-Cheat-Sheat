@@ -87,20 +87,7 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 
 > ⚠️ **Discovery is the one constrained gate** — contract executes 29 May, gate is 15 Jun (17-day window), so a full 15-day buffer is impossible. We target foundation-complete by **10 Jun** with a **5-day acceptance buffer**. Mitigation: run all 10 foundation concerns **in parallel from day 1** (8 tracks), front-load D8/D9 audits.
 
-**How we absorb the compression — parallel tracks (8 experts / 8 workstreams, proposal §10.3):** the pulled-forward features run concurrently rather than sequentially. Recommended concurrency per sprint:
-
-| Sprint | Parallel tracks running concurrently |
-|---|---|
-| S1 | Track 1 (SOS) · Track 7 (RT-16 legal kickoff) |
-| S2 | Track 1 (BackTrack) ∥ Track 3 (Navigation) ∥ Track 8 (OCS scaffold) |
-| S3 | Track 3 (Nav finish) ∥ Track 5 (HazTrack ingestion) ∥ Track 4 (onboarding) |
-| S4 | Track 5 (HazTrack finish) ∥ Track 4 (First Aid) ∥ Track 8 (OCS Stage 1) |
-| S6 | Track 4 (TrackIQ display) ∥ Track 5 (TrackIQ scoring/intelligence) |
-| S7 | Track 4 (PCR) ∥ Track 3 (PCR markers on map) |
-| S8 | Track 2 (TrackMate transport+messaging) ∥ Track 1 (history) |
-| S9 | Track 8 (OCS full) ∥ Track 4 (POI) ∥ Track 1 (event-log + export) |
-
-> **Capacity check:** peak load is S4 and S9 (8 features each). With 8 senior experts across 8 tracks (≈1 feature/track/sprint) this is within capacity. Hard dependencies still serialise within a track (e.g. OCS HazTrack admin **after** HazTrack feed pipeline; OCS PCR moderation **after** PCR build).
+**Parallelisation:** pulled-forward work runs concurrently across the 8 tracks (see the `section` lanes in each sprint Gantt). Peak load S4 & S9 (8 features) fits 8 experts; hard dependencies still serialise within a track.
 
 ---
 
@@ -492,31 +479,27 @@ Epics/Features are **business-functional only**. Cross-cutting foundations are *
 
 ## B2. Sprint 0 Foundation Register
 
-Two layers:
-- **B2.1 Tasks** — everything Sprint 0 does (analysis + documents + site + design + codebase). **Not all are customer hand-overs** — some are internal.
-- **B2.2 Topic → Concern → Acceptance Criteria** — the analysis/assurance layer that guarantees each task's output meets requirements. (ACs live here inline — single source, `sprint-0-acs.md` retired.)
+- **B2.1 Tasks** — what to do · **B2.2 Topic → Concern → Acceptance Criteria** — the quality requirements. Time → [Sprint 0 Gantt](#a2-sprint-by-sprint-execution).
 
-### B2.1 Sprint 0 Tasks
+### B2.1 Tasks
 
-Everything Sprint 0 does. **Customer hand-over?** flags whether the output is handed to the client (a Discovery deliverable) or is internal foundation work. 🎯 = carries a committed Discovery artefact (D1–D9 / website).
+🎯 = committed Discovery artefact (gate checklist in [B5](#b5-discovery-gate-deliverable-register)).
 
-| ID | Task | Type | Customer hand-over? | Covers (Topic / Concern) | Discovery artefact |
-|---|---|---|---|---|---|
-| **S0-01** | Business analysis — ingest the 19 spec docs → requirements understanding | 🔍 Analysis | No (internal) | all | — |
-| **S0-02** | Build product backlog & delivery plan (Epic→Feature · gate priority · sprint plan) | 🔍 Analysis | Shared (planning) | all | — |
-| **S0-03** 🎯 | Solution Architecture Document (SAD) | 📄 Document | Yes | TOPIC-01 · TOPIC-02 (C1·C3·C4·C5) + PCR arch | D1·D2·D3·D4·D5·D6·D7 |
-| **S0-04** 🎯 | Compliance & Audit Report | 📄 Document | Yes | TOPIC-04 (C8·C9) + audit (C2) | D8·D9 |
-| **S0-05** | Design System & UX Guidelines | 📄 Document | Yes | TOPIC-03 (C6·C7) | — |
-| **S0-06** | Engineering & DevOps Handbook | 📄 Document | No (internal) | TOPIC-01 (C2) — repo · CI/CD · coding standards · release | — |
-| **S0-07** 🎯 | Companion Website | 🌐 Site | Yes | TOPIC-05 (C10) | website |
-| **S0-08** | Design System (Figma library) | 🎨 Design asset | Shared | TOPIC-03 (C7) — components/tokens | — |
-| **S0-09** | Foundation Codebase & CI Pipelines | ⚙️ Code/config | No (internal) | all concerns (implementations: store · isolation · CAL · auth · overlay engine · scaffolds · scanners) | — |
-
-**9 tasks** = 2 analysis + 4 documents + site + Figma + codebase/CI. Only the 🎯 (+ shared) outputs are client hand-overs; the rest are internal foundation work. Schedule in the [Sprint 0 Gantt](#a2-sprint-by-sprint-execution).
+| ID | Task | Reference docs |
+|---|---|---|
+| **S0-01** | Business analysis (19 spec docs → requirements) | `research/spec-docs/` |
+| **S0-02** | Build product backlog & delivery plan | (this file) |
+| **S0-03** 🎯 | Solution Architecture Document (SAD) | AOD-5026 · FSD-5126 · OSM-5026 §10 |
+| **S0-04** 🎯 | Compliance & Audit Report | VGD-5126 · ESF/CDG/BTF/OSM · PRD-5126 §14.4 |
+| **S0-05** | Design System & UX Guidelines | WFD-5126 · UXS-5726 · FQH-5026 |
+| **S0-06** | Engineering & DevOps Handbook | VGD-5126 · TQP-5026 |
+| **S0-07** 🎯 | Companion Website | OCS-5026 · Slitigenz §10.2 |
+| **S0-08** | Design System (Figma library) | WFD-5126 |
+| **S0-09** | Foundation Codebase & CI Pipelines | CDG-5126 · MAS-5126 · FSD-5126 |
 
 ### B2.2 Topic → Concern → Acceptance Criteria
 
-The analysis framework: **5 Topics** group **10 Concerns**; each Concern carries the **Acceptance Criteria (DoD)** the tasks' outputs must satisfy. Each criterion notes which **Task (S0-)** it validates and which **Discovery artefact (D#)** it evidences.
+Quality requirements per concern. Refs to read are in each Concern heading.
 
 | Topic | Concerns |
 |---|---|
@@ -533,105 +516,105 @@ The analysis framework: **5 Topics** group **10 Concerns**; each Concern carries
 ### TOPIC-01 — Architecture & Delivery Platform
 
 #### Concern 1 — Architecture & Technical Design  *(refs: AOD-5026 · FSD-5126 · UXS-5726 · validates: S0-03, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C1-01 | Dual-layer separation enforced — Experience→Core dependency is one-way & read-only; a dependency-lint rule fails any Core mutation from Experience | S0-03·S0-09 · D1/D4 |
-| AC-C1-02 | High-Level Architecture Diagram annotates Core isolation boundaries, aligns with AOD-5026, PD-accepted | S0-03 · D1 |
-| AC-C1-03 | Deterministic State Transition Matrix enumerates all Core states/transitions, zero probabilistic branch, PD-accepted | S0-03 · D2 |
-| AC-C1-04 | Offline-First whitepaper proves 100% Core function with no network (airplane-mode walkthrough per Core path), PD-accepted | S0-03 · D3 |
-| AC-C1-05 | Component boundaries defined with interface contracts + published dependency graph; no Core↔Experience cycles | S0-03 · D4 |
-| AC-C1-06 | ADRs recorded per stack decision; versions pinned; deviations require a new ADR | S0-03·S0-06 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C1-01 | Dual-layer separation enforced — Experience→Core dependency is one-way & read-only; a dependency-lint rule fails any Core mutation from Experience |
+| AC-C1-02 | High-Level Architecture Diagram annotates Core isolation boundaries, aligns with AOD-5026, PD-accepted |
+| AC-C1-03 | Deterministic State Transition Matrix enumerates all Core states/transitions, zero probabilistic branch, PD-accepted |
+| AC-C1-04 | Offline-First whitepaper proves 100% Core function with no network (airplane-mode walkthrough per Core path), PD-accepted |
+| AC-C1-05 | Component boundaries defined with interface contracts + published dependency graph; no Core↔Experience cycles |
+| AC-C1-06 | ADRs recorded per stack decision; versions pinned; deviations require a new ADR |
 
 #### Concern 2 — Infrastructure & CI/CD  *(refs: VGD-5126 · CDG-5126 · BTF-5126 · TQP-5026 · validates: S0-06, S0-09, S0-04)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C2-01 | CI builds iOS 15+ & Android 13+ on every push to main; signed artefacts; pipeline green | S0-06·S0-09 |
-| AC-C2-02 | Static-analysis CI scans for all 14 prohibited mutations + prohibited satellite field names; build fails on any match | S0-06·S0-09 |
-| AC-C2-03 | Prohibited-capability & phase-boundary scan detects AI/ML/satellite SDKs (active/dormant) + Phase-2 triggers; build fails on detection | S0-06·S0-09 |
-| AC-C2-04 | Per-gate evidence bundle produced (Discovery/Alpha/Beta/GA) with scan + test results | S0-06 |
-| AC-C2-05 | SDK inventory warrants no prohibited capability; OSS licences App Store/Play compatible; declaration signed | S0-04 · D8/D9 |
-| AC-C2-06 | WFD build-gate tracker blocks subsystem dev without approved wireframe; PD approval recorded per subsystem | S0-06 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C2-01 | CI builds iOS 15+ & Android 13+ on every push to main; signed artefacts; pipeline green |
+| AC-C2-02 | Static-analysis CI scans for all 14 prohibited mutations + prohibited satellite field names; build fails on any match |
+| AC-C2-03 | Prohibited-capability & phase-boundary scan detects AI/ML/satellite SDKs (active/dormant) + Phase-2 triggers; build fails on detection |
+| AC-C2-04 | Per-gate evidence bundle produced (Discovery/Alpha/Beta/GA) with scan + test results |
+| AC-C2-05 | SDK inventory warrants no prohibited capability; OSS licences App Store/Play compatible; declaration signed |
+| AC-C2-06 | WFD build-gate tracker blocks subsystem dev without approved wireframe; PD approval recorded per subsystem |
 
 ---
 
 ### TOPIC-02 — Data, Connectivity & Identity Core
 
 #### Concern 3 — Foundational Data Model & Persistence  *(refs: CDG-5126 · AOD-5026 · BTF-5126 · validates: S0-03, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C3-01 | Local-only Core store (SQLite+WAL) operates fully offline, no Firebase dependency in any Core write path, crash-survivable via WAL replay | S0-03·S0-09 |
-| AC-C3-02 | Firebase/Firestore isolation barrier proven by dependency scan; Core writes verified local-only | S0-03·S0-09 · D4 |
-| AC-C3-03 | Every data type classified Local-Only or Syncable; breadcrumb confirmed Local-Only & Non-Syncable in writing; rule blocks misclassified sync | S0-03 · D5 |
-| AC-C3-04 | Non-Core data (PCR cache · group · profile) uses Firestore offline persistence; Core data excluded from sync | S0-03·S0-09 |
-| AC-C3-05 | AES-256 at rest; TLS 1.3 in transit; key management per policy | S0-03·S0-09 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C3-01 | Local-only Core store (SQLite+WAL) operates fully offline, no Firebase dependency in any Core write path, crash-survivable via WAL replay |
+| AC-C3-02 | Firebase/Firestore isolation barrier proven by dependency scan; Core writes verified local-only |
+| AC-C3-03 | Every data type classified Local-Only or Syncable; breadcrumb confirmed Local-Only & Non-Syncable in writing; rule blocks misclassified sync |
+| AC-C3-04 | Non-Core data (PCR cache · group · profile) uses Firestore offline persistence; Core data excluded from sync |
+| AC-C3-05 | AES-256 at rest; TLS 1.3 in transit; key management per policy |
 
 #### Concern 4 — Connectivity Abstraction Layer (CAL)  *(refs: FSD-5126 §6.1 · AOD-5026 · validates: S0-03, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C4-01 | CAL exposes 4 state flags (satReady/queueEnabled/offlineBeacon/partialSignal); `satReady` locked false & not activatable; schema documented | S0-03 · D6 |
-| AC-C4-02 | Degraded states detected deterministically; no automatic recovery/escalation; calm status surfaced | S0-03·S0-09 |
-| AC-C4-03 | Reusable connectivity-status component consumed app-wide; reflects CAL flags; no alarmist styling | S0-09 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C4-01 | CAL exposes 4 state flags (satReady/queueEnabled/offlineBeacon/partialSignal); `satReady` locked false & not activatable; schema documented |
+| AC-C4-02 | Degraded states detected deterministically; no automatic recovery/escalation; calm status surfaced |
+| AC-C4-03 | Reusable connectivity-status component consumed app-wide; reflects CAL flags; no alarmist styling |
 
 #### Concern 5 — Authentication & RBAC  *(refs: OCS-5026 · AOD-5026 · validates: S0-03, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C5-01 | Firebase Auth scoped to non-Core profile only; Core paths require no auth; identity isolated from Core data | S0-03·S0-09 |
-| AC-C5-02 | OCS login via Firebase Auth with secure session management (TLS 1.3) | S0-09 |
-| AC-C5-03 | OCS 3-role RBAC (Founder/Admin/Operator) enforced server-side; permission matrix documented; unauthorized action blocked + audited | S0-03·S0-09 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C5-01 | Firebase Auth scoped to non-Core profile only; Core paths require no auth; identity isolated from Core data |
+| AC-C5-02 | OCS login via Firebase Auth with secure session management (TLS 1.3) |
+| AC-C5-03 | OCS 3-role RBAC (Founder/Admin/Operator) enforced server-side; permission matrix documented; unauthorized action blocked + audited |
 
 ---
 
 ### TOPIC-03 — Experience Foundation
 
 #### Concern 6 — Map & Overlay Rendering Foundation  *(refs: MAS-5126 · OSM-5026 · validates: S0-05, S0-09; PCR doc → S0-03)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C6-01 | Mapbox SDK renders OSM vector tiles offline from bundle; no Mapbox-cloud runtime dependency | S0-05·S0-09 |
-| AC-C6-02 | Region bundles render offline; cold-start within BPS targets (≤500MB / >500MB) | S0-09 |
-| AC-C6-03 | Map provider behind a swappable interface; no provider-specific hard-coding in app logic | S0-05·S0-09 |
-| AC-C6-04 | Overlay framework enforces z-index hierarchy (basemap→PCR), LIR-01→06 layer independence, only the 8 valid overlay states; toggles work | S0-05·S0-09 |
-| AC-C6-05 | PCR architecture documented — supersession-based resolution (no TTL), isolated from TTL hazard/env layers; PD-accepted | S0-03 · D7 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C6-01 | Mapbox SDK renders OSM vector tiles offline from bundle; no Mapbox-cloud runtime dependency |
+| AC-C6-02 | Region bundles render offline; cold-start within BPS targets (≤500MB / >500MB) |
+| AC-C6-03 | Map provider behind a swappable interface; no provider-specific hard-coding in app logic |
+| AC-C6-04 | Overlay framework enforces z-index hierarchy (basemap→PCR), LIR-01→06 layer independence, only the 8 valid overlay states; toggles work |
+| AC-C6-05 | PCR architecture documented — supersession-based resolution (no TTL), isolated from TTL hazard/env layers; PD-accepted |
 
 #### Concern 7 — Design System, App Shell & UX Guidelines  *(refs: WFD-5126 · UXS-5726 · FQH-5026 · validates: S0-05, S0-08)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C7-01 | Component library published (Figma + code) with design tokens; reused by feature screens | S0-05·S0-08 |
-| AC-C7-02 | App shell makes SOS reachable ≤2 taps from every screen state, BackTrack ≤3 taps; chrome consistent | S0-05 |
-| AC-C7-03 | Inactive-module placeholders render exactly "Inactive in Phase 1" with no executable logic | S0-05·S0-09 |
-| AC-C7-04 | WCAG 2.1 AA on shared components; touch targets ≥44pt (≥60pt Core); glove/low-light/one-handed verified | S0-05·S0-08 |
-| AC-C7-05 | Five-Question Cognitive Hierarchy harness checks all 5 questions answerable across 6 archetypes (offline/gloved/low-light); failures reported | S0-05 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C7-01 | Component library published (Figma + code) with design tokens; reused by feature screens |
+| AC-C7-02 | App shell makes SOS reachable ≤2 taps from every screen state, BackTrack ≤3 taps; chrome consistent |
+| AC-C7-03 | Inactive-module placeholders render exactly "Inactive in Phase 1" with no executable logic |
+| AC-C7-04 | WCAG 2.1 AA on shared components; touch targets ≥44pt (≥60pt Core); glove/low-light/one-handed verified |
+| AC-C7-05 | Five-Question Cognitive Hierarchy harness checks all 5 questions answerable across 6 archetypes (offline/gloved/low-light); failures reported |
 
 ---
 
 ### TOPIC-04 — Compliance & Phase Governance
 
 #### Concern 8 — Business Rules & Compliance Baseline  *(refs: UXS · ESF · CDG · BTF · OSM · PSB · PRD · validates: S0-04, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C8-01 | Core execution documented & built as non-adaptive / non-inferential; no ML/inference in Core | S0-04·S0-09 |
-| AC-C8-02 | 14 prohibited-mutation register + runtime/CI guard reject them (test proves rejection) | S0-04·S0-09 |
-| AC-C8-03 | Prohibited satellite field-name register; CI scans data models; build fails on presence | S0-04·S0-09 |
-| AC-C8-04 | Zero outbound packets from Core paths (app process), verified by airplane-mode capture; non-dispatch posture confirmed | S0-04·S0-09 |
-| AC-C8-05 | 22 Rejection Triggers (RT-01→22) + 11 Rollback Governance (RG-01→11) encoded as gate checks; gate fails on any hit | S0-04 |
-| AC-C8-06 | Phase-boundary discipline + exactly 3 permitted scaffolds whitelisted; any other scaffold flagged RT-09 | S0-04 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C8-01 | Core execution documented & built as non-adaptive / non-inferential; no ML/inference in Core |
+| AC-C8-02 | 14 prohibited-mutation register + runtime/CI guard reject them (test proves rejection) |
+| AC-C8-03 | Prohibited satellite field-name register; CI scans data models; build fails on presence |
+| AC-C8-04 | Zero outbound packets from Core paths (app process), verified by airplane-mode capture; non-dispatch posture confirmed |
+| AC-C8-05 | 22 Rejection Triggers (RT-01→22) + 11 Rollback Governance (RG-01→11) encoded as gate checks; gate fails on any hit |
+| AC-C8-06 | Phase-boundary discipline + exactly 3 permitted scaffolds whitelisted; any other scaffold flagged RT-09 |
 
 #### Concern 9 — Phase 2 Inert Scaffolds  *(refs: PSB-5026 §4 · BTF · FSD · CDG · validates: S0-04, S0-09)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C9-01 | BackTrack™ Emergency Escrow schema present, versioned, inert; no executable logic; surfaces "Inactive in Phase 1" | S0-04·S0-09 |
-| AC-C9-02 | CAL `satReady` flag declared false, not activatable, absent from app data models (CAL schema only) | S0-04·S0-09 |
-| AC-C9-03 | CAL satellite pathway interface documented, non-executable, no transmission code; extensible for Phase 2 | S0-04·S0-09 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C9-01 | BackTrack™ Emergency Escrow schema present, versioned, inert; no executable logic; surfaces "Inactive in Phase 1" |
+| AC-C9-02 | CAL `satReady` flag declared false, not activatable, absent from app data models (CAL schema only) |
+| AC-C9-03 | CAL satellite pathway interface documented, non-executable, no transmission code; extensible for Phase 2 |
 
 ---
 
 ### TOPIC-05 — Public Presence
 
 #### Concern 10 — Companion Website  *(refs: OCS-5026 · Slitigenz §10.2 · validates: S0-07)*
-| AC ID | Acceptance Criterion (DoD) | Validates · D# |
-|---|---|---|
-| AC-C10-01 | Public site live on CMS | S0-07 · website |
-| AC-C10-02 | Required Discovery content + legal pages present | S0-07 |
-| AC-C10-03 | PD-accepted at Discovery | S0-07 |
+| AC ID | Acceptance Criterion (DoD) |
+|---|---|
+| AC-C10-01 | Public site live on CMS |
+| AC-C10-02 | Required Discovery content + legal pages present |
+| AC-C10-03 | PD-accepted at Discovery |
 
 ---
 
