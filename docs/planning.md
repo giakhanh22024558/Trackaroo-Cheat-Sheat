@@ -97,45 +97,56 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 
 ### Sprint 0 — Foundation (29 May – 15 Jun) → Discovery Gate
 
-**Goal:** Stand up the shared platform once and produce the **9 committed Architectural Compliance Artefacts + companion website**. No business features. Full task list: [B2](#b2-sprint-0-foundation-register). Committed artefacts: [B5](#b5-discovery-gate-deliverable-register).
-**Buffer:** all 10 concerns run **in parallel from day 1** → foundation-complete **10 Jun**; **11–15 Jun = artefact-acceptance buffer** (~5 days — constrained by the 29 May contract start; see Risk-buffer policy).
-**Gate exit:** D1–D9 accepted by Project Director + companion website live. Validation via lab GPS-spoofing + Faraday (CLR-SLZ-001).
+**Goal:** Foundation platform + 9 committed Discovery artefacts + companion website. No business features.
+**Buffer:** parallel build → foundation-complete 10 Jun; **11–15 Jun = artefact-acceptance buffer**. Validation via lab GPS-spoofing + Faraday (CLR-SLZ-001).
+**Detail:** full task list, Topic → Concern → AC breakdown in [B2](#b2-sprint-0-foundation-register) · committed artefact register in [B5](#b5-discovery-gate-deliverable-register).
+
+**Deliverable checklist (Discovery Gate 15 Jun):**
+
+| ✓ | Gate deliverable | Composed of (task) | Validated by |
+|---|---|---|---|
+| ☐ | **D1** High-Level Architecture Diagram | S0-03 | AC-C1-02 |
+| ☐ | **D2** Deterministic State Transition Matrix | S0-03 | AC-C1-03 |
+| ☐ | **D3** Offline-First Execution Explanation | S0-03 | AC-C1-04 |
+| ☐ | **D4** Module Isolation Mapping | S0-03 | AC-C1-05 / AC-C3-02 |
+| ☐ | **D5** Breadcrumb Local-Only Classification | S0-03 | AC-C3-03 |
+| ☐ | **D6** CAL Architecture Documentation | S0-03 | AC-C4-01 |
+| ☐ | **D7** PCR Architecture Documentation | S0-03 | AC-C6-05 |
+| ☐ | **D8** SDK Audit Declaration | S0-04 | AC-C2-05 |
+| ☐ | **D9** OSS Licence Audit | S0-04 | AC-C2-05 |
+| ☐ | Companion website live | S0-07 | AC-C10-01 |
+| ☐ | *Internal:* Backlog + delivery plan | S0-01 / S0-02 | (planning ready) |
+| ☐ | *Internal:* Design System (Figma) + UX Guide | S0-05 / S0-08 | AC-C7-01..05 |
+| ☐ | *Internal:* Eng & DevOps Handbook | S0-06 | AC-C2-01..04 |
+| ☐ | *Internal:* Foundation Codebase + CI | S0-09 | AC-C2-01..04 |
+| **✅** | **Discovery Gate passed** | All D1–D9 + site accepted by PD | — |
 
 ```mermaid
 gantt
-    title Sprint 0 — Foundation (29 May – 10 Jun work) → Discovery 15 Jun
+    title Sprint 0 — Foundation (29 May – 10 Jun) → Discovery 15 Jun
     dateFormat YYYY-MM-DD
     axisFormat %a %d/%m
     tickInterval 1day
     excludes weekends
-    section Analysis
-    S0-01 Business analysis            :2026-05-29, 2026-06-02
-    S0-02 Build backlog & plan         :2026-06-01, 2026-06-05
-    section Documents
-    S0-03 SAD (D1-D7)                  :2026-06-01, 2026-06-10
-    S0-04 Compliance & Audit (D8/D9)   :2026-06-03, 2026-06-10
-    S0-05 Design System & UX Guide     :2026-06-03, 2026-06-10
-    S0-06 Eng & DevOps Handbook        :2026-06-02, 2026-06-09
-    section Build & Site
-    S0-07 Companion Website            :2026-05-29, 2026-06-09
-    S0-08 Design System (Figma)        :2026-05-29, 2026-06-06
-    S0-09 Foundation Codebase & CI     :2026-05-29, 2026-06-10
-    section Gate buffer
-    Foundation freeze                  :milestone, active, 2026-06-10, 0d
-    Artefact acceptance buffer (~5d)   :active, 2026-06-11, 2026-06-15
-    Discovery acceptance (D1-D9 + site) :milestone, crit, 2026-06-15, 0d
+    section Workstreams (parallel)
+    Analysis & backlog              :2026-05-29, 2026-06-05
+    Architectural docs (D1–D9)      :2026-06-01, 2026-06-10
+    Design System + Website         :2026-05-29, 2026-06-09
+    Codebase + CI                   :2026-05-29, 2026-06-10
+    section Gate
+    Foundation freeze               :milestone, active, 2026-06-10, 0d
+    Acceptance buffer (~5d)         :active, 2026-06-11, 2026-06-15
+    Discovery Gate (D1–D9 + site)   :milestone, crit, 2026-06-15, 0d
 ```
 
 ### Sprint 1 — SOS & Emergency Logging (16 – 27 Jun) → Alpha
 **Goal:** Safety-critical lead — SOS reaches acceptance first (Evidentiary Integrity early).
 
-| Feature | Name |
-|---|---|
-| FEAT-006 | SOS activation control (persistent · multi-tap confirm) |
-| FEAT-007 | 3-stage SOS log sequence (timestamp → GPS pending → coords) |
-| FEAT-008 | SOS confirmation screen (feedback elements · non-dispatch copy) |
-| FEAT-009 | SOS onboarding acknowledgement (click-through) |
-| FEAT-010 | QR fallback handover (offline-generated) |
+**Deliverable checklist (towards Alpha 22 Aug):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | SOS subsystem | FEAT-006 / 007 / 008 / 009 / 010 |
+| ☐ | SOS legal-review (RT-16) kickoff | Track 7 Legal — closes in S5 |
 
 ```mermaid
 gantt
@@ -155,14 +166,12 @@ gantt
 ```
 
 ### Sprint 2 — BackTrack™ + Navigation core (30 Jun – 11 Jul) → Alpha
-| Feature | Name |
-|---|---|
-| FEAT-011 | Active-session breadcrumb logging (dual-trigger) |
-| FEAT-012 | Breadcrumb immutable write (WAL + encryption) |
-| FEAT-013 | BackTrack™ reverse retrace |
-| FEAT-014 | Distress-mode breadcrumb capture |
-| FEAT-001 | Map region download & offline bundle management |
-| FEAT-002 | Current location & orientation indicator |
+
+**Deliverable checklist (towards Alpha 22 Aug):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | BackTrack™ core (capture + immutable write + retrace + distress mode) | FEAT-011 / 012 / 013 / 014 |
+| ☐ | Navigation foundation (offline map + location/orientation) | FEAT-001 / 002 |
 
 ```mermaid
 gantt
@@ -182,14 +191,13 @@ gantt
 ```
 
 ### Sprint 3 — Navigation complete + HazTrack™ start + onboarding (14 – 25 Jul) → Alpha
-| Feature | Name |
-|---|---|
-| FEAT-003 | Route planning & display (deterministic) |
-| FEAT-004 | Map interaction controls |
-| FEAT-005 | Navigational instrument overlays (route line + breadcrumb trail) |
-| FEAT-017 | Hazard feed ingestion & filter pipeline |
-| FEAT-018 | Hazard overlay rendering |
-| FEAT-025 | First-use onboarding flow *(pulled from S5)* |
+
+**Deliverable checklist (towards Alpha 22 Aug):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | Navigation complete (routing + controls + instrument overlays) | FEAT-003 / 004 / 005 |
+| ☐ | HazTrack™ ingestion + overlay rendering | FEAT-017 / 018 |
+| ☐ | First-use onboarding flow | FEAT-025 *(pulled from S5)* |
 
 ```mermaid
 gantt
@@ -210,16 +218,15 @@ gantt
 ```
 
 ### Sprint 4 — HazTrack™ complete + First Aid + OCS Stage 1 (28 Jul – 8 Aug) → Alpha · **feature freeze 8 Aug**
-| Feature | Name |
-|---|---|
-| FEAT-019 | Hazard freshness / TTL display |
-| FEAT-020 | Hazard source attribution |
-| FEAT-021 | Hazard cache management (offline) |
-| FEAT-022 | First Aid Reference content rendering |
-| FEAT-023 | Mandatory persistent disclaimer |
-| FEAT-024 | Offline pre-loaded access |
-| FEAT-027 | HazTrack™ feed administration module (OCS) *(pulled from S5 — after FEAT-017 feed)* |
-| FEAT-028 | Break-glass intervention module (OCS) *(pulled from S5)* |
+
+**Deliverable checklist (towards Alpha 22 Aug · feature freeze 8 Aug):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | HazTrack™ complete (TTL + attribution + offline cache) | FEAT-019 / 020 / 021 |
+| ☐ | First Aid Reference module (content + disclaimer + offline access) | FEAT-022 / 023 / 024 |
+| ☐ | OCS Stage 1 (HazTrack admin + break-glass) | FEAT-027 / 028 *(pulled from S5)* |
+| ☐ | First Aid clinical review (RT-12) kickoff | Track 7 Legal — closes in S5 |
+| **✅** | **Alpha feature freeze (8 Aug)** | All Sprint 1–4 features complete |
 
 ```mermaid
 gantt
@@ -247,13 +254,15 @@ gantt
 ### Sprint 5 — 🛡️ STABILISATION buffer (11 – 22 Aug) → Alpha Gate
 **No new features** (Alpha freeze was 8 Aug). 14-day risk buffer: end-to-end Survival Core validation, legal/clinical close, hardening, gate evidence.
 
-| Activity | Detail |
-|---|---|
-| Survival Core validation | Full regression across Nav · SOS · BackTrack™ · HazTrack™ · First Aid · OCS Stage 1 |
-| RT-16 SOS legal review close | Qualified-counsel sign-off (started S1) |
-| RT-12 First Aid clinical review close | Clinical reviewer sign-off (started S4) |
-| Prohibited-capability scan | Confirm clean (no AI/satellite/Phase-2 triggers) |
-| Defect burn-down + gate evidence | Alpha evidence package |
+**Deliverable checklist (Alpha Gate 22 Aug):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | Survival Core regression | Full E2E: Nav · SOS · BackTrack™ · HazTrack™ · First Aid · OCS Stage 1 |
+| ☐ | RT-16 SOS legal sign-off | Qualified counsel (kicked off in S1) |
+| ☐ | RT-12 First Aid clinical sign-off | Clinical reviewer (kicked off in S4) |
+| ☐ | Prohibited-capability scan clean | No AI / satellite / Phase 2 triggers detected |
+| ☐ | Alpha evidence package | Defect burn-down + signed evidence pack |
+| **✅** | **Alpha Gate passed** | All deliverables accepted by PD |
 
 ```mermaid
 gantt
@@ -275,14 +284,13 @@ gantt
 ```
 
 ### Sprint 6 — TrackIQ™ Track Difficulty (25 Aug – 5 Sep) → Beta-Ready
-| Feature | Name |
-|---|---|
-| FEAT-033 | Difficulty grade rendering |
-| FEAT-034 | Track Verification Shield rendering |
-| FEAT-035 | Deterministic difficulty scoring |
-| FEAT-036 | Stop-detection prompt (fixed threshold) |
-| FEAT-037 | Track metadata display |
-| FEAT-038 | HazTrack™ → TrackIQ™ non-mutation guard |
+
+**Deliverable checklist (towards Beta-Ready 30 Oct):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | TrackIQ™ difficulty grading + verification shield + metadata | FEAT-033 / 034 / 035 / 037 |
+| ☐ | Stop-detection prompt | FEAT-036 |
+| ☐ | HazTrack™ → TrackIQ™ isolation guard (LIR-05) | FEAT-038 |
 
 ```mermaid
 gantt
@@ -301,14 +309,11 @@ gantt
 ```
 
 ### Sprint 7 — PCR — Point Condition Reports (8 – 19 Sep) → Beta-Ready
-| Feature | Name |
-|---|---|
-| FEAT-039 | PCR map markers (6 categories · ring states) |
-| FEAT-040 | PCR detail card |
-| FEAT-041 | PCR submission (online + offline queue) |
-| FEAT-042 | PCR confirmation & supersession resolution |
-| FEAT-043 | Unconfirmed-age muted display |
-| FEAT-044 | PCR resolution & history view |
+
+**Deliverable checklist (towards Beta-Ready 30 Oct):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | PCR module (markers + detail + submission + supersession + history) | FEAT-039 / 040 / 041 / 042 / 043 / 044 |
 
 ```mermaid
 gantt
@@ -327,14 +332,13 @@ gantt
 ```
 
 ### Sprint 8 — TrackMate™ Peer Communication + history (22 Sep – 3 Oct) → Beta-Ready
-| Feature | Name |
-|---|---|
-| FEAT-045 | Group presence & peer messaging |
-| FEAT-046 | Transport stack (BLE Mesh → Wi-Fi Direct → LoRa) |
-| FEAT-047 | LoRa hardware onboarding (4 wireframe states) |
-| FEAT-048 | Group Health Envelope (binary indicator) |
-| FEAT-049 | Offline message queue & deterministic sync |
-| FEAT-015 | Persistent multi-session history (BackTrack™) *(pulled from S9)* |
+
+**Deliverable checklist (towards Beta-Ready 30 Oct):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | TrackMate™ peer comms (presence + transport stack + LoRa onboarding + offline queue) | FEAT-045 / 046 / 047 / 049 |
+| ☐ | Group Health Envelope (binary indicator) | FEAT-048 |
+| ☐ | BackTrack™ multi-session history | FEAT-015 *(pulled from S9)* |
 
 ```mermaid
 gantt
@@ -356,16 +360,14 @@ gantt
 ### Sprint 9 — OCS full + event-log + POI + Low-tier (6 – 17 Oct) → Beta-Ready · **feature freeze 17 Oct**
 All remaining features land here (incl. the 3 Low-tier, pulled from S11) so the RC is **feature-complete by 17 Oct**.
 
-| Feature | Name |
-|---|---|
-| FEAT-029 | PCR moderation module (OCS) *(after PCR built in S7)* |
-| FEAT-030 | User support & account management module (OCS) |
-| FEAT-031 | Audit log & compliance-evidence module (OCS) |
-| FEAT-026 | Local event-log viewer |
-| FEAT-050 | POI display & category iconography *(pulled from S10)* |
-| FEAT-016 | Breadcrumb export (GPX / CSV) — Low *(pulled from S11)* |
-| FEAT-032 | Remaining OCS operational modules (content / config / analytics) — Low *(pulled from S11)* |
-| FEAT-051 | POI metadata & presentation-only indicators — Low *(pulled from S11)* |
+**Deliverable checklist (towards Beta-Ready 30 Oct · feature freeze 17 Oct):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | OCS full operational (moderation + user mgmt + audit log + analytics/config) | FEAT-029 / 030 / 031 / 032 |
+| ☐ | Local event-log viewer | FEAT-026 |
+| ☐ | POI module (display + metadata) | FEAT-050 / 051 *(pulled from S10/S11)* |
+| ☐ | BackTrack™ export (GPX / CSV) | FEAT-016 *(pulled from S11, Low)* |
+| **✅** | **Beta-Ready feature freeze (17 Oct)** | All Sprint 6–9 + pulled Low features complete |
 
 ```mermaid
 gantt
@@ -393,12 +395,14 @@ gantt
 ### Sprint 10 — 🛡️ STABILISATION buffer (20 – 30 Oct) → Beta-Ready Gate
 **No new features** (Beta freeze was 17 Oct). 13-day risk buffer: full validation suite + audits on the frozen RC.
 
-| Activity | Detail |
-|---|---|
-| 11 TQP-5026 validation domains | Full execution across the device matrix |
-| WCAG 2.1 AA audit | Independent audit (RT-11) on feature-complete build |
-| 22 Rejection Triggers clearance | Confirm all RT-01→22 resolved |
-| Beta hardening + gate evidence | Defect burn-down · Beta-Ready evidence package |
+**Deliverable checklist (Beta-Ready Gate 30 Oct):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | 11 TQP-5026 validation domains executed | Full pass on device matrix |
+| ☐ | WCAG 2.1 AA audit (RT-11) | Independent audit on feature-complete build |
+| ☐ | 22 Rejection Triggers cleared | RT-01..22 all resolved + evidence logged |
+| ☐ | Beta-Ready evidence package | Defect burn-down + signed evidence pack |
+| **✅** | **Beta-Ready Gate passed** | All deliverables accepted by PD |
 
 ```mermaid
 gantt
@@ -418,13 +422,15 @@ gantt
 ```
 
 ### Sprint 11 — 🛡️ RELEASE buffer (31 Oct – 13 Nov) → GA Gate
-**No new features** — the RC is feature-complete since 17 Oct (S9). This sprint is pure release: regression on the frozen build, store submission, go/no-go. Maximum risk buffer for the hard commercial deadline.
+**No new features** — the RC is feature-complete since 17 Oct (S9). Pure release: regression on the frozen build, store submission, go/no-go. Maximum risk buffer for the hard commercial deadline.
 
-| Activity | Detail |
-|---|---|
-| Full regression on frozen RC | All 11 epics end-to-end on the device matrix |
-| App Store + Google Play submission | Store review lead-time absorbed within the buffer |
-| GA go/no-go sign-off | Written Project Director sign-off |
+**Deliverable checklist (GA Gate 13 Nov):**
+| ✓ | Gate deliverable | Composed of (this sprint) |
+|---|---|---|
+| ☐ | Full regression on frozen RC | All 11 epics E2E on device matrix |
+| ☐ | App Store + Google Play submission | Submission package + store review pass-through |
+| ☐ | GA go/no-go sign-off | Written Project Director sign-off |
+| **✅** | **GA Public Launch (13 Nov)** | All deliverables accepted; launch confirmed |
 
 ```mermaid
 gantt
