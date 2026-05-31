@@ -48,9 +48,9 @@ Sprint 0 separates **the work (tasks)** from **how it is assured (criteria)** (i
 | Analysis area | **Concern** | "Concern N" (the 10 technical concerns) |
 | Done-criteria per concern | **Acceptance Criteria** | `AC-C{concern}-{nn}`, language `en`, confirmed at Discovery gate |
 
-- **Tasks (`S0-`)** — 9 items (see §B2.1): business analysis · build backlog · 4 documents · site · Figma · codebase/CI. A **Customer hand-over?** flag marks which are client deliverables (Discovery artefacts) vs internal foundation work. The former per-task `FND-` IDs are retired.
-- **Topic → Concern → Acceptance Criteria** (§B2.2) is the assurance layer; each criterion notes which **Task (`S0-`)** it validates + which Discovery artefact (D#) it evidences.
-- **Single source:** tasks, criteria and ACs all live inline in `docs/planning.md` §B2 (the separate `sprint-0-acs.md` was retired — no double maintenance).
+- **Tasks (`S0-`)** — 9 items (see `docs/planning.md` §B2.1): business analysis · build backlog · 4 documents · site · Figma · codebase/CI. A **Customer hand-over?** flag marks which are client deliverables (Discovery artefacts) vs internal foundation work. The former per-task `FND-` IDs are retired.
+- **Topic → Concern → Acceptance Criteria** is the assurance layer; each criterion notes which **Task (`S0-`)** it validates + which Discovery artefact (D#) it evidences. **Lives in [`docs/sprint-0-foundation-criteria.md`](../docs/sprint-0-foundation-criteria.md)** (moved out of planning.md so BA can analyse separately without bloating the delivery plan).
+- **Sources:** tasks → `docs/planning.md` §B2.1 · criteria → `docs/sprint-0-foundation-criteria.md` · gate deliverable register → `docs/planning.md` §B5. Each criterion `AC-C{concern}-{nn}` is unique — never renumber after issue.
 - **Link model:** a business feature builds on the Sprint 0 tasks' outputs and asserts foundation standards (5-Q hierarchy, prohibited mutations, WCAG, RT/RG, thresholds) as **Acceptance Criteria** — the standard itself is never a feature.
 
 ## Priority levels
