@@ -8,7 +8,7 @@
 |---|---|
 | [System overview](./01-system-overview.md) | Dual-layer architecture, the 11 epics, high-level diagrams |
 | [User roles](./02-user-roles.md) | 6 user archetypes (TAA-5126) + 3 console roles (OCS-5026) |
-| [Modules](./03-modules/_index.md) | The 11 product modules (= Epics) with feature lists |
+| [Modules / Feature Backlog](./03-modules/_index.md) ⭐ | **Full feature backlog (11 Epics · 51 Features · 9-column canonical) + per-module page index** |
 | [Shared features](./04-shared-features.md) | Cross-module functions (settings, profile, account, attachments, etc.) |
 
 ## The 11 product modules (Epics)
