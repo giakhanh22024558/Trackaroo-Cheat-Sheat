@@ -43,8 +43,6 @@ gantt
 
 ### Sprint → Delivery goal → Client gate
 
-Each gate block now ends with a **dedicated stabilisation sprint** so feature work freezes ~2 weeks before the gate, leaving a managed risk buffer for validation/hardening/gate prep. Feature sprints are loaded harder (more parallel tracks) to absorb the pulled-forward work.
-
 | Sprint | Dates (2026) | Delivery goal | Feature work? | Client gate |
 |---|---|---|---|---|
 | **Sprint 0** | 29 May – 10 Jun (+5d buffer→15 Jun) | Foundation platform + **9 Compliance Artefacts (D1–D9)** + companion website | Sprint 0 tasks (S0-) | **★ Discovery — 15 Jun** |
@@ -60,12 +58,7 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 | **Sprint 10** | 20 – 30 Oct | 🛡️ **STABILISATION buffer** — 11 TQP validation domains · WCAG 2.1 AA audit · 22 RT clearance · hardening | ⛔ buffer | **★ Beta-Ready — 30 Oct** |
 | **Sprint 11** | 31 Oct – 13 Nov | 🛡️ **RELEASE buffer** — regression on frozen RC · App Store / Play submission · GA go/no-go | ⛔ buffer | **★ GA — 13 Nov** |
 
-> **Gate blocks:** Sprint 0 → Discovery · Sprints 1–5 → Alpha · Sprints 6–10 → Beta-Ready · Sprint 11 → GA.
-> Day-level item durations in the per-sprint charts are **indicative** pending Story-level estimates; tracks run in parallel per the 8-workstream model.
-
-### Risk-buffer policy & parallelisation
-
-**Buffer policy — all feature work completes ~15 days before its gate:**
+### Risk-buffer policy
 
 | Gate | Date | Feature freeze | Buffer | Buffer sprint |
 |---|---|---|---|---|
@@ -74,21 +67,11 @@ Each gate block now ends with a **dedicated stabilisation sprint** so feature wo
 | Beta-Ready | 30 Oct | **17 Oct** | **13 days** | Sprint 10 |
 | GA | 13 Nov | 17 Oct (RC frozen) | RC stable; Sprint 11 = release-only | Sprint 11 |
 
-> ⚠️ **Discovery is the one constrained gate** — contract executes 29 May, gate is 15 Jun (17-day window), so a full 15-day buffer is impossible. We target foundation-complete by **10 Jun** with a **5-day acceptance buffer**. Mitigation: run all 10 foundation concerns **in parallel from day 1** (8 tracks), front-load D8/D9 audits.
-
-**Parallelisation:** pulled-forward work runs concurrently across the 8 tracks (see the `section` lanes in each sprint Gantt). Peak load S4 & S9 (8 features) fits 8 experts; hard dependencies still serialise within a track.
-
 ---
 
 ## A2. Sprint-by-sprint execution
 
-> 🎨 **Colour convention:** in every per-sprint Gantt, each `section` = one **Epic** (Sprint 0 = one **Topic**), so **all tasks of the same Epic/Topic share the same bar colour** within that chart. Non-feature activities (Legal, QA, Buffer, Release, Gate) keep their own sections. *(Mermaid cycles ~4 section colours per chart, so colours group within a chart; they are not guaranteed identical across different sprint charts.)*
-
 ### Sprint 0 — Foundation (29 May – 15 Jun) → Discovery Gate
-
-**Goal:** Foundation platform + 9 committed Discovery artefacts + companion website. No business features.
-**Buffer:** parallel build → foundation-complete 10 Jun; **11–15 Jun = artefact-acceptance buffer**. Validation via lab GPS-spoofing + Faraday (CLR-SLZ-001).
-**Detail:** full task list, Topic → Concern → AC breakdown in [B2](#b2-sprint-0-foundation-register) · committed artefact register in [B5](#b5-discovery-gate-deliverable-register).
 
 **Deliverable checklist (Discovery Gate 15 Jun):**
 
@@ -129,7 +112,6 @@ gantt
 ```
 
 ### Sprint 1 — SOS & Emergency Logging (16 – 27 Jun) → Alpha
-**Goal:** Safety-critical lead — SOS reaches acceptance first (Evidentiary Integrity early).
 
 **Deliverable checklist (towards Alpha 22 Aug):**
 | ✓ | Gate deliverable | Composed of (this sprint) |
@@ -241,7 +223,6 @@ gantt
 ```
 
 ### Sprint 5 — 🛡️ STABILISATION buffer (11 – 22 Aug) → Alpha Gate
-**No new features** (Alpha freeze was 8 Aug). 14-day risk buffer: end-to-end Survival Core validation, legal/clinical close, hardening, gate evidence.
 
 **Deliverable checklist (Alpha Gate 22 Aug):**
 | ✓ | Gate deliverable | Composed of (this sprint) |
@@ -347,7 +328,6 @@ gantt
 ```
 
 ### Sprint 9 — OCS full + event-log + POI + Low-tier (6 – 17 Oct) → Beta-Ready · **feature freeze 17 Oct**
-All remaining features land here (incl. the 3 Low-tier, pulled from S11) so the RC is **feature-complete by 17 Oct**.
 
 **Deliverable checklist (towards Beta-Ready 30 Oct · feature freeze 17 Oct):**
 | ✓ | Gate deliverable | Composed of (this sprint) |
@@ -382,7 +362,6 @@ gantt
 ```
 
 ### Sprint 10 — 🛡️ STABILISATION buffer (20 – 30 Oct) → Beta-Ready Gate
-**No new features** (Beta freeze was 17 Oct). 13-day risk buffer: full validation suite + audits on the frozen RC.
 
 **Deliverable checklist (Beta-Ready Gate 30 Oct):**
 | ✓ | Gate deliverable | Composed of (this sprint) |
@@ -411,7 +390,6 @@ gantt
 ```
 
 ### Sprint 11 — 🛡️ RELEASE buffer (31 Oct – 13 Nov) → GA Gate
-**No new features** — the RC is feature-complete since 17 Oct (S9). Pure release: regression on the frozen build, store submission, go/no-go. Maximum risk buffer for the hard commercial deadline.
 
 **Deliverable checklist (GA Gate 13 Nov):**
 | ✓ | Gate deliverable | Composed of (this sprint) |
@@ -443,21 +421,11 @@ gantt
 
 ## B4. Delivery Gate & Priority
 
-Priority by earliest delivery gate (lower ID = higher priority). Companion mapping — not a backlog column (canonical Priority col G is filled on Story rows; Stories inherit Feature priority here).
-
 | Priority | Gate | Date | Epics | Sprints |
 |---|---|---|---|---|
 | **(Foundation)** | Discovery | 15 Jun | — (Sprint 0 tasks S0-, [B2](#b2-sprint-0-foundation-register)) | Sprint 0 |
 | **High** | Alpha | 22 Aug | EPIC-001 → EPIC-007 | Sprints 1–5 |
 | **Medium** | Beta-Ready | 30 Oct | EPIC-008 → EPIC-011 | Sprints 6–10 |
 | **Low** | GA | 13 Nov | (deferrable features, see below) | Sprint 11 |
-
-Full locked timeline: **Contract Execution 29 May → Discovery 15 Jun → Alpha 22 Aug → Beta-Ready 30 Oct → GA 13 Nov 2026** (Slitigenz proposal §10.2 — `../../research/spec-docs/Slitigenz-Proposal-RFT5026.md`).
-
-**Feature tiers (mixed epics carry features at >1 gate):**
-
-- **High (25)** → Sprints 1–5: FEAT-001→005, 006→010, 011→014, 017→024, 025, 027, 028
-- **Medium (23)** → Sprints 6–10: FEAT-015, 026, 029→031, 033→038, 039→044, 045→049, 050
-- **Low (3)** → Sprint 11: FEAT-016 (breadcrumb export) · FEAT-032 (OCS analytics/config) · FEAT-051 (POI metadata)
 
 ---
