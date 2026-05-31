@@ -66,12 +66,13 @@
 
 ## Source of truth note
 
-This Confluence space is **the read view**. The **source of truth lives in the project repository** under:
-- `docs/planning.md` — delivery plan, sprints, gates, deliverable checklist
-- `docs/sprint-0-foundation-criteria.md` — 45 Foundation ACs
-- `docs/gap-clarifications.md` — open clarification register (CLR-TRK)
-- `research/spec-docs/*.md` — 20 spec doc extracts (PRD, FSD, OSM, etc.)
-- `diagrams/` — architecture diagrams (4-tier C4 layout)
-- `conventions/` — backlog ID conventions, AC writing rules
+| Artefact | Source of truth | Location |
+|---|---|---|
+| **Delivery plan + backlog** | **This Confluence space** (`02-roadmap-milestones`) | maintained directly here · Confluence wins |
+| Sprint 0 Foundation criteria (45 ACs) | Repo | `docs/sprint-0-foundation-criteria.md` |
+| Open clarification register (CLR-TRK) | Repo | `docs/gap-clarifications.md` |
+| Spec extracts (20 docs) | Repo | `research/spec-docs/*.md` |
+| Architecture diagrams (4-tier C4) | Repo | `diagrams/` |
+| Backlog ID + AC writing conventions | Repo | `conventions/` |
 
-If a Confluence page conflicts with the repo file, **the repo wins**. Re-export to refresh.
+If a repo file conflicts with the Confluence page **for delivery plan content**, the Confluence page wins (the plan is maintained here now). For everything else, the repo wins; re-export to refresh.

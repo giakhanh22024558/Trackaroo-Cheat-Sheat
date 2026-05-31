@@ -100,10 +100,14 @@ Use the [Confluence Cloud REST API](https://developer.atlassian.com/cloud/conflu
 
 ## Maintenance
 
-When project artefacts change:
-- **Source of truth stays in the repo** (`docs/`, `research/spec-docs/`, `diagrams/`).
-- Re-run the export to refresh the Confluence pages (or edit the changed `.md` here + re-import).
-- Do NOT manually edit pages in Confluence and expect the repo to sync — Confluence is the **read view**, repo is the **source of truth**.
+| Artefact | Source of truth | Update flow |
+|---|---|---|
+| **Delivery plan** (`01-about/02-roadmap-milestones.md`) | **This Confluence file** | Edit directly here; commit; re-import to Confluence. Don't re-create `docs/planning.md`. |
+| ABOUT / PRODUCT / RULES / TECH skeletons | This export | Fill in iteratively; commit; re-import |
+| Sprint 0 Foundation criteria | Repo (`docs/sprint-0-foundation-criteria.md`) | Edit in repo; re-export to refresh Confluence reference |
+| Spec extracts, diagrams, conventions, CLR register | Repo | Edit in repo; this export references them by path |
+
+Re-import strategy: most importers support **incremental upsert** — only changed files update. If yours doesn't, drop the section and re-import.
 
 ## NOT included in this export
 

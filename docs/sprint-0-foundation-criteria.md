@@ -2,10 +2,10 @@
 
 > **Quality requirements** for Sprint 0 foundation work. Each criterion validates one or more Sprint 0 Tasks (`S0-NN`) and feeds the Discovery gate evidence pack.
 >
-> **Companion:**
-> - **Tasks** (`S0-01..09`) — see [`planning.md` §B2.1](./planning.md#b21-tasks)
-> - **Gate deliverable checklist** (D1–D9 + site) — see [`planning.md` §B5](./planning.md#b5-discovery-gate-deliverable-register)
-> - **Timeline** — see [`planning.md` §A2 Sprint 0](./planning.md#sprint-0--foundation-29-may--15-jun--discovery-gate)
+> **Companion:** (delivery plan lives in the Confluence workspace)
+> - **Tasks** (`S0-01..09`) — see [Roadmap & milestones §B2.1](../confluence-export/01-about/02-roadmap-milestones.md#b21-tasks)
+> - **Gate deliverable checklist** (D1–D9 + site) — see [Roadmap & milestones §B5](../confluence-export/01-about/02-roadmap-milestones.md#b5-discovery-gate-deliverable-register)
+> - **Timeline** — see [Roadmap & milestones §A2 Sprint 0](../confluence-export/01-about/02-roadmap-milestones.md#sprint-0--foundation-29-may--15-jun--discovery-gate)
 >
 > Criteria language: **English** · all confirmed at **Discovery Gate (15 Jun 2026)**.
 
@@ -132,6 +132,6 @@
 
 ## Notes for BA analysis (downstream work)
 
-- These 45 ACs are the **assurance layer** for Sprint 0. A separate Story-pass for business features (EPIC-/FEAT- in `planning.md` §B3) will assert the cross-cutting standards from [`planning.md` §B7](./planning.md#b7-cross-cutting-standards-reserved-for-ac) as their own ACs.
+- These 45 ACs are the **assurance layer** for Sprint 0. A separate Story-pass for business features (EPIC-/FEAT- in [Roadmap & milestones §B3](../confluence-export/01-about/02-roadmap-milestones.md#b3-consolidated-feature-backlog-9-column-canonical)) will assert the cross-cutting standards from [Roadmap & milestones §B7](../confluence-export/01-about/02-roadmap-milestones.md#b7-cross-cutting-standards-reserved-for-ac) as their own ACs.
 - ID convention: `AC-C{concern}-{nn}` (e.g. `AC-C1-02` = Concern 1, criterion 02). IDs are stable — never renumber after issue; new criteria append to the tail of the relevant Concern.
-- Each AC notes which **Task (`S0-`)** it validates; cross-check the [Discovery deliverable register](./planning.md#b5-discovery-gate-deliverable-register) to map AC → committed artefact.
+- Each AC notes which **Task (`S0-`)** it validates; cross-check the [Discovery deliverable register](../confluence-export/01-about/02-roadmap-milestones.md#b5-discovery-gate-deliverable-register) to map AC → committed artefact.
