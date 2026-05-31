@@ -12,7 +12,7 @@
 | [Ways of working](./04-ways-of-working.md) | Scrum cadence, DoR/DoD, ceremonies, dual-track | …are joining a sprint or running a refinement |
 | [Story / AC conventions](./05-story-ac-conventions.md) | How to write a Story, AC format (Given/When/Then en), ID rules | …are writing or reviewing backlog items |
 | [Change Request process](./06-change-request-process.md) | When CR · who approves · impact analysis flow | …have a scope change to raise |
-| [Tool stack](./07-tool-stack.md) | Jira · Confluence · Drive · GitHub — what's used for what | …don't know where things live |
+| [Tool stack](./07-tool-stack.md) | Jira · Drive · GitHub — what's used for what | …don't know where things live |
 | [Onboarding](./08-onboarding.md) | Day-1, Week-1 checklist; environment setup | …are new to the team |
 | [Glossary](./09-glossary.md) | Acronyms (SOS, BackTrack™, CAL, PCR, RT/RG…) + domain terms | …saw an acronym you don't know (often!) |
 

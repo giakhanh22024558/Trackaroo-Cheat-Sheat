@@ -19,12 +19,12 @@ id_formats:
 > **Implicit rule for this project:** lower ID number = higher delivery priority.
 > `EPIC-001` / `FEAT-001` is the **most prioritized** item.
 
-- **Priority = earliest delivery gate** (Discovery → Alpha → Beta-Ready → GA). See "Delivery Gate & Priority" (§B4) in `confluence-export/01-about/02-roadmap-milestones.md` (the relocated delivery plan).
+- **Priority = earliest delivery gate** (Discovery → Alpha → Beta-Ready → GA). See "Delivery Gate & Priority" (§B4) in `drive-docs/01-about/02-roadmap-milestones.md` (the relocated delivery plan).
 - **Epics** are numbered in priority order → tiers fall into contiguous ID ranges:
   - `EPIC-001 … EPIC-005` = **Very high** (Discovery)
   - `EPIC-006 … EPIC-012` = **High** (Alpha)
   - `EPIC-013 … EPIC-016` = **Medium** (Beta-Ready)
-- **Features** are numbered by walking Epics in priority order, then by feature priority **within** each Epic. So `FEAT-001` is the highest-priority feature of the highest-priority Epic. (Mixed Epics may carry a lower-priority feature with a small ID because it sits under a high-priority Epic — the feature-tier table in `docs/planning.md` §B4 shows each feature's exact priority.)
+- **Features** are numbered by walking Epics in priority order, then by feature priority **within** each Epic. So `FEAT-001` is the highest-priority feature of the highest-priority Epic. (Mixed Epics may carry a lower-priority feature with a small ID because it sits under a high-priority Epic — see Delivery Gate & Priority table in `drive-docs/01-about/02-roadmap-milestones.md` §B4.)
 - **Re-derivation vs incremental add:** IDs are assigned in priority order during a *major (re-)derivation pass*. For *incremental* additions between passes, append at the tail (highest number) and fold into priority order at the next major pass — avoids constant renumbering churn while honoring the skill's "sequential, never reused" principle.
 - This rule is **project-scoped** (recorded here). It does not change the MasterMind model default (which assigns IDs in discovery order, not priority order).
 
@@ -32,7 +32,7 @@ id_formats:
 
 > **Epics/Features = business-functional features only.** Cross-cutting / foundational concerns do NOT belong in the feature backlog.
 >
-> **Single source:** all planning + backlog now lives in **`confluence-export/01-about/02-roadmap-milestones.md`** (Part A = plan, Part B = registers). Previously at `docs/planning.md`; relocated 31 May 2026 so the team can read/edit/import directly into Confluence.
+> **Single source:** all planning + backlog now lives in **`drive-docs/01-about/02-roadmap-milestones.md`** (Part A = plan, Part B = registers). Previously at `docs/planning.md`; relocated 31 May 2026 so the team can read/edit/import directly into the Drive workspace folder.
 
 - **Feature backlog — Roadmap & milestones §B3 (EPIC-/FEAT-):** end-user / operator **business capabilities** (navigation, SOS, BackTrack, HazTrack, First Aid, TrackIQ, PCR, TrackMate, POI, OCS modules, app experience).
 - **Sprint 0 register — Roadmap & milestones §B2:** cross-cutting foundation that serves **every** module — overall architecture, infra/CI-CD, foundational data model, auth, code standards, design system, UX guidelines, RBAC/permission matrix, business-rule/compliance baselines, Phase 2 inert scaffolds, public site. Built first as the foundation (Sprint 0 / run-up to Discovery gate).
@@ -50,7 +50,7 @@ Sprint 0 separates **the work (tasks)** from **how it is assured (criteria)** (i
 
 - **Tasks (`S0-`)** — 9 items (see Roadmap & milestones §B2.1): business analysis · build backlog · 4 documents · site · Figma · codebase/CI. A **Customer hand-over?** flag marks which are client deliverables (Discovery artefacts) vs internal foundation work. The former per-task `FND-` IDs are retired.
 - **Topic → Concern → Acceptance Criteria** is the assurance layer; each criterion notes which **Task (`S0-`)** it validates + which Discovery artefact (D#) it evidences. **Lives in [`docs/sprint-0-foundation-criteria.md`](../docs/sprint-0-foundation-criteria.md)** (separated from delivery plan so BA can analyse independently).
-- **Sources:** tasks → `confluence-export/01-about/02-roadmap-milestones.md` §B2.1 · criteria → `docs/sprint-0-foundation-criteria.md` · gate deliverable register → `confluence-export/01-about/02-roadmap-milestones.md` §B5. Each criterion `AC-C{concern}-{nn}` is unique — never renumber after issue.
+- **Sources:** tasks → `drive-docs/01-about/02-roadmap-milestones.md` §B2.1 · criteria → `docs/sprint-0-foundation-criteria.md` · gate deliverable register → `drive-docs/01-about/02-roadmap-milestones.md` §B5. Each criterion `AC-C{concern}-{nn}` is unique — never renumber after issue.
 - **Link model:** a business feature builds on the Sprint 0 tasks' outputs and asserts foundation standards (5-Q hierarchy, prohibited mutations, WCAG, RT/RG, thresholds) as **Acceptance Criteria** — the standard itself is never a feature.
 
 ## Priority levels

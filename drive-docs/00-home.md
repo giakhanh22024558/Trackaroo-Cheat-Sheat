@@ -24,7 +24,7 @@
 | How we work (Scrum, DoR, DoD) | [About → Ways of working](#) |
 | Write a Story or AC the right way | [About → Story / AC conventions](#) |
 | Raise a Change Request | [About → Change Request process](#) |
-| Where things live (Jira / Confluence / Drive) | [About → Tool stack](#) |
+| Where things live (Jira / Drive / GitHub) | [About → Tool stack](#) |
 | First-day / first-week setup | [About → Onboarding](#) |
 | What does this acronym mean? | [About → Glossary](#) |
 | System architecture, modules | [Product → System overview](#) |
@@ -68,11 +68,11 @@
 
 | Artefact | Source of truth | Location |
 |---|---|---|
-| **Delivery plan + backlog** | **This Confluence space** (`02-roadmap-milestones`) | maintained directly here · Confluence wins |
+| **Delivery plan + backlog** | **This Drive workspace** (`01-about/02-roadmap-milestones.md` + `02-product/03-modules/_index.md`) | maintained in `drive-docs/` in repo · re-upload to Drive on change |
 | Sprint 0 Foundation criteria (45 ACs) | Repo | `docs/sprint-0-foundation-criteria.md` |
 | Open clarification register (CLR-TRK) | Repo | `docs/gap-clarifications.md` |
 | Spec extracts (20 docs) | Repo | `research/spec-docs/*.md` |
 | Architecture diagrams (4-tier C4) | Repo | `diagrams/` |
 | Backlog ID + AC writing conventions | Repo | `conventions/` |
 
-If a repo file conflicts with the Confluence page **for delivery plan content**, the Confluence page wins (the plan is maintained here now). For everything else, the repo wins; re-export to refresh.
+The canonical content of every page in this Drive workspace lives in the repo under `drive-docs/`. Edits should go in the repo first; re-upload to refresh the Drive copy.

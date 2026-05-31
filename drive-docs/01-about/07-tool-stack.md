@@ -14,7 +14,7 @@ What tool is used for what. The single rule: each piece of info lives in exactly
 ## Outline (to fill)
 
 ### Source-of-truth matrix
-*[TODO: Repo (docs/specs/diagrams) · Jira (sprint execution) · Confluence (read view) · Drive (raw inputs + PDFs) · GitHub (code + CI)]*
+*[TODO: Repo (docs/specs/diagrams) · Jira (sprint execution) · Drive (workspace docs + raw inputs + PDFs) · GitHub (code + CI)]*
 
 ### Project repo layout
 *[TODO: `docs/` · `research/spec-docs/` · `diagrams/` · `conventions/` · `MasterMind/` (read-only)]*
@@ -22,7 +22,7 @@ What tool is used for what. The single rule: each piece of info lives in exactly
 ### Jira usage
 *[TODO: Epic/Feature/Story/Bug · sprint board · gate evidence linkage]*
 
-### Confluence usage
+### Drive usage (workspace docs)
 *[TODO: This space = read view of the repo · re-export to sync]*
 
 ### Drive usage
