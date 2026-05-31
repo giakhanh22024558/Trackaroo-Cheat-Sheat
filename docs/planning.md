@@ -1,12 +1,12 @@
 # Trackaroo® Phase 1 — Delivery Planning (RELOCATED)
 
-> ⚠️ **This file has moved.** The delivery plan + backlog is now maintained in the Drive workspace at:
+> ⚠️ **This file has moved.** The delivery plan + backlog is now maintained in the Confluence workspace at:
 >
-> **➡️ [`drive-docs/01-about/02-roadmap-milestones.md`](../drive-docs/01-about/02-roadmap-milestones.md)**
+> **➡️ [`confluence-export/01-about/02-roadmap-milestones.md`](../confluence-export/01-about/02-roadmap-milestones.md)**
 
 ## Why moved
 
-The Drive workspace folder (`drive-docs/`) is now the authoritative home for project planning so the team can read, edit, and upload it directly into Google Drive. The file there is the **single source of truth** for delivery planning going forward.
+The Confluence-bound workspace (`confluence-export/`) is now the authoritative home for project planning so the team can read, edit, and import it directly into Confluence Cloud. The file there is the **single source of truth** for delivery planning going forward.
 
 ## What's still in this repo (NOT moved)
 

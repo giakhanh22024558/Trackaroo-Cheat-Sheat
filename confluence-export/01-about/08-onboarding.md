@@ -14,7 +14,7 @@ Day-1, Week-1 checklist. Local environment setup. Required reading.
 ## Outline (to fill)
 
 ### Day 1 — orientation
-*[TODO: Accounts (Jira/Drive/GitHub) · workspace tour · meet the team · read this Home + ABOUT]*
+*[TODO: Accounts (Jira/Confluence/Drive/GitHub) · workspace tour · meet the team · read this Home + ABOUT]*
 
 ### Day 1 — read these 6 pages
 *[TODO: [Project overview · Roadmap · Tool stack · Glossary · System overview · UX guidelines]]*
