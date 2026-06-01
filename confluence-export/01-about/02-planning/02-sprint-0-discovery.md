@@ -69,12 +69,15 @@ gantt
 > **All 8 tasks track in parallel** (Squad of 8 senior experts, see [Team & Contacts](../03-team-contacts.md) §2).
 > Task IDs + status assigned in the Jira board synced into this page.
 
-## Risk callouts
+## Risk register
 
-- **17-day window from contract execution is the tightest gate** — no slack for re-submission. All 8 tasks must clear PD on first review.
-- **9 Artefacts + 10 mockups + WFD Wireframes = highest effort + highest review risk** — split across 3 different owners and run fully parallel from Day 1.
-- **System Access** is critical but lightweight — close by end of Week 1 to avoid blocking everything else.
-- **Design Quality Obligation (DCA §11A)** introduces independent PD rejection grounds — mockups + design direction statement must reach **premium consumer safety app** standard, not just minimum spec.
+| # | Date | Raised by | Risk | Approved by | Resolution |
+|---|---|---|---|---|---|
+| **RISK-001** | 2026-06-01 | Luong Gia Khanh (PM) | 17-day Sprint 0 window = tightest gate · no slack for re-submission · all 8 tasks must clear PD on first review | *(awaiting PD)* | Front-load all 8 tasks from Day 1, parallel across 8 owners; foundation freeze Fri 5 Jun gives 3-BD internal polish before submission |
+| **RISK-002** | 2026-06-01 | Luong Gia Khanh (PM) | 9 Artefacts + 10 mockups + WFD Wireframes = highest combined effort + highest PD review risk | Dinh Ba Trung (Tech Lead) | Split across 3 owners (Tech / UI/UX / UI/UX) · run fully parallel from Day 1 · daily standups |
+| **RISK-003** | 2026-06-01 | Luong Gia Khanh (PM) | System Access task lightweight but critical blocker for any repo-dependent work | Nguyen Viet Hoang (DevOps Lead) | DevOps Lead closes by Wed 3 Jun (Week 1) before any other task needs repo access |
+| **RISK-004** | 2026-06-01 | Luong Gia Khanh (PM) | DCA §11A Design Quality Obligation = independent PD rejection ground for mockups + design statement (premium-consumer-safety standard) | *(awaiting PD)* | Pre-review with PD on Tue 9 Jun (informal walkthrough) before formal Wed 10 Jun submission |
+| **RISK-005** | 2026-06-01 | Luong Gia Khanh (PM) | Submission Wed 10 Jun → only **3 BD PD review** (Wed–Fri) · recovery plan (5 BD per DCA §5.5.2) would exceed gate date if rejected | *(awaiting PD)* | Submit early Wed 10 Jun AM · daily check-ins during 3-BD review · pre-flag any reviewer concerns before formal review opens |
 
 ## Sign-off
 
