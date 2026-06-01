@@ -10,25 +10,11 @@
 
 ---
 
-## H2. Risk Register
+## H2. Risk Register → moved
 
-| Col | Type | Required | Sample value | Notes |
-|---|---|---|---|---|
-| `risk_id` | RISK-NNN | Y | `RISK-001` | Sequential, never reused |
-| `date_raised` | YYYY-MM-DD | Y | `2026-06-01` | |
-| `raised_by` | Name | Y | `Luong Gia Khanh` | |
-| `category` | Delivery / Technical / Security / Legal / Commercial / Resource | Y | `Technical` | |
-| `description` | Text | Y | `PCR clustering rule undefined; vendor must propose 60×60pt threshold by Beta-Ready` | Plain language |
-| `likelihood` | L / M / H | Y | `M` | |
-| `severity` | L / M / H | Y | `M` | |
-| `priority` | L · M · H computed | Y | `Medium` | =likelihood × severity heuristic |
-| `affected_gate` | Discovery / Alpha / Beta-Ready / GA / Warranty | Y | `Beta-Ready` | |
-| `owner` | Name | Y | `Nguyen Thuy Duong (UI/UX Lead)` | Key Personnel role |
-| `mitigation` | Text | Y | `Propose 60×60pt cluster rule + tap-to-expand UX to PD by 10 Jun; document in WFD-5126 §5.17` | What we're doing about it |
-| `status` | Open / Mitigating / Closed / Watch | Y | `Mitigating` | |
-| `closed_date` | YYYY-MM-DD | When closed | *(blank)* | |
-| `last_updated` | YYYY-MM-DD | Y | `2026-06-01` | |
-| `weekly_status_ref` | Week NN | When raised in status | `Week 1` | |
+> **Moved to its own template file** with compact 7-column schema + full maintenance/reporting/escalation context: [`registers/risk.md`](./registers/risk.md).
+>
+> Rationale: client mandate (DCA §7) requires only severity · owner · mitigation status as minimum; previous 15-column schema was over-spec. Sprint-level register in Sprint 0 page uses a 6-col compact mirror.
 
 ## H3. Decision Register / Technical Decision Record
 

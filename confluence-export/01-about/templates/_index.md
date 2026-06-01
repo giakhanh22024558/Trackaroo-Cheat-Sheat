@@ -12,7 +12,7 @@
 | 03 | [Meeting Minutes](./03-meeting-minutes.md) | Within 24h of every meeting | §6.5.2 | `[CMP-5026] Minutes — [Meeting Type] — [Date]` |
 | 04 | [Variation Proposal](./04-variation-proposal.md) | Per change need | §6.8 / DCA §21.2 | `[VAR-NNN] Variation Proposal — [Subject]` |
 | 05 | [Incident / Anomaly Report](./05-incident-anomaly-report.md) | SEV-1 · security · gate failure · personnel loss · force majeure · material impact | §6.6.2 | `[CMP-5026] Incident Report — [Type] — [Date]` |
-| 06 | [Register Schemas (x8)](./06-register-schemas.md) | 8 live register sheets (Risk / Decision / Defect / Dependency / OSS / SDK / AI-tool / Change) | §6.10.2 / DCA §7 | `[CMP-5026] Register — [Name]` |
+| 06 | [Registers — per-register templates](./registers/) | 9 live registers (DCA §7) — each register has its own template file with schema + maintenance + reporting integration. **Risk** [split out](./registers/risk.md). Decision · Defect · Dependency · OSS · SDK · AI-tool · Change remaining in [`06-register-schemas.md`](./06-register-schemas.md) until split. | §6.10.2 / DCA §7 | `[CMP-5026] Register — [Name]` |
 
 ## Usage flow
 
