@@ -19,25 +19,25 @@ gantt
     excludes weekends
 
     section Architectural
-    9 Artefacts D1-D9 (parallel)          :crit, 2026-05-29, 2026-06-08
+    9 Artefacts D1-D9 (parallel)          :crit, 2026-05-29, 2026-06-10
 
     section Design
-    10 high-fidelity mockups               :crit, 2026-05-29, 2026-06-08
-    Design direction statement             :2026-06-04, 2026-06-08
+    10 high-fidelity mockups               :crit, 2026-05-29, 2026-06-10
+    Design direction statement             :2026-06-04, 2026-06-10
 
     section Technical & Process
-    TrackMate Transport Proposal           :2026-05-29, 2026-06-08
-    WFD Wireframe Coverage                 :2026-05-29, 2026-06-08
+    TrackMate Transport Proposal           :2026-05-29, 2026-06-10
+    WFD Wireframe Coverage                 :2026-05-29, 2026-06-10
     AI-Tool Register                       :2026-06-01, 2026-06-04
-    Companion Website Staging              :2026-05-29, 2026-06-08
+    Companion Website Staging              :2026-05-29, 2026-06-10
     System Access established              :crit, 2026-05-29, 2026-06-03
 
     section Gate milestones
     System Access live                     :milestone, 2026-06-03, 0d
     AI-Tool Register complete              :milestone, 2026-06-04, 0d
     Internal foundation freeze (draft v1)  :milestone, 2026-06-05, 0d
-    Package submitted to PD                :milestone, crit, 2026-06-08, 0d
-    PD review window (5 BD)                :active, 2026-06-08, 2026-06-12
+    Package submitted to PD                :milestone, crit, 2026-06-10, 0d
+    PD review window (3 BD)                :active, 2026-06-10, 2026-06-12
     Discovery Gate                         :milestone, crit, 2026-06-15, 0d
 ```
 
@@ -48,24 +48,24 @@ gantt
 | **Wed 3 Jun** | System Access live | Other tasks need repo access; unblocks dev infra |
 | **Thu 4 Jun** | AI-Tool Register complete | Lowest-effort task; close it early to demonstrate process discipline |
 | **Fri 5 Jun** | All 8 tasks draft v1 complete | "Foundation freeze" — Squad self-review starts |
-| **Mon 8 Jun** | Package submitted to PD | Hard deadline — 5 BD PD review window starts here |
-| **Fri 12 Jun** | PD review complete | Any rejection → recovery plan ≤5 BD (per DCA §5.5.2) — risky if rejected this late |
+| **Wed 10 Jun** | Package submitted to PD | Hard deadline (per PD: *"Design Intent Submission due by 10 June 2026"*) — PD review window starts here |
+| **Fri 12 Jun** | PD review complete | 3 BD window only (Wed–Fri). Any rejection → recovery plan ≤5 BD (per DCA §5.5.2) — extremely risky if rejected this late |
 | **Mon 15 Jun** | **Discovery Gate clearance** | Sprint 1 cannot start without it |
 
 ## Task list
 
 | Task | Owner (Squad role) | Internal deadline | Effort | Sub-deliverables |
 |---|---|---|---|---|
-| **9 Architectural Compliance Artefacts** (D1–D9) | **Tech Lead** — Dinh Ba Trung (lead) · Mobile Lead (D8) · DevOps Lead (D9) | **Fri 5 Jun** (draft) · **Mon 8 Jun** (submit) | High | D1–D7 docs + D8 SDK audit + D9 OSS licence audit |
-| **10 high-fidelity mockups** (5 screens × daylight + night) | **UI/UX Lead** — Nguyen Thuy Duong | **Mon 8 Jun** | High | Map · Archetype Selection · TrackMate™ Group · SOS Confirmation · First Aid Reference — each in 2 modes |
-| **Written design direction statement** (Design Quality Obligation §11A) | **UI/UX Lead** — Nguyen Thuy Duong | **Mon 8 Jun** *(after mockups v1)* | Medium | 1 written doc, 2–4 pages |
-| **TrackMate™ Transport Proposal** (BLE Mesh · Wi-Fi Direct · LoRa) | **Mobile Developer** — Nguyen Tien Dat | **Mon 8 Jun** | Medium | 1 technical proposal doc |
-| **WFD-5126 Wireframe Coverage** — all Survival Core subsystems | **UI/UX Lead** — Nguyen Thuy Duong | **Mon 8 Jun** | High | Wireframe set covering Navigation · SOS · BackTrack™ · HazTrack™ · First Aid Reference |
+| **9 Architectural Compliance Artefacts** (D1–D9) | **Tech Lead** — Dinh Ba Trung (lead) · Mobile Lead (D8) · DevOps Lead (D9) | **Fri 5 Jun** (draft) · **Wed 10 Jun** (submit) | High | D1–D7 docs + D8 SDK audit + D9 OSS licence audit |
+| **10 high-fidelity mockups** (5 screens × daylight + night) | **UI/UX Lead** — Nguyen Thuy Duong | **Wed 10 Jun** | High | Map · Archetype Selection · TrackMate™ Group · SOS Confirmation · First Aid Reference — each in 2 modes |
+| **Written design direction statement** (Design Quality Obligation §11A) | **UI/UX Lead** — Nguyen Thuy Duong | **Wed 10 Jun** *(after mockups v1)* | Medium | 1 written doc, 2–4 pages |
+| **TrackMate™ Transport Proposal** (BLE Mesh · Wi-Fi Direct · LoRa) | **Mobile Developer** — Nguyen Tien Dat | **Wed 10 Jun** | Medium | 1 technical proposal doc |
+| **WFD-5126 Wireframe Coverage** — all Survival Core subsystems | **UI/UX Lead** — Nguyen Thuy Duong | **Wed 10 Jun** | High | Wireframe set covering Navigation · SOS · BackTrack™ · HazTrack™ · First Aid Reference |
 | **AI-Tool Register** (per DCA §10.6) | **Tech Lead** — Dinh Ba Trung | **Thu 4 Jun** | Low | 1 Google Sheet (schema in [`templates/06-register-schemas.md`](../templates/06-register-schemas.md) §H8) |
-| **Companion Website Staging** (env + CMS + content plan) | **Web/Console Lead** — Nguyen Quoc Viet | **Mon 8 Jun** | Medium | Staging URL · CMS configured · content delivery plan approved |
+| **Companion Website Staging** (env + CMS + content plan) | **Web/Console Lead** — Nguyen Quoc Viet | **Wed 10 Jun** | Medium | Staging URL · CMS configured · content delivery plan approved |
 | **System Access** — Client admin to repos · build envs · credentials | **DevOps Lead** — Nguyen Viet Hoang | **Wed 3 Jun** | Low | GitHub org access · Firebase/Mapbox accounts · CI/CD repo · credentials register |
 
-> **Submission deadline:** Mon 8 Jun → PD review 5 BD (8–12 Jun) → Discovery Gate Mon 15 Jun.
+> **Submission deadline:** Wed 10 Jun (per PD: *"Design Intent Submission due by 10 June 2026, 5 Business Days before gate"*) → PD review Wed–Fri (10–12 Jun) → Discovery Gate Mon 15 Jun.
 > **All 8 tasks track in parallel** (Squad of 8 senior experts, see [Team & Contacts](../03-team-contacts.md) §2).
 > Task IDs + status assigned in the Jira board synced into this page.
 
