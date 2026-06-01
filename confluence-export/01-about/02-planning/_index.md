@@ -24,6 +24,7 @@ gantt
     title Trackaroo® Phase 1 — Master Timeline (29 May – 13 Nov 2026)
     dateFormat YYYY-MM-DD
     axisFormat %d %b
+    todayMarker off
 
     section Client Gates
     Contract Execution      :milestone, crit, 2026-05-29, 0d

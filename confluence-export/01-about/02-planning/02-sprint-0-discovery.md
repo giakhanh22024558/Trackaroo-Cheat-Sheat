@@ -17,6 +17,7 @@ gantt
     axisFormat %a %d/%m
     tickInterval 1day
     excludes weekends
+    todayMarker off
 
     section Architectural
     9 Artefacts D1-D9 (parallel)          :crit, 2026-05-29, 2026-06-10
