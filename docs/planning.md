@@ -2,7 +2,7 @@
 
 > ⚠️ **This file has moved.** The delivery plan + backlog is now maintained in the Confluence workspace at:
 >
-> **➡️ [`confluence-export/01-about/02-roadmap-milestones.md`](../confluence-export/01-about/02-roadmap-milestones.md)**
+> **➡️ [`confluence-export/01-about/02-roadmap-milestones.md`](../confluence-export/01-about/02-planning/_index.md)**
 
 ## Why moved
 

@@ -7,7 +7,7 @@
 | Page | What's in it | Read if you... |
 |---|---|---|
 | [Project overview](./01-overview.md) | Mandate, scope, what Phase 1 covers (and doesn't) | …are new or need a refresher on what we're building and why |
-| [Roadmap & milestones](./02-roadmap-milestones.md) ⭐ | **Live delivery plan + backlog** (Part A timeline · Part B registers · 12 sprints · 4 gates · 51 features · Sprint 0 tasks). Maintained here directly. | …need to know "when is X due" or look at the backlog |
+| [Planning](./02-planning/_index.md) ⭐ | **Delivery plan parent page** — master timeline + 4 gate checklists + 12 sprint pages (Sprint 0 detailed, Sprints 1–11 coming soon) | …need to know "when is X due" or read a specific sprint plan |
 | [Team & contacts](./03-team-contacts.md) | Who does what, RACI, escalation path | …don't know who to ask about X |
 | [Ways of working](./04-ways-of-working.md) | Scrum cadence, DoR/DoD, ceremonies, dual-track | …are joining a sprint or running a refinement |
 | [Story / AC conventions](./05-story-ac-conventions.md) | How to write a Story, AC format (Given/When/Then en), ID rules | …are writing or reviewing backlog items |
