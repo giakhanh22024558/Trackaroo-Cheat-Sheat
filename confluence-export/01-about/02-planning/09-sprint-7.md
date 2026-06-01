@@ -10,9 +10,8 @@
 This page will follow the structure of [Sprint 0 — Discovery](./02-sprint-0-discovery.md):
 
 - **Sprint goal** — single-sentence outcome
-- **Task list** — per task: owner, deadline, effort, sub-deliverables
-- **Timeline & milestones** — Mermaid gantt, day-by-day, weekends excluded
-- **Internal milestones** — checkpoint table with rationale
+- **Timeline & milestones** — Mermaid gantt (day-by-day, weekends excluded) + internal milestones table
+- **Task list** — per task: owner, deadline, effort, sub-deliverables (task IDs come from Jira sync)
 - **Risk callouts** — known blockers and mitigations
 - **Sign-off block** — PD acceptance record
 
