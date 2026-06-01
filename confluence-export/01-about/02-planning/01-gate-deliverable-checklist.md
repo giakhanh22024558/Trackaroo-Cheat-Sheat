@@ -32,22 +32,31 @@ Slitigenz must provide specific **technical, design, and administrative delivera
 | ☐ | **D8** | SDK audit declaration | Full inventory: SDK name + activation status |
 | ☐ | **D9** | OSS licence audit | App Store + Google Play distribution compatibility |
 
-### 1B. Design Intent Submission
+### 1B. Design & User Interface
 
 | ✓ | Item | Detail |
 |---|---|---|
-| ☐ | **10 high-fidelity mockups** | **5 key screens × 2 modes** — Map · Archetype Selection · TrackMate™ Group · SOS Confirmation · First Aid Reference — in **daylight + night** modes |
-| ☐ | **Written design direction statement** | Explains how the visual language satisfies the Design Quality Obligation (DCA §11A) |
+| ☐ | **10 high-fidelity mockups** | **5 key screens × 2 modes** — Map · Archetype Selection · TrackMate™ Group · SOS Confirmation · First Aid Reference — in **daylight + night** modes. Submit by **10 Jun 2026** (5 BD before gate) |
+| ☐ | **Written design direction statement** (**max 2 pages**) | Explains how the visual language satisfies the Design Quality Obligation (DCA §11A) |
+| ☐ | **Survival Core Wireframe Coverage** (WFD-5126) | Formally approved UI states for **Navigation Engine · BackTrack™ · HazTrack™ · SOS** — Experience Layer development cannot start without these |
 
-### 1C. Technical & Process Deliverables
+### 1C. TrackMate™ Transport & Comms
 
 | ✓ | Item | Detail |
 |---|---|---|
-| ☐ | **TrackMate™ Transport Proposal** | Technical proposal for BLE Mesh · Wi-Fi Direct · LoRa transport |
-| ☐ | **WFD-5126 Wireframe Coverage** | Formally approved UI state coverage for **all Survival Core subsystems** |
-| ☐ | **AI-Tool Register** | Disclosure of all AI coding tools + human-review processes (per DCA §10.6) |
-| ☐ | **Companion Website Staging** | Staging environment · CMS configuration · delivery plan accepted |
+| ☐ | **Transport Proposal** | Technical proposal for BLE Mesh · Wi-Fi Direct · LoRa transport — must be approved before comms development begins |
+| ☐ | **Proposal-Stage Concessions — Battery validation methodology + architecture** | Deferred empirical-proof methodology for battery performance validation (BPS-5126 thresholds) |
+| ☐ | **Proposal-Stage Concessions — Transport validation methodology** | Range · fallback behaviour · hardware auto-detection methodology |
+
+### 1D. Operational & Administrative Readiness
+
+| ✓ | Item | Detail |
+|---|---|---|
+| ☐ | **Companion Website Staging + Live anchor statement** | Staging env · CMS config · information architecture accepted. **Site live with verbatim product anchor statement** |
 | ☐ | **System Access** | Continuous, unrestricted Client admin access to all repositories · build environments · credentials (per DCA §8.1) |
+| ☐ | **AI-Tool Register** | Disclosure of all AI coding tools + human-review processes (per DCA §10.6) |
+| ☐ | **Continuity Plan** | Identifies backup personnel · knowledge-transfer steps · repository continuity · escalation if any Key Personnel unavailable >5 consecutive BD (per DCA §14.1 — **strict precedent**) |
+| ☐ | **Initial Security & Privacy Evidence** | Documentation of data-isolation architecture + security baselines (encryption at rest, TLS 1.3 in transit, Survival Core network-zero proof) |
 
 ➡ Detailed delivery plan: [Sprint 0 — Discovery](./02-sprint-0-discovery.md)
 

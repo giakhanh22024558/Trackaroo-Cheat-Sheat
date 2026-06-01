@@ -6,7 +6,7 @@
 
 ## Sprint goal
 
-> **Pass Discovery Gate on 15 June 2026** by delivering **8 PD-deliverable tasks** (9 Architectural Compliance Artefacts · Design Intent · 5 technical/process deliverables) **+ 1 internal QA pre-study task** (Sprint 1 enablement). Acceptance by PD unblocks all subsequent build work in Sprints 1+.
+> **Pass Discovery Gate on 15 June 2026** by delivering **10 PD-deliverable tasks** (9 Architectural Compliance Artefacts · Design + UI · TrackMate Transport + concessions · Operational & Admin Readiness) **+ 1 internal QA pre-study task** (Sprint 1 enablement). Acceptance by PD unblocks all subsequent build work in Sprints 1+.
 
 ## Timeline & milestones
 
@@ -27,11 +27,13 @@ gantt
     Design direction statement             :2026-06-04, 2026-06-10
 
     section Technical & Process
-    TrackMate Transport Proposal           :2026-05-29, 2026-06-10
+    TrackMate Proposal + Concessions       :2026-05-29, 2026-06-10
     WFD Wireframe Coverage                 :2026-05-29, 2026-06-10
     AI-Tool Register                       :2026-06-01, 2026-06-04
-    Companion Website Staging              :2026-05-29, 2026-06-10
+    Companion Website + live anchor        :2026-05-29, 2026-06-10
     System Access established              :crit, 2026-05-29, 2026-06-03
+    Continuity Plan                        :2026-06-01, 2026-06-10
+    Initial Security & Privacy Evidence    :2026-06-01, 2026-06-10
 
     section QA pre-study (Sprint 1 enablement)
     QA reads docs + drafts test approach   :2026-06-01, 2026-06-12
@@ -65,15 +67,17 @@ gantt
 | **9 Architectural Compliance Artefacts** (D1–D9) | The full Discovery artefact package — 7 architecture docs + SDK audit + OSS licence audit. Each D# detailed in [Gate Checklist §1A](./01-gate-deliverable-checklist.md#1a-9-architectural-compliance-artefacts). Demonstrates Survival Core isolation, deterministic state, offline-first execution, breadcrumb classification, CAL/PCR architecture. | **Tech Lead** — Dinh Ba Trung (lead) · Mobile Lead (D8) · DevOps Lead (D9) | High | **Fri 5 Jun** (draft) · **Wed 10 Jun** (submit) | AOD-5026 · FSD-5126 · OSM-5026 §10 · BTF-5126 · CDG-5126 · VGD-5126 · PSB-5026 · DCA §10.7 (D9) |
 | **10 high-fidelity mockups** (5 screens × daylight + night) | Design Intent submission — 5 key screens (Map · Archetype Selection · TrackMate™ Group · SOS Confirmation · First Aid Reference) each in **daylight + night** modes. Used by PD to assess Design Quality Obligation. | **UI/UX Lead** — Nguyen Thuy Duong | High | **Wed 10 Jun** | UXS-5726 · WFD-5126 · MAS-5126 · TAA-5126 · DCA §11A |
 | **Written design direction statement** (Design Quality Obligation §11A) | 2–4 page document articulating how the visual language meets premium-consumer-safety-app standard. Independent acceptance ground per DCA §11A — PD may reject design quality even if functional spec passes. | **UI/UX Lead** — Nguyen Thuy Duong | Medium | **Wed 10 Jun** *(after mockups v1)* | DCA §11A · UXS-5726 · MAS-5126 |
-| **TrackMate™ Transport Proposal** (BLE Mesh · Wi-Fi Direct · LoRa) | Technical proposal for 3-tier peer-comms transport stack with deterministic fallback logic + battery/range trade-offs. Foundation for Sprint 8 build. | **Mobile Developer** — Nguyen Tien Dat | Medium | **Wed 10 Jun** | FSD-5126 §6.2 · WFD-5126 §5.7–5.8 · BPS-5126 · CDG-5126 |
+| **TrackMate™ Transport Proposal + Proposal-Stage Concessions** | (a) Technical proposal for 3-tier peer-comms transport stack (BLE Mesh · Wi-Fi Direct · LoRa) with deterministic fallback logic. (b) Concessions: **methodology + architecture** for deferred empirical validation of **battery performance** (BPS thresholds) + **transport** (range · fallback · HW auto-detection). Foundation for Sprint 8 build + downstream gate validation. | **Mobile Developer** — Nguyen Tien Dat (+ QA Lead for validation methodology) | Medium-High | **Wed 10 Jun** | FSD-5126 §6.2 · WFD-5126 §5.7–5.8 · BPS-5126 · CDG-5126 · TQP-5026 |
 | **WFD-5126 Wireframe Coverage** — all Survival Core subsystems | UI state coverage for every Survival Core subsystem (Navigation · SOS · BackTrack™ · HazTrack™ · First Aid). PD-approval prerequisite before any subsystem dev may start (per WFD-5126 build-gate rule). | **UI/UX Lead** — Nguyen Thuy Duong | High | **Wed 10 Jun** | WFD-5126 · UXS-5726 · FQH-5026 · FSD-5126 |
 | **AI-Tool Register** (per DCA §10.6) | Disclosure sheet of every AI coding tool in use + data-handling model + human-review process + PD approval status. Schema in [`templates/06-register-schemas.md`](../templates/06-register-schemas.md) §H8. | **Tech Lead** — Dinh Ba Trung | Low | **Thu 4 Jun** | DCA §10.6 · VGD-5126 |
-| **Companion Website Staging** (env + CMS + content plan) | Public-facing staging website + CMS configured + delivery plan accepted by PD. Goes live as part of Alpha gate (market-ready). | **Web/Console Lead** — Nguyen Quoc Viet | Medium | **Wed 10 Jun** | OCS-5026 · Slitigenz Proposal §10.2 · DCA §8.4 · CMP-5026 §6.11 |
+| **Companion Website Staging + live anchor** | Staging env + CMS configured + IA accepted by PD. **Live site with verbatim product anchor statement.** Foundation for Alpha (market-ready). | **Web/Console Lead** — Nguyen Quoc Viet | Medium | **Wed 10 Jun** | OCS-5026 · Slitigenz Proposal §10.2 · DCA §8.4 · CMP-5026 §6.11 |
 | **System Access** — Client admin to repos · build envs · credentials | Sets up continuous, unrestricted Client admin access to all repositories · CI/CD · platform accounts (App Store, Play, Mapbox, Firebase) · credentials register. **Strict prerequisite** to any subsequent work per DCA §8.1. | **DevOps Lead** — Nguyen Viet Hoang | Low | **Wed 3 Jun** | DCA §8.1, §8.3, §8.4 · CDG-5126 |
+| **Continuity Plan** | Written plan: backup personnel · knowledge-transfer steps · repo/build continuity · escalation arrangements if any Key Personnel unavailable >5 consecutive BD or materially reduced. **Strict precedent before Discovery Gate Clearance** per DCA §14.1. | **Project Manager** — Luong Gia Khanh | Low | **Wed 10 Jun** | DCA §14.1 · CMP-5026 §6.2.2 · Slitigenz Squad (§1.3) |
+| **Initial Security & Privacy Evidence** | Documentation of data-isolation architecture (Survival Core local-only · Firebase boundary) + security baselines (AES-256 at rest · TLS 1.3 in transit · MFA · zero outbound from Core verified). Pre-flight for Schedule 9 DPSA executed before env access. | **DevOps Lead** — Nguyen Viet Hoang (+ Tech Lead) | Medium | **Wed 10 Jun** | DCA §9.1–9.7 + Schedule 9 · CDG-5126 · BTF-5126 · ESF-5026 |
 | **QA pre-study + Sprint 1 test approach draft** *(internal — not a Discovery deliverable)* | QA Lead reads key spec docs in advance + drafts test approach for Sprint 1 (SOS theme) so test suite build can start Day 1 of Sprint 1. Outputs: TQP domain coverage matrix for SOS · device matrix · test-data plan · early RT/RG checks (RT-16 SOS legal, RT-09 prohibited capabilities). | **QA/Audit Lead** — Nguyen Thi Thom | Medium | **Fri 12 Jun** *(before Sprint 1 starts 16 Jun)* | TQP-5026 (11 domains) · ESF-5026 (SOS, non-dispatch) · SFD-5026 · FSD-5126 §4.4 · BPS-5126 (battery ≤20%/hr SOS) · VGD-5126 (RT-01..23 · RG-01..11) · WFD-5126 §SOS · UXS-5726 (≤2 tap rule) · FQH-5026 |
 
 > **Submission deadline (PD package):** Wed 10 Jun (per PD: *"Design Intent Submission due by 10 June 2026, 5 Business Days before gate"*) → PD review Wed–Fri (10–12 Jun) → Discovery Gate Mon 15 Jun.
-> **9 sprint tasks total** — 8 PD-deliverable + 1 internal QA pre-study (Sprint 1 enablement). All track in parallel across the 8-person Squad ([Team & Contacts](../03-team-contacts.md) §2).
+> **11 sprint tasks total** — 10 PD-deliverable + 1 internal QA pre-study (Sprint 1 enablement). All track in parallel across the 8-person Squad ([Team & Contacts](../03-team-contacts.md) §2).
 > Task IDs + status assigned in the Jira board synced into this page.
 
 ## Risk register
@@ -92,7 +96,7 @@ gantt
 
 | Item | Status |
 |---|---|
-| All 8 PD-deliverable tasks accepted | ☐ |
+| All 10 PD-deliverable tasks accepted | ☐ |
 | QA test approach v1 ready (internal) | ☐ |
 | Discovery Gate Clearance issued | ☐ |
 | PD signature | __________ |
