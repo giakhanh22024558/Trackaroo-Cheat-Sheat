@@ -19,10 +19,10 @@ gantt
     excludes weekends
 
     section Architectural
-    9 Artefacts D1-D9 (parallel)          :2026-05-29, 2026-06-10
+    9 Artefacts D1-D9 (parallel)          :crit, 2026-05-29, 2026-06-10
 
     section Design
-    10 high-fidelity mockups               :2026-05-29, 2026-06-10
+    10 high-fidelity mockups               :crit, 2026-05-29, 2026-06-10
     Design direction statement             :2026-06-04, 2026-06-10
 
     section Technical & Process
@@ -30,15 +30,15 @@ gantt
     WFD Wireframe Coverage                 :2026-05-29, 2026-06-10
     AI-Tool Register                       :2026-06-01, 2026-06-04
     Companion Website Staging              :2026-05-29, 2026-06-10
-    System Access established              :2026-05-29, 2026-06-03
+    System Access established              :crit, 2026-05-29, 2026-06-03
 
     section Gate milestones
     System Access live                     :milestone, 2026-06-03, 0d
     AI-Tool Register complete              :milestone, 2026-06-04, 0d
     Internal foundation freeze (draft v1)  :milestone, 2026-06-05, 0d
-    Package submitted to PD                :milestone, 2026-06-10, 0d
+    Package submitted to PD                :milestone, crit, 2026-06-10, 0d
     PD review window (3 BD)                :active, 2026-06-10, 2026-06-12
-    Discovery Gate                         :milestone, 2026-06-15, 0d
+    Discovery Gate                         :milestone, crit, 2026-06-15, 0d
 ```
 
 ### Internal milestones (manage proactively)

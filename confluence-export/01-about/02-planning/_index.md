@@ -26,11 +26,11 @@ gantt
     axisFormat %d %b
 
     section Client Gates
-    Contract Execution      :milestone, 2026-05-29, 0d
-    Discovery Gate          :milestone, 2026-06-15, 0d
-    Alpha Gate              :milestone, 2026-08-22, 0d
-    Beta-Ready MVP          :milestone, 2026-10-30, 0d
-    GA / Public Launch      :milestone, 2026-11-13, 0d
+    Contract Execution      :milestone, crit, 2026-05-29, 0d
+    Discovery Gate          :milestone, crit, 2026-06-15, 0d
+    Alpha Gate              :milestone, crit, 2026-08-22, 0d
+    Beta-Ready MVP          :milestone, crit, 2026-10-30, 0d
+    GA / Public Launch      :milestone, crit, 2026-11-13, 0d
 
     section Feature freeze
     Foundation freeze        :milestone, active, 2026-06-10, 0d
