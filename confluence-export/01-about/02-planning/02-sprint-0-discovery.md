@@ -6,7 +6,7 @@
 
 ## Sprint goal
 
-> **Pass Discovery Gate on 15 June 2026** by delivering 8 tasks covering 9 Architectural Compliance Artefacts · Design Intent · 5 technical/process deliverables. Acceptance by PD unblocks all subsequent build work in Sprints 1+.
+> **Pass Discovery Gate on 15 June 2026** by delivering **8 PD-deliverable tasks** (9 Architectural Compliance Artefacts · Design Intent · 5 technical/process deliverables) **+ 1 internal QA pre-study task** (Sprint 1 enablement). Acceptance by PD unblocks all subsequent build work in Sprints 1+.
 
 ## Timeline & milestones
 
@@ -33,12 +33,16 @@ gantt
     Companion Website Staging              :2026-05-29, 2026-06-10
     System Access established              :crit, 2026-05-29, 2026-06-03
 
+    section QA pre-study (Sprint 1 enablement)
+    QA reads docs + drafts test approach   :2026-06-01, 2026-06-12
+
     section Gate milestones
     System Access live                     :milestone, 2026-06-03, 0d
     AI-Tool Register complete              :milestone, 2026-06-04, 0d
     Internal foundation freeze (draft v1)  :milestone, 2026-06-05, 0d
     Package submitted to PD                :milestone, crit, 2026-06-10, 0d
     PD review window (3 BD)                :active, 2026-06-10, 2026-06-12
+    QA test approach v1 ready              :milestone, 2026-06-12, 0d
     Discovery Gate                         :milestone, crit, 2026-06-15, 0d
 ```
 
@@ -51,6 +55,7 @@ gantt
 | **Fri 5 Jun** | All 8 tasks draft v1 complete | "Foundation freeze" — Squad self-review starts |
 | **Wed 10 Jun** | Package submitted to PD | Hard deadline (per PD: *"Design Intent Submission due by 10 June 2026"*) — PD review window starts here |
 | **Fri 12 Jun** | PD review complete | 3 BD window only (Wed–Fri). Any rejection → recovery plan ≤5 BD (per DCA §5.5.2) — extremely risky if rejected this late |
+| **Fri 12 Jun** | QA test approach v1 ready | Sprint 1 (SOS) test suite build starts Day 1 — no QA ramp-up time lost |
 | **Mon 15 Jun** | **Discovery Gate clearance** | Sprint 1 cannot start without it |
 
 ## Task list
@@ -65,9 +70,10 @@ gantt
 | **AI-Tool Register** (per DCA §10.6) | Disclosure sheet of every AI coding tool in use + data-handling model + human-review process + PD approval status. Schema in [`templates/06-register-schemas.md`](../templates/06-register-schemas.md) §H8. | **Tech Lead** — Dinh Ba Trung | Low | **Thu 4 Jun** | DCA §10.6 · VGD-5126 |
 | **Companion Website Staging** (env + CMS + content plan) | Public-facing staging website + CMS configured + delivery plan accepted by PD. Goes live as part of Alpha gate (market-ready). | **Web/Console Lead** — Nguyen Quoc Viet | Medium | **Wed 10 Jun** | OCS-5026 · Slitigenz Proposal §10.2 · DCA §8.4 · CMP-5026 §6.11 |
 | **System Access** — Client admin to repos · build envs · credentials | Sets up continuous, unrestricted Client admin access to all repositories · CI/CD · platform accounts (App Store, Play, Mapbox, Firebase) · credentials register. **Strict prerequisite** to any subsequent work per DCA §8.1. | **DevOps Lead** — Nguyen Viet Hoang | Low | **Wed 3 Jun** | DCA §8.1, §8.3, §8.4 · CDG-5126 |
+| **QA pre-study + Sprint 1 test approach draft** *(internal — not a Discovery deliverable)* | QA Lead reads key spec docs in advance + drafts test approach for Sprint 1 (SOS theme) so test suite build can start Day 1 of Sprint 1. Outputs: TQP domain coverage matrix for SOS · device matrix · test-data plan · early RT/RG checks (RT-16 SOS legal, RT-09 prohibited capabilities). | **QA/Audit Lead** — Nguyen Thi Thom | Medium | **Fri 12 Jun** *(before Sprint 1 starts 16 Jun)* | TQP-5026 (11 domains) · ESF-5026 (SOS, non-dispatch) · SFD-5026 · FSD-5126 §4.4 · BPS-5126 (battery ≤20%/hr SOS) · VGD-5126 (RT-01..23 · RG-01..11) · WFD-5126 §SOS · UXS-5726 (≤2 tap rule) · FQH-5026 |
 
-> **Submission deadline:** Wed 10 Jun (per PD: *"Design Intent Submission due by 10 June 2026, 5 Business Days before gate"*) → PD review Wed–Fri (10–12 Jun) → Discovery Gate Mon 15 Jun.
-> **All 8 tasks track in parallel** (Squad of 8 senior experts, see [Team & Contacts](../03-team-contacts.md) §2).
+> **Submission deadline (PD package):** Wed 10 Jun (per PD: *"Design Intent Submission due by 10 June 2026, 5 Business Days before gate"*) → PD review Wed–Fri (10–12 Jun) → Discovery Gate Mon 15 Jun.
+> **9 sprint tasks total** — 8 PD-deliverable + 1 internal QA pre-study (Sprint 1 enablement). All track in parallel across the 8-person Squad ([Team & Contacts](../03-team-contacts.md) §2).
 > Task IDs + status assigned in the Jira board synced into this page.
 
 ## Risk register
@@ -86,7 +92,8 @@ gantt
 
 | Item | Status |
 |---|---|
-| All 8 tasks accepted by PD | ☐ |
+| All 8 PD-deliverable tasks accepted | ☐ |
+| QA test approach v1 ready (internal) | ☐ |
 | Discovery Gate Clearance issued | ☐ |
 | PD signature | __________ |
 | Date | __________ |
