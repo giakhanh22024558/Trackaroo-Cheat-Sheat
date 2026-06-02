@@ -73,6 +73,8 @@ Which brings me to a request.
 
 Ian — I know you're extremely busy, **but** given the Discovery Gate is on **15 June** and the formal Design Intent submission is due **10 June**, we'd like to propose a **preview review session earlier than the formal submission date** — ideally so we have time to incorporate any direction you'd like to give before we lock the artefacts.
 
+To explain the timing: per CMP §6.4, formal submissions should give PD 5 business days for review before the gate. With submission landing on **Wed 10 June** and the gate on **Mon 15 June**, the intervening weekend (13–14 June) compresses your effective review window to just **2–3 business days** instead of 5. An earlier preview gives us room to address any direction you have in advance — ensuring deliverable quality and minimising the chance of post-submission rework.
+
 What we're proposing is a single block we'd split into three focused parts:
 
 - **30 minutes** — Design Intent walkthrough (mockups + design direction statement)
@@ -86,7 +88,7 @@ Our preferred date is **Monday, 8 June** — which happens to coincide with our 
 Two options for your consideration:
 
 - **Option A** — Extend the 8 June weekly call into a combined session. You don't add a meeting; we just restructure that slot to cover the preview.
-- **Option B** — Keep the weekly call as-is and book a separate preview session on a different day that suits you better.
+- **Option B** — Keep the weekly call as-is and book a **separate preview session**. Suggested time: **Monday 8 June, 08:00 Hanoi (ICT) / 11:00 Sydney (AEST)** — within the agreed morning overlap window per CMP §6.3.2. Same ~85-minute block as Option A, covering all Discovery deliverables for preview before the formal 10 June submission.
 
 Either works for us. **Let us know your preference and we'll structure the agenda + materials accordingly.**
 
