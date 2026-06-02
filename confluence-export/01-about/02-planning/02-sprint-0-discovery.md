@@ -43,6 +43,9 @@ gantt
     AI-Tool Register complete              :milestone, 2026-06-04, 0d
     Internal foundation freeze (draft v1)  :milestone, 2026-06-05, 0d
     Package submitted to PD                :milestone, crit, 2026-06-10, 0d
+    Internal freeze (compressed for preview):milestone, crit, 2026-06-04, 0d
+    Pre-preview package to PD (Fri 09:00)  :milestone, crit, 2026-06-05, 0d
+    PD Preview Session (Mon 15:00 ICT)     :milestone, crit, 2026-06-08, 0d
     PD review window (3 BD)                :active, 2026-06-10, 2026-06-12
     QA test approach v1 ready              :milestone, 2026-06-12, 0d
     Discovery Gate                         :milestone, crit, 2026-06-15, 0d
@@ -54,8 +57,10 @@ gantt
 |---|---|---|
 | **Wed 3 Jun** | System Access live | Other tasks need repo access; unblocks dev infra |
 | **Thu 4 Jun** | AI-Tool Register complete | Lowest-effort task; close it early to demonstrate process discipline |
-| **Fri 5 Jun** | All 8 tasks draft v1 complete | "Foundation freeze" — Squad self-review starts |
-| **Wed 10 Jun** | Package submitted to PD | Hard deadline (per PD: *"Design Intent Submission due by 10 June 2026"*) — PD review window starts here |
+| **Thu 4 Jun EOD** | All 10 PD-deliverable tasks draft v1 complete — **compressed internal freeze** | Pulled forward 1 BD vs original Fri 5 Jun plan, to feed pre-preview submission (agreed at kickoff 2026-06-01) |
+| **Fri 5 Jun 09:00 ICT** | **Pre-preview package submitted to PD** | Per kickoff agreement — PD reviews over weekend travel (no signal Sat–Sun, drafts must be self-explanatory) |
+| **Mon 8 Jun 15:00 ICT** | **PD Preview Session** (~85 min · 3 parts) | Direction-setting before formal lock — out-of-window slot agreed by PD at kickoff (CMP §6.3.2) |
+| **Wed 10 Jun** | Formal package submitted to PD | Hard deadline (per PD: *"Design Intent Submission due by 10 June 2026"*) — incorporates feedback from preview |
 | **Fri 12 Jun** | PD review complete | 3 BD window only (Wed–Fri). Any rejection → recovery plan ≤5 BD (per DCA §5.5.2) — extremely risky if rejected this late |
 | **Fri 12 Jun** | QA test approach v1 ready | Sprint 1 (SOS) test suite build starts Day 1 — no QA ramp-up time lost |
 | **Mon 15 Jun** | **Discovery Gate clearance** | Sprint 1 cannot start without it |
@@ -76,7 +81,7 @@ gantt
 | **Initial Security & Privacy Evidence** | Documentation of data-isolation architecture (Survival Core local-only · Firebase boundary) + security baselines (AES-256 at rest · TLS 1.3 in transit · MFA · zero outbound from Core verified). Pre-flight for Schedule 9 DPSA executed before env access. | **DevOps Lead** — Nguyen Viet Hoang (+ Tech Lead) | Medium | **Wed 10 Jun** | DCA §9.1–9.7 + Schedule 9 · CDG-5126 · BTF-5126 · ESF-5026 |
 | **QA pre-study + Sprint 1 test approach draft** *(internal — not a Discovery deliverable)* | QA Lead reads key spec docs in advance + drafts test approach for Sprint 1 (SOS theme) so test suite build can start Day 1 of Sprint 1. Outputs: TQP domain coverage matrix for SOS · device matrix · test-data plan · early RT/RG checks (RT-16 SOS legal, RT-09 prohibited capabilities). | **QA/Audit Lead** — Nguyen Thi Thom | Medium | **Fri 12 Jun** *(before Sprint 1 starts 16 Jun)* | TQP-5026 (11 domains) · ESF-5026 (SOS, non-dispatch) · SFD-5026 · FSD-5126 §4.4 · BPS-5126 (battery ≤20%/hr SOS) · VGD-5126 (RT-01..23 · RG-01..11) · WFD-5126 §SOS · UXS-5726 (≤2 tap rule) · FQH-5026 |
 
-> **Submission deadline (PD package):** Wed 10 Jun (per PD: *"Design Intent Submission due by 10 June 2026, 5 Business Days before gate"*) → PD review Wed–Fri (10–12 Jun) → Discovery Gate Mon 15 Jun.
+> **Compressed deadlines** (per kickoff 2026-06-01): **Thu 4 Jun EOD** internal freeze · **Fri 5 Jun 09:00 ICT** pre-preview package to PD · **Mon 8 Jun 15:00 ICT** preview session (~85 min, 3 parts) · **Wed 10 Jun** formal submission · **Mon 15 Jun** Discovery Gate.
 > **11 sprint tasks total** — 10 PD-deliverable + 1 internal QA pre-study (Sprint 1 enablement). All track in parallel across the 8-person Squad ([Team & Contacts](../03-team-contacts.md) §2).
 > Task IDs + status assigned in the Jira board synced into this page.
 
@@ -91,6 +96,7 @@ gantt
 | **RISK-003** | 2026-06-01 | System Access task lightweight but critical blocker for any repo-dependent work | Medium | Nguyen Viet Hoang (DevOps Lead) | DevOps Lead closes by Wed 3 Jun (Week 1) before any other task needs repo access | Mitigating |
 | **RISK-004** | 2026-06-01 | DCA §11A Design Quality Obligation = independent PD rejection ground for mockups + design statement (premium-consumer-safety standard) | High | Nguyen Thuy Duong (UI/UX Lead) | Pre-review with PD on Tue 9 Jun (informal walkthrough) before formal Wed 10 Jun submission | Open |
 | **RISK-005** | 2026-06-01 | Submission Wed 10 Jun → only **3 BD PD review** (Wed–Fri) · recovery plan (5 BD per DCA §5.5.2) would exceed gate date if rejected | High | Luong Gia Khanh (PM) | Submit early Wed 10 Jun AM · daily check-ins during 3-BD review · pre-flag any reviewer concerns before formal review opens | Open |
+| **RISK-006** | 2026-06-01 | Compressed internal freeze: Thu 4 Jun EOD vs original Fri 5 Jun — 1 BD pulled forward across all 10 PD-deliverable tasks running in parallel. Risk of incomplete drafts being sent to PD pre-preview. | High | Luong Gia Khanh (PM) | Daily Squad standups Mon–Thu · escalate ASAP if any task slips · pre-preview package allowed to contain explicit *'placeholder pending PD direction'* sections for items needing input | Open |
 
 ## Sign-off
 
