@@ -7,36 +7,54 @@
 
 ---
 
-## Slide 1 — 9 Architectural Artefacts + TrackMate Transport Proposal
+## Slide 1 — Discovery Deliverables Overview
 
-Quickly walking through where we are on the technical Discovery deliverables.
+Since this is a brief kickoff and not a status meeting, I won't dive too deep into progress detail — otherwise this turns into a weekly report. But to give you an overview of the plan and where we're heading, I'll walk you through these sections briefly.
 
-Out of the 9 Architectural Compliance Artefacts plus the TrackMate Transport Proposal — a good portion are already in **Finalizing** status, and I'd like to explain why.
+### 9 Architectural Artefacts
 
-Most of these artefacts already had a structured first version in our **Vendor Demonstration Program (VDP) / PoC** submitted with the original proposal — that's the foundation we've been refining since day one of execution. So what we're handing over is essentially the **finalized, gate-ready** form of work whose architectural intent was already locked in at proposal stage.
+Most of these already had a structured first version in our **Vendor Demonstration Program (VDP) / PoC** submitted with the original proposal — that's the foundation we've been refining since day one of execution. So what we're handing over is essentially the **finalized, gate-ready** form of work whose architectural intent was already locked in at proposal stage.
 
-Specifically, the items in **Finalizing** status today are:
+Items in **Finalizing** status today — 5 of 9:
 
 - High-Level Architecture Diagram
 - Deterministic State Transition Matrix
 - Module Isolation Mapping
 - Breadcrumb Classification Confirmation
 - CAL Architecture Documentation
-- TrackMate Transport Proposal
 
 These are essentially complete — we're doing the last pass of internal review against your authority stack before submission.
 
-The remaining items still **In Progress** are:
+Items still **In Progress** — 4 of 9:
 
 - Offline-First Execution Explanation
-- PCR architecture documentation
-- SDK audit declaration
-- OSS licence audit
-- TrackMate proposal-stage concessions (battery + transport validation methodology)
+- PCR Architecture Documentation
+- SDK Audit Declaration
+- OSS Licence Audit
+
+We mapped these out from day one. They're tracking on plan, no surprises, no blockers. Clear ownership across the Squad.
+
+### TrackMate™ Transport & Comms — all In Progress
+
+Three items, all on the build path before comms development begins:
+
+- **Transport Proposal** — technical proposal for BLE Mesh, Wi-Fi Direct, and LoRa transport. Must be approved before any comms code is written.
+- **Proposal-Stage Concessions — Battery validation methodology + architecture** — the deferred empirical-proof methodology for battery performance validation against BPS-5126 thresholds.
+- **Proposal-Stage Concessions — Transport validation methodology** — range, fallback behaviour, and hardware auto-detection methodology.
+
+### Operational & Administrative Readiness — all In Progress
+
+Five items covering the project's operational baseline:
+
+- **Companion Website Staging + Live anchor statement** — staging environment, CMS configuration, information architecture accepted. Site live with the verbatim product anchor statement.
+- **System Access** — continuous, unrestricted Client admin access to all repositories, build environments, and credentials (per DCA §8.1).
+- **AI-Tool Register** — disclosure of all AI coding tools and human-review processes (per DCA §10.6).
+- **Continuity Plan** — identifies backup personnel, knowledge-transfer steps, repository continuity, and escalation if any Key Personnel is unavailable for more than 5 consecutive business days (per DCA §14.1 — **strict precedent**).
+- **Initial Security & Privacy Evidence** — documentation of data-isolation architecture and security baselines (encryption at rest, TLS 1.3 in transit, Survival Core network-zero proof).
 
 We mapped these out from day one. They're tracking on plan, no surprises, no blockers. We have clear ownership across the Squad and the work is already underway.
 
-**Net message:** We're on track. The Discovery package is on a path to being submitted in the required window, and the items In Review are not last-minute scrambling — they're work that's been maturing since proposal stage.
+**Net message:** We're on track across all three categories. The Discovery package is on a path to being submitted in the required window, and the items in Finalizing are not last-minute scrambling — they're work that's been maturing since proposal stage.
 
 ---
 
