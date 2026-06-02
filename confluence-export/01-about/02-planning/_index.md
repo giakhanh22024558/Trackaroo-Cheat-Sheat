@@ -15,7 +15,7 @@
 | **Cadence** | 2-week sprints · 8 parallel tracks |
 | **Gates** | Discovery (15 Jun) → Alpha (22 Aug) → Beta-Ready (30 Oct) → GA (13 Nov) |
 | **Sprints** | 12 (Sprint 0 Foundation · Sprints 1–11 build + buffer + release) |
-| **Backlog** | 51 features across 11 Epics — see [Modules / Feature Backlog](../../02-product/03-modules/_index.md) |
+| **Backlog** | 51 features across 11 Epics — backlog detail TBC |
 
 ## Master timeline
 
