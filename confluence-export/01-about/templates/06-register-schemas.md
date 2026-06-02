@@ -16,22 +16,11 @@
 >
 > Rationale: client mandate (DCA §7) requires only severity · owner · mitigation status as minimum; previous 15-column schema was over-spec. Sprint-level register in Sprint 0 page uses a 6-col compact mirror.
 
-## H3. Decision Register / Technical Decision Record
+## H3. Decision Register → moved
 
-| Col | Type | Required | Sample value | Notes |
-|---|---|---|---|---|
-| `decision_id` | DEC-NNN | Y | `DEC-001` | |
-| `date` | YYYY-MM-DD | Y | `2026-05-29` | When decision taken |
-| `taken_by` | PD / Slitigenz Tech Lead / Joint | Y | `PD` | |
-| `category` | Architecture / SDK / Data model / UX / Process / Other | Y | `Architecture` | |
-| `decision` | Text | Y | `Adopt Mapbox GL Flutter SDK with offline OSM vector-tile bundle for navigation` | The decision itself |
-| `rationale` | Text | Y | `Only SDK meeting BPS cold-start ≤6s in PoC; native offline tile bundle support; matches FSD §4.1` | Why this was chosen |
-| `alternatives_considered` | Text | N | `Google Maps SDK (no offline), MapLibre (immature offline tiles)` | What else was on the table |
-| `affected_components` | Text | Y | `EPIC-001 Navigation · all map renders` | |
-| `authority_doc` | DCA / FSD / OSM / WFD ref | When applicable | `FSD-5126 §4.1 · MAS-5126` | |
-| `requires_variation` | Y/N | Y | `N` | If Y → link to VAR-NNN |
-| `recorded_in_status` | Week NN | Y | `Week 1` | |
-| `superseded_by` | DEC-MMM | When applicable | *(blank)* | Never delete original |
+> **Moved to its own template file** with compact 9-column schema + full maintenance/reporting/cross-register flow context: [`registers/decision.md`](./registers/decision.md).
+>
+> Rationale: Decision register has specific CMP §6.10.2 obligations (immediate PD notification for significant categories) that warrant a dedicated page. Compacted from 12 → 9 columns by inlining `alternatives_considered` into `rationale` and tracking supersession via `status=Superseded` instead of a separate column.
 
 ## H4. Defect Register
 
