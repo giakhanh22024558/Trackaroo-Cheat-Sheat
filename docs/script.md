@@ -13,7 +13,7 @@ Quickly walking through where we are on the technical Discovery deliverables.
 
 Out of the 9 Architectural Compliance Artefacts plus the TrackMate Transport Proposal — a good portion are already in **Finalizing / In Review** status, and I'd like to explain why.
 
-Most of these artefacts already had a structured first version in our **Vendor Delivery Document (VDD)** submitted with the original proposal — that's the foundation we've been refining since day one of execution. So what we're handing over is essentially the **finalized, gate-ready** form of work whose architectural intent was already locked in at proposal stage.
+Most of these artefacts already had a structured first version in our **Vendor Demonstration Program (VDP) / PoC** submitted with the original proposal — that's the foundation we've been refining since day one of execution. So what we're handing over is essentially the **finalized, gate-ready** form of work whose architectural intent was already locked in at proposal stage.
 
 Specifically, the items in **In Review** status today are:
 
