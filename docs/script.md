@@ -73,12 +73,13 @@ Which brings me to a request.
 
 Ian — I know you're extremely busy, **but** given the Discovery Gate is on **15 June** and the formal Design Intent submission is due **10 June**, we'd like to propose a **preview review session earlier than the formal submission date** — ideally so we have time to incorporate any direction you'd like to give before we lock the artefacts.
 
-What we're proposing is a single block we'd split into two focused parts:
+What we're proposing is a single block we'd split into three focused parts:
 
 - **30 minutes** — Design Intent walkthrough (mockups + design direction statement)
 - **40 minutes** — Technical artefact preview (architecture diagrams + TrackMate proposal)
+- **15 minutes** — Companion Website preview (staging environment + CMS + information architecture)
 
-Total ~70 minutes.
+Total ~85 minutes.
 
 Our preferred date is **Monday, 8 June** — which happens to coincide with our standing Weekly Status Call.
 
