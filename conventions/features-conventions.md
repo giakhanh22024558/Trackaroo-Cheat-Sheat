@@ -49,8 +49,8 @@ Sprint 0 separates **the work (tasks)** from **how it is assured (criteria)** (i
 | Done-criteria per concern | **Acceptance Criteria** | `AC-C{concern}-{nn}`, language `en`, confirmed at Discovery gate |
 
 - **Tasks (`S0-`)** — 9 items (see Roadmap & milestones §B2.1): business analysis · build backlog · 4 documents · site · Figma · codebase/CI. A **Customer hand-over?** flag marks which are client deliverables (Discovery artefacts) vs internal foundation work. The former per-task `FND-` IDs are retired.
-- **Topic → Concern → Acceptance Criteria** is the assurance layer; each criterion notes which **Task (`S0-`)** it validates + which Discovery artefact (D#) it evidences. **Lives in [`docs/sprint-0-foundation-criteria.md`](../docs/sprint-0-foundation-criteria.md)** (separated from delivery plan so BA can analyse independently).
-- **Sources:** tasks → `confluence-export/01-about/02-planning/01-gate-deliverable-checklist.md` §B2.1 · criteria → `docs/sprint-0-foundation-criteria.md` · gate deliverable register → `confluence-export/01-about/02-planning/01-gate-deliverable-checklist.md` §B5. Each criterion `AC-C{concern}-{nn}` is unique — never renumber after issue.
+- **Topic → Concern → Acceptance Criteria** was the assurance layer for Sprint 0 ACs. *(File `docs/sprint-0-foundation-criteria.md` retired 2026-06-02 — superseded by Sprint 0 task list + Gate Deliverable Checklist with per-task Status. Foundation ACs preserved in git history; recover via `git show` if needed.)*
+- **Sources:** tasks + gate deliverable register → `confluence-export/01-about/02-planning/01-gate-deliverable-checklist.md` + `02-sprint-0-discovery.md`.
 - **Link model:** a business feature builds on the Sprint 0 tasks' outputs and asserts foundation standards (5-Q hierarchy, prohibited mutations, WCAG, RT/RG, thresholds) as **Acceptance Criteria** — the standard itself is never a feature.
 
 ## Priority levels

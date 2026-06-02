@@ -10,7 +10,6 @@ The Confluence-bound workspace (`confluence-export/`) is now the authoritative h
 
 ## What's still in this repo (NOT moved)
 
-- **`docs/sprint-0-foundation-criteria.md`** — 45 Sprint 0 Foundation ACs (Topic → Concern → AC). Stays in repo for BA analysis.
 - **`docs/gap-clarifications.md`** — Open clarification register (CLR-TRK-NNN). Stays in repo (operational tool).
 - **`research/spec-docs/`** — 20 spec doc extracts. Stays in repo.
 - **`diagrams/`** — Architecture diagrams. Stays in repo.
