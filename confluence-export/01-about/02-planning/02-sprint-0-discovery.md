@@ -41,11 +41,10 @@ gantt
     section Gate milestones
     System Access live                     :milestone, 2026-06-03, 0d
     AI-Tool Register complete              :milestone, 2026-06-04, 0d
-    Internal foundation freeze (draft v1)  :milestone, 2026-06-05, 0d
-    Package submitted to PD                :milestone, crit, 2026-06-10, 0d
-    Internal freeze (compressed for preview):milestone, crit, 2026-06-04, 0d
-    Pre-preview package to PD (Fri 09:00)  :milestone, crit, 2026-06-05, 0d
-    PD Preview Session (Mon 15:00 ICT)     :milestone, crit, 2026-06-08, 0d
+    Internal foundation freeze             :milestone, crit, 2026-06-04, 0d
+    Pre-preview package to PD              :milestone, crit, 2026-06-05, 0d
+    PD Preview Session (Mon afternoon ICT) :milestone, crit, 2026-06-08, 0d
+    Formal package submitted to PD         :milestone, crit, 2026-06-10, 0d
     PD review window (3 BD)                :active, 2026-06-10, 2026-06-12
     QA test approach v1 ready              :milestone, 2026-06-12, 0d
     Discovery Gate                         :milestone, crit, 2026-06-15, 0d
