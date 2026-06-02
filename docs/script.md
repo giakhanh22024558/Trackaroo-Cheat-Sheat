@@ -34,13 +34,13 @@ Items still **In Progress** — 4 of 9:
 
 We mapped these out from day one. They're tracking on plan, no surprises, no blockers. Clear ownership across the Squad.
 
-### TrackMate™ Transport & Comms — all In Progress
+### TrackMate™ Transport & Comms
 
-Three items, all on the build path before comms development begins:
+Three items on the build path before comms development begins:
 
-- **Transport Proposal** — technical proposal for BLE Mesh, Wi-Fi Direct, and LoRa transport. Must be approved before any comms code is written.
-- **Proposal-Stage Concessions — Battery validation methodology + architecture** — the deferred empirical-proof methodology for battery performance validation against BPS-5126 thresholds.
-- **Proposal-Stage Concessions — Transport validation methodology** — range, fallback behaviour, and hardware auto-detection methodology.
+- **Transport Proposal** — *Finalizing.* Technical proposal for BLE Mesh, Wi-Fi Direct, and LoRa transport. Must be approved before any comms code is written.
+- **Proposal-Stage Concessions — Battery validation methodology + architecture** — *In Progress.* Deferred empirical-proof methodology for battery performance validation against BPS-5126 thresholds.
+- **Proposal-Stage Concessions — Transport validation methodology** — *In Progress.* Range, fallback behaviour, and hardware auto-detection methodology.
 
 ### Operational & Administrative Readiness — all In Progress
 
