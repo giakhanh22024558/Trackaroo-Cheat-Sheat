@@ -11,22 +11,24 @@
 
 Quickly walking through where we are on the technical Discovery deliverables.
 
-Out of the 9 Architectural Compliance Artefacts plus the TrackMate Transport Proposal — a good portion are already in **Finalizing / In Review** status, and I'd like to explain why.
+Out of the 9 Architectural Compliance Artefacts plus the TrackMate Transport Proposal — a good portion are already in **Finalizing** status, and I'd like to explain why.
 
 Most of these artefacts already had a structured first version in our **Vendor Demonstration Program (VDP) / PoC** submitted with the original proposal — that's the foundation we've been refining since day one of execution. So what we're handing over is essentially the **finalized, gate-ready** form of work whose architectural intent was already locked in at proposal stage.
 
-Specifically, the items in **In Review** status today are:
+Specifically, the items in **Finalizing** status today are:
 
 - High-Level Architecture Diagram
 - Deterministic State Transition Matrix
 - Module Isolation Mapping
+- Breadcrumb Classification Confirmation
+- CAL Architecture Documentation
 - TrackMate Transport Proposal
 
 These are essentially complete — we're doing the last pass of internal review against your authority stack before submission.
 
 The remaining items still **In Progress** are:
 
-- CAL architecture documentation
+- Offline-First Execution Explanation
 - PCR architecture documentation
 - SDK audit declaration
 - OSS licence audit
