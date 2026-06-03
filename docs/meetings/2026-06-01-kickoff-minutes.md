@@ -18,15 +18,15 @@
 | Name | Role | Present? |
 |---|---|---|
 | **Ian Moore** | Project Director & Sole Decision Authority *(Client)* | ✅ |
-| **Daniel** (Trương Anh Vũ) | Executive Sponsor & Commercial Lead | ✅ |
-| **Tru** (Đinh Bá Trung) | Technical Lead & Solution Architect | ✅ |
-| **Bill** (Lương Gia Khánh) | Delivery Lead & Project Manager | ✅ |
-| **David** (Phạm Tiến Đạt) | Lead Mobile Engineer | ✅ |
-| **Henry** (Nguyễn Việt Hoàng) | Security / DevOps Lead | ✅ |
-| **Anna** (Nguyễn Thị Thơm) | QA Lead | ✅ |
-| **Nathan** (Nguyễn Quốc Việt) | Web / Console Lead | ✅ |
-| **Wendy** (Nguyễn Thị Diệu Quyên) | UI/UX Design Lead | ✅ |
-| **Josh** (Nguyễn Đăng Bảo Long) | Technical Advisor | ✅ |
+| **Daniel** (Truong Anh Vu) | Executive Sponsor & Commercial Lead | ✅ |
+| **Tru** (Dinh Ba Trung) | Technical Lead & Solution Architect | ✅ |
+| **Bill** (Luong Gia Khanh) | Delivery Lead & Project Manager | ✅ |
+| **David** (Pham Tien Dat) | Lead Mobile Engineer | ✅ |
+| **Henry** (Nguyen Viet Hoang) | Security / DevOps Lead | ✅ |
+| **Anna** (Nguyen Thi Thom) | QA Lead | ✅ |
+| **Nathan** (Nguyen Quoc Viet) | Web / Console Lead | ✅ |
+| **Wendy** (Nguyen Thi Dieu Quyen) | UI/UX Design Lead | ✅ |
+| **Josh** (Nguyen Dang Bao Long) | Technical Advisor | ✅ |
 
 > Mark **Present?** column with ✅ / ✗ (apology) as actual attendance is confirmed.
 
