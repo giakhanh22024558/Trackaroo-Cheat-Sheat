@@ -10,8 +10,8 @@
 | Field | Value |
 |---|---|
 | **Meeting type** | Project Kickoff |
-| **Date & time** | 2026-06-01 · Hanoi [HH:MM] ICT · Sydney [HH:MM] AEST |
-| **Duration** | [__ min] (started [HH:MM], ended [HH:MM]) |
+| **Date & time** | 2026-06-01 · Hanoi 15:00 ICT · Sydney 18:00 AEST |
+| **Duration** | 22 min (started 15:00, ended 15:22 ICT) |
 | **Attendees** | **Client:** Ian Moore (Project Director) · **Slitigenz:** Luong Gia Khanh (PM) · Dinh Ba Trung (Tech Lead) · Nguyen Thuy Duong (UI/UX Lead) · [others as present] |
 | **Apologies** | [names if any] |
 
@@ -23,14 +23,14 @@
 | 2 | **Preview session timing:** Monday 8 June 2026 · **15:00 Hanoi (ICT)** · duration ~85 min · format: 3 parts (30 min Design Intent · 40 min Technical artefacts · 15 min Companion Website) | PD accepted (out-of-window per CMP §6.3.2) | 2026-06-08 |
 | 3 | **Pre-preview submission deadline:** Items requiring PD review must be submitted (via Jira issues output) **before 09:00 Friday 5 June (Hanoi ICT)** — so PD can review ahead of the Monday 8 June 15:00 ICT preview session | PD (deadline set by PD) | 2026-06-05 |
 | 4 | **PD availability constraint** — PD travelling over the weekend with no phone signal · all clarifications/questions to be raised in writing before the Friday 09:00 ICT submission | PD acknowledged | weekend |
-| 5 | **Key Personnel substitutions notified** — Mobile Engineer Lead: Nguyen Huy Khoi → **Pham Tien Dat (David)** · UI/UX Design Lead: Nguyen Thuy Duong → **Nguyen Thi Dieu Quyen (Wendy)**. Notified to PD at kickoff per DCA §14.1. | Slitigenz (PD approval pending) | 2026-06-01 |
-| 6 | **Companion Website design direction — PD clarification response received** (CMP §6.10.2) — self-design approach accepted within confirmed + added constraints (Brand Guidelines · UIX-5026 §4 Visual Register · §5 Quality Reference Applications); 5 reference sites + product explainer provided; Discovery Gate timeline reconfirmed (staging+CMS+IA+plan 15 Jun · Design Intent 10 Jun per UIX-5026 §13) | PD (written response) | 2026-06-01 |
+| 5 | **Key Personnel substitutions notified** — Mobile Engineer Lead: Nguyen Huy Khoi → **Pham Tien Dat (David)** · UI/UX Design Lead: Nguyen Thuy Duong → **Nguyen Thi Dieu Quyen (Wendy)**. Notified to PD at kickoff. | Slitigenz (PD approval pending) | 2026-06-01 |
+| 6 | **Companion Website design direction — PD clarification response received** — self-design approach accepted within confirmed + added constraints (Brand Guidelines · UIX-5026 §4 Visual Register · §5 Quality Reference Applications); 5 reference sites + product explainer provided; Discovery Gate timeline reconfirmed (staging+CMS+IA+plan 15 Jun · Design Intent 10 Jun per UIX-5026 §13) | PD (written response) | 2026-06-01 |
 
 ## 2. Action items
 
 | # | Action | Owner | Due date | Status |
 |---|---|---|---|---|
-| 1 | Send brief confirmation email + calendar invite (dual TZ) for Mon 8 Jun 15:00 ICT preview session | Slitigenz PM | 2026-06-02 (within 24h of minutes) | Open |
+| 1 | Send brief confirmation email + calendar invite (dual TZ) for Mon 8 Jun 15:00 ICT preview session | Slitigenz PM | **by 2026-06-02 15:22 ICT** (within 24h of 15:22 meeting close) | Open |
 | 2 | Update Confluence Sprint 0 plan with new internal timeline (Thu 4 Jun EOD freeze · Fri 5 Jun 09:00 ICT submission · Mon 8 Jun 15:00 ICT preview) | Slitigenz PM | 2026-06-02 | Open |
 | 3 | Internal Squad alignment broadcast — new compressed deadline + daily standup cadence Mon–Thu | Slitigenz PM | 2026-06-02 | Open |
 | 4 | Submit pre-preview package: items requiring PD review (via Jira issues output) + draft deliverables + questions/clarifications list | All Squad leads · PM consolidates | **before 2026-06-05 09:00 ICT (Fri)** | Open |
