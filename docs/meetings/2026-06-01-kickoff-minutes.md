@@ -12,7 +12,7 @@
 | **Meeting type** | Project Kickoff |
 | **Date & time** | 2026-06-01 · Hanoi 15:00 ICT · Sydney 18:00 AEST |
 | **Duration** | 22 min (started 15:00, ended 15:22 ICT) |
-| **Attendees** | **Client:** Ian Moore (Project Director) · **Slitigenz:** Luong Gia Khanh (PM) · Dinh Ba Trung (Tech Lead) · Nguyen Thuy Duong (UI/UX Lead) · [others as present] |
+| **Attendees** | **Client:** Ian Moore (Project Director) · **Slitigenz:** Luong Gia Khanh (PM) · Dinh Ba Trung (Tech Lead) · Nguyen Thi Dieu Quyen / Wendy (UI/UX Lead) · Pham Tien Dat / David (Mobile Engineer Lead) · [others as present] |
 | **Apologies** | [names if any] |
 
 ## 1. Decisions taken
