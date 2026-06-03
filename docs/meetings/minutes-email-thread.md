@@ -42,9 +42,9 @@ PD confirmation: silence past 2 business days = confirmation (CMP §6.5.2).
 
 | | |
 |---|---|
+| **Email** | [`2026-06-01-confirmation-email.md`](./2026-06-01-confirmation-email.md) — opens the thread + sets the subject |
 | **Subject** | `[CMP-5026] Trackaroo® Phase 1 — Meeting Minutes` |
-| **Body header (line 1)** | `Minutes — Project Kickoff — 2026-06-01` |
-| **Body** | Content from [`2026-06-01-kickoff-minutes.md`](./2026-06-01-kickoff-minutes.md) |
+| **Attachment** | Kickoff minutes — [`2026-06-01-kickoff-minutes.md`](./2026-06-01-kickoff-minutes.md) |
 | **Send by** | 2026-06-02 15:22 ICT (24h from 15:22 meeting close) |
 
 ## Subsequent meetings (examples — same thread, Reply)

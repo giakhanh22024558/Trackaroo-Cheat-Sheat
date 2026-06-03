@@ -1,20 +1,25 @@
-# Brief confirmation email — Kickoff outcomes
+# Kickoff email — opens the Meeting Minutes thread
 
-> Send within 24 hours of meeting close.
-> Per CMP §6.5.2 minutes circulate under separate cover.
+> **First email** of the running minutes thread. Sets the stable subject; all meeting minutes are attached here (see [thread convention](./minutes-email-thread.md)).
+> Send within 24 hours of meeting close · per CMP §6.5.2.
 
 ---
 
-**To:** `imoore@trackaroosystems.com`
+**To:** `imoore@trackaroosystems.com` + all kickoff attendees
 **CC:** `vuta@slitigenz.io` (Slitigenz Exec Sponsor — material decision per CMP §6.2.1)
-**From:** Luong Gia Khanh (Slitigenz PM)
-**Subject:** `[CMP-5026] Confirmation — Preview Session Mon 8 Jun + Pre-submission Fri 5 Jun`
+**From:** Bill (Luong Gia Khanh) — Delivery Lead & Project Manager, Slitigenz
+**Subject:** `[CMP-5026] Trackaroo® Phase 1 — Meeting Minutes`
+**Attachment:** Kickoff minutes — 2026-06-01
 
 ---
 
 Dear Ian,
 
-Thank you for your time at today's kickoff. To confirm what we agreed in writing:
+Thank you for your time at today's kickoff.
+
+This email opens our running **Meeting Minutes** thread for Trackaroo® Phase 1. **The minutes for each meeting will be attached to this email thread** — every subsequent meeting's minutes will be sent as a reply here (same subject line), so all minutes stay in one place and are easy to find. The **kickoff minutes for 1 June 2026 are attached**.
+
+To confirm what we agreed in writing:
 
 ## Discovery Deliverables Preview Session
 
@@ -41,10 +46,10 @@ Thank you for your time at today's kickoff. To confirm what we agreed in writing
 3. Pre-preview package — delivered by Fri 5 Jun 09:00 ICT
 4. Confluence Sprint 0 plan updated to reflect compressed internal timeline
 
-Full meeting minutes circulating under separate cover within 24h per CMP §6.5.2.
+The full kickoff minutes are attached to this email (and will be the first in this running thread).
 
 Please reply if any item above differs from your understanding. Per CMP §6.5.2, silence past 2 business days will be treated as confirmation.
 
 Best regards,
-**Luong Gia Khanh**
-Project Manager — SLI Technology Company Limited (Slitigenz)
+**Bill (Luong Gia Khanh)**
+Delivery Lead & Project Manager — SLI Technology Company Limited (Slitigenz)
