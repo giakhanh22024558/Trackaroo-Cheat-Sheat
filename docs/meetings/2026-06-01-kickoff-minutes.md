@@ -1,9 +1,8 @@
-# [CMP-5026] Minutes — Kickoff — 2026-06-01
+# Minutes — Project Kickoff — 2026-06-01
 
-> **Distributed by:** Slitigenz, within 24 hours of meeting close
-> **To:** All attendees + `imoore@trackaroosystems.com`
-> **PD confirmation window:** 2 BD (silence = confirmation)
-> **Per CMP-5026 §6.5.2**
+> **Email thread subject:** `[CMP-5026] Trackaroo® Phase 1 — Meeting Minutes` — this is the **first email** anchoring the running minutes thread. Subsequent meetings reply in the same thread (see [thread convention](./minutes-email-thread.md)).
+> **Distributed by:** Slitigenz, within 24 hours of meeting close · **To:** all attendees + `imoore@trackaroosystems.com` · **CC:** `vuta@slitigenz.io`
+> **PD confirmation window:** 2 BD (silence = confirmation) · **Per CMP-5026 §6.5.2**
 
 ## Meeting metadata
 
