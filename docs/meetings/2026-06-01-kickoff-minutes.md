@@ -55,17 +55,22 @@
 | 8 | **Confirm receipt of UIX-5026** to PD in writing (required per PD's clarification response) | Bill (Luong Gia Khanh) | 2026-06-02 | Open |
 | 9 | Review UIX-5026 §4 + §5, Brand Guidelines, 5 reference sites + product explainer before commencing companion website staging build | Wendy (Nguyen Thi Dieu Quyen) · Nathan (Nguyen Quoc Viet) | before staging build start | Open |
 | 10 | Design Direction Statement (Component B) to address how website design draws from + relates to UIX-5026 §5 reference applications | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
-| 11 | **TRAC-1** · [Architecture] 9 Architectural Compliance Artefacts | Tru (Dinh Ba Trung) | 2026-06-10 | Open |
-| 12 | **TRAC-2** · [Design] 10 high-fidelity mockups | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
-| 13 | **TRAC-3** · [Design][Doc] Written design direction statement | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
-| 14 | **TRAC-4** · [Architecture] TrackMate™ Transport Proposal + Proposal-Stage Concessions | Josh (Nguyen Dang Bao Long) | 2026-06-10 | Open |
-| 15 | **TRAC-5** · [Design] WFD-5126 Wireframe Coverage — all Survival Core subsystems | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
-| 16 | **TRAC-6** · [Doc] AI-Tool Register | David (Pham Tien Dat) | 2026-06-10 | Open |
-| 17 | **TRAC-7** · [Website] Companion Website Staging + live anchor | Nathan (Nguyen Quoc Viet) | 2026-06-10 | Open |
-| 18 | **TRAC-8** · [Infras] System Access — Client admin to repos · build envs · credentials | Henry (Nguyen Viet Hoang) | 2026-06-10 | Open |
-| 19 | **TRAC-9** · [Doc] Continuity Plan | Bill (Luong Gia Khanh) | 2026-06-10 | Open |
-| 20 | **TRAC-10** · [Security][Doc] Initial Security & Privacy Evidence | Henry (Nguyen Viet Hoang) | 2026-06-10 | Open |
-| 21 | **TRAC-11** · [Test] QA pre-study + Sprint 1 test approach draft | Anna (Nguyen Thi Thom) | 2026-06-12 | Open |
+
+The following tasks (Jira **TRAC** board) will also be considered actions the team needs to complete to achieve the given timeline:
+
+| Key | Task | Assignee | Due | Status |
+|---|---|---|---|---|
+| **TRAC-1** | [Architecture] 9 Architectural Compliance Artefacts | Tru (Dinh Ba Trung) | 2026-06-10 | Open |
+| **TRAC-2** | [Design] 10 high-fidelity mockups | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
+| **TRAC-3** | [Design][Doc] Written design direction statement | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
+| **TRAC-4** | [Architecture] TrackMate™ Transport Proposal + Proposal-Stage Concessions | Josh (Nguyen Dang Bao Long) | 2026-06-10 | Open |
+| **TRAC-5** | [Design] WFD-5126 Wireframe Coverage — all Survival Core subsystems | Wendy (Nguyen Thi Dieu Quyen) | 2026-06-10 | Open |
+| **TRAC-6** | [Doc] AI-Tool Register | David (Pham Tien Dat) | 2026-06-10 | Open |
+| **TRAC-7** | [Website] Companion Website Staging + live anchor | Nathan (Nguyen Quoc Viet) | 2026-06-10 | Open |
+| **TRAC-8** | [Infras] System Access — Client admin to repos · build envs · credentials | Henry (Nguyen Viet Hoang) | 2026-06-10 | Open |
+| **TRAC-9** | [Doc] Continuity Plan | Bill (Luong Gia Khanh) | 2026-06-10 | Open |
+| **TRAC-10** | [Security][Doc] Initial Security & Privacy Evidence | Henry (Nguyen Viet Hoang) | 2026-06-10 | Open |
+| **TRAC-11** | [Test] QA pre-study + Sprint 1 test approach draft | Anna (Nguyen Thi Thom) | 2026-06-12 | Open |
 
 ## 3. Risks / blockers raised
 
