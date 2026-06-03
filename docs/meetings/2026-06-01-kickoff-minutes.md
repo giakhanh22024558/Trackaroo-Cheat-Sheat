@@ -21,7 +21,7 @@
 |---|---|---|---|
 | 1 | **Discovery Deliverables Preview Session agreed** — informal preview ahead of formal 10 June submission | Joint (PD + Slitigenz PM) | 2026-06-08 |
 | 2 | **Preview session timing:** Monday 8 June 2026 · **15:00 Hanoi (ICT)** · duration ~85 min · format: 3 parts (30 min Design Intent · 40 min Technical artefacts · 15 min Companion Website) | PD accepted (out-of-window per CMP §6.3.2) | 2026-06-08 |
-| 3 | **Pre-preview submission deadline:** Items requiring PD review must be submitted (via Jira issues output) **before 09:00 Friday 6 June (Hanoi ICT)** — so PD can review ahead of the Monday 8 June 15:00 ICT preview session | PD (deadline set by PD) | 2026-06-06 |
+| 3 | **Pre-preview submission deadline:** Items requiring PD review must be submitted (via Jira issues output) **before 09:00 Friday 5 June (Hanoi ICT)** — so PD can review ahead of the Monday 8 June 15:00 ICT preview session | PD (deadline set by PD) | 2026-06-05 |
 | 4 | **PD availability constraint** — PD travelling over the weekend with no phone signal · all clarifications/questions to be raised in writing before the Friday 09:00 ICT submission | PD acknowledged | weekend |
 | 5 | **Key Personnel substitutions notified** — Mobile Engineer Lead + UI/UX Design Lead changed from the names in the May proposal (see §6). Notified to PD at kickoff per DCA §14.1. | Slitigenz (PD approval pending) | 2026-06-01 |
 | 6 | **Companion Website design direction — PD clarification response received** (CMP §6.10.2) — proposed self-design approach accepted within confirmed + added constraints; reference sites + product explainer provided; Discovery Gate timeline reconfirmed (see §7) | PD (written response) | 2026-06-01 |
@@ -33,7 +33,7 @@
 | 1 | Send brief confirmation email + calendar invite (dual TZ) for Mon 8 Jun 15:00 ICT preview session | Slitigenz PM | 2026-06-02 (within 24h of minutes) | Open |
 | 2 | Update Confluence Sprint 0 plan with new internal timeline (Thu 4 Jun EOD freeze · Fri 5 Jun 09:00 ICT submission · Mon 8 Jun 15:00 ICT preview) | Slitigenz PM | 2026-06-02 | Open |
 | 3 | Internal Squad alignment broadcast — new compressed deadline + daily standup cadence Mon–Thu | Slitigenz PM | 2026-06-02 | Open |
-| 4 | Submit pre-preview package: items requiring PD review (via Jira issues output) + draft deliverables + questions/clarifications list | All Squad leads · PM consolidates | **before 2026-06-06 09:00 ICT (Fri)** | Open |
+| 4 | Submit pre-preview package: items requiring PD review (via Jira issues output) + draft deliverables + questions/clarifications list | All Squad leads · PM consolidates | **before 2026-06-05 09:00 ICT (Fri)** | Open |
 | 5 | Send formal preview-session agenda (per CMP §6.5.2 — 48h before workshop) | Slitigenz PM | 2026-06-06 (Sat) | Open |
 | 6 | Log decisions (timeline · out-of-window meeting · personnel changes · companion website clarification) into Decision Register | Slitigenz Tech Lead | 2026-06-02 | Open |
 | 7 | Update Team & Contacts page + Schedule 5 Key Personnel with new Mobile Lead (Pham Tien Dat) + UI/UX Lead (Nguyen Thi Dieu Quyen); update Continuity Plan | Slitigenz PM | 2026-06-02 | Open |
