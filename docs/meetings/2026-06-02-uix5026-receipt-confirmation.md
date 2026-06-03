@@ -48,5 +48,5 @@ We have the following points we'd like to clarify before commencing the staging 
 - [question 2]
 
 Regards,
-**Luong Gia Khanh**
-Project Manager — SLI Technology Company Limited (Slitigenz)
+**Bill (Luong Gia Khanh)**
+Delivery Lead & Project Manager — SLI Technology Company Limited (Slitigenz)
