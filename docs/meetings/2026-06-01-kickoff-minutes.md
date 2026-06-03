@@ -12,8 +12,23 @@
 | **Meeting type** | Project Kickoff |
 | **Date & time** | 2026-06-01 · Hanoi 15:00 ICT · Sydney 18:00 AEST |
 | **Duration** | 22 min (started 15:00, ended 15:22 ICT) |
-| **Attendees** | **Client:** Ian Moore (Project Director) · **Slitigenz:** Luong Gia Khanh (PM) · Dinh Ba Trung (Tech Lead) · Nguyen Thi Dieu Quyen / Wendy (UI/UX Lead) · Pham Tien Dat / David (Mobile Engineer Lead) · [others as present] |
-| **Apologies** | [names if any] |
+
+### Attendees & apologies
+
+| Name | Role | Present? |
+|---|---|---|
+| **Ian Moore** | Project Director & Sole Decision Authority *(Client)* | ✅ |
+| **Daniel** (Trương Anh Vũ) | Executive Sponsor & Commercial Lead | ✅ |
+| **Tru** (Đinh Bá Trung) | Technical Lead & Solution Architect | ✅ |
+| **Bill** (Lương Gia Khánh) | Delivery Lead & Project Manager | ✅ |
+| **David** (Phạm Tiến Đạt) | Lead Mobile Engineer | ✅ |
+| **Henry** (Nguyễn Việt Hoàng) | Security / DevOps Lead | ✅ |
+| **Anna** (Nguyễn Thị Thơm) | QA Lead | ✅ |
+| **Nathan** (Nguyễn Quốc Việt) | Web / Console Lead | ✅ |
+| **Wendy** (Nguyễn Thị Diệu Quyên) | UI/UX Design Lead | ✅ |
+| **Josh** (Nguyễn Đăng Bảo Long) | Technical Advisor | ✅ |
+
+> Mark **Present?** column with ✅ / ✗ (apology) as actual attendance is confirmed.
 
 ## 1. Decisions taken
 
