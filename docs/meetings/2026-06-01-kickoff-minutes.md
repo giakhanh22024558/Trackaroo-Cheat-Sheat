@@ -56,6 +56,26 @@
 | 9 | Review UIX-5026 §4 + §5, Brand Guidelines, 5 reference sites + product explainer before commencing companion website staging build | UI/UX Lead (Wendy) + Web/Console Lead | before staging build start | Open |
 | 10 | Design Direction Statement (Component B) to address how website design draws from + relates to UIX-5026 §5 reference applications | UI/UX Lead (Wendy) | 2026-06-10 | Open |
 
+### Jira task list — Sprint 0 deliverables (current status)
+
+> Live board: **TRAC** project. Reporter for all = Bill (Luong Gia Khanh). Snapshot as of 2026-06-03.
+
+| Key | Summary | Assignee | Due | Priority | Status |
+|---|---|---|---|---|---|
+| **TRAC-1** | [Architecture] 9 Architectural Compliance Artefacts | Tru (Dinh Ba Trung) | 10 Jun | Highest | WORKING ON IT |
+| **TRAC-2** | [Design] 10 high-fidelity mockups | Wendy (Nguyen Thi Dieu Quyen) | 10 Jun | Highest | WORKING ON IT |
+| **TRAC-3** | [Design][Doc] Written design direction statement | Wendy (Nguyen Thi Dieu Quyen) | 10 Jun | High | WORKING ON IT |
+| **TRAC-4** | [Architecture] TrackMate™ Transport Proposal + Proposal-Stage Concessions | Josh (Nguyen Dang Bao Long) | 10 Jun | High | WORKING ON IT |
+| **TRAC-5** | [Design] WFD-5126 Wireframe Coverage — all Survival Core subsystems | Wendy (Nguyen Thi Dieu Quyen) | 10 Jun | High | ABOUT TO DO |
+| **TRAC-6** | [Doc] AI-Tool Register | David (Pham Tien Dat) | 10 Jun | High | ABOUT TO DO |
+| **TRAC-7** | [Website] Companion Website Staging + live anchor | Nathan (Nguyen Quoc Viet) | 10 Jun | Highest | WORKING ON IT |
+| **TRAC-8** | [Infras] System Access — Client admin to repos · build envs · credentials | Henry (Nguyen Viet Hoang) | 10 Jun | High | ABOUT TO DO |
+| **TRAC-9** | [Doc] Continuity Plan | Bill (Luong Gia Khanh) | 10 Jun | Highest | WORKING ON IT |
+| **TRAC-10** | [Security][Doc] Initial Security & Privacy Evidence | Henry (Nguyen Viet Hoang) | 10 Jun | High | ABOUT TO DO |
+| **TRAC-11** | [Test] QA pre-study + Sprint 1 test approach draft | Anna (Nguyen Thi Thom) | 12 Jun | Highest | WORKING ON IT |
+
+> All items: Type = Story · Resolution = Unresolved. Status snapshot — update from the live TRAC board.
+
 ## 3. Risks / blockers raised
 
 | # | Item | Severity | Owner | Will track in | Notes |
